@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI SQL Assistant — Yash Bhawar</title>
+  <meta name="description"
+    content="A local-first AI agent that translates natural language to SQL using Ollama, LangChain, and a tiered safety framework.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Project</span>
+        <h1 class="project-detail-title">AI SQL Assistant</h1>
+        <p class="project-detail-tagline">
+          Ask your database questions in plain English — get safe, accurate SQL queries generated and executed instantly.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">LangChain</span>
+          <span class="tag ml">Ollama</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Python</span>
+          <span class="tag ml">sqlparse</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/AI-SQL-Assistant" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEMO SCREENSHOT ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="demo-showcase">
+        <!-- TODO: Replace with actual screenshot or GIF of the Streamlit UI -->
+        <!-- SUGGESTED SCREENSHOT: Full Streamlit app showing sidebar (connected DB) + chat with a natural language query and SQL result table -->
+        <div class="demo-placeholder">
+          <span class="placeholder-icon">📸</span>
+          <p>App Demo Screenshot / GIF</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Non-technical users — business analysts, managers, product teams — need to query databases daily but don't
+            know SQL. Existing solutions are either cloud-based (data privacy concerns) or lack safety guardrails, 
+            making it risky to let an AI execute arbitrary queries against production databases.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            A <strong>fully local</strong> AI assistant that runs on your machine — no data leaves your network. Users 
+            type questions in plain English, the LLM generates SQL, and a <strong>tiered safety system</strong> 
+            classifies, validates, and optionally blocks dangerous queries before they ever touch the database.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🗣️</span>
+          <h3>Natural Language to SQL</h3>
+          <p>Type questions like "Show all employees in engineering" and get precise SQL generated automatically.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🛡️</span>
+          <h3>Tiered Safety Framework</h3>
+          <p>Destructive queries (DROP, TRUNCATE, DELETE without WHERE) are automatically blocked. Write operations require confirmation.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✅</span>
+          <h3>Confirmation Workflow</h3>
+          <p>UPDATE/INSERT operations show the affected row count and ask for explicit approval before execution.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📝</span>
+          <h3>Audit Trail</h3>
+          <p>Every query attempt — allowed, blocked, or confirmed — is logged with timestamps for full accountability.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h3>Read-Only Mode</h3>
+          <p>One toggle to restrict all operations to SELECT queries only. Perfect for safe data exploration.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔄</span>
+          <h3>Auto-Retry & Schema-Aware</h3>
+          <p>Failed queries are automatically corrected. The LLM understands your table schemas, columns, and relationships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">👤</span>
+          <span class="arch-label">User Input</span>
+          <span class="arch-sublabel">Natural Language</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🧠</span>
+          <span class="arch-label">LangChain Agent</span>
+          <span class="arch-sublabel">Mistral 7B via Ollama</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🛡️</span>
+          <span class="arch-label">Safety Gate</span>
+          <span class="arch-sublabel">Classify → Block/Confirm/Allow</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🗄️</span>
+          <span class="arch-label">MySQL Database</span>
+          <span class="arch-sublabel">Execute & Return Results</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>Core Pipeline</h3>
+          <ul>
+            <li><code>agent.py</code> — LLM agent that converts natural language → SQL via LangChain</li>
+            <li><code>database.py</code> — MySQL connection management with SQLAlchemy</li>
+            <li><code>schema.py</code> — Auto-introspects table schemas so the LLM knows your data structure</li>
+            <li><code>query_explainer.py</code> — Translates generated SQL back to plain English</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Safety Layer</h3>
+          <ul>
+            <li><code>classifier.py</code> — Categorizes queries as READ / WRITE / DESTRUCTIVE</li>
+            <li><code>guard.py</code> — Safety gate that blocks, confirms, or allows based on classification</li>
+            <li><code>sanitizer.py</code> — Input sanitization to prevent injection</li>
+            <li><code>audit.py</code> — Logs every query attempt with timestamps and outcomes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SAFETY DEMO ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛡️ Safety System in Action</h2>
+      <div class="demo-grid">
+        <div class="demo-card">
+          <!-- TODO: Screenshot showing a safe SELECT query being executed successfully -->
+          <!-- SUGGESTED: Screenshot of chat showing "Show all employees" → generated SELECT query → results table -->
+          <div class="demo-placeholder small">
+            <span class="placeholder-icon">📸</span>
+            <p>Safe Query Execution</p>
+          </div>
+          <h3>✅ Safe Query — Allowed</h3>
+          <p>SELECT queries execute immediately with results displayed in a clean table format with CSV export option.</p>
+        </div>
+        <div class="demo-card">
+          <!-- TODO: Screenshot showing a destructive query being blocked -->
+          <!-- SUGGESTED: Screenshot of chat showing "Delete all records" → red blocked message -->
+          <div class="demo-placeholder small">
+            <span class="placeholder-icon">📸</span>
+            <p>Destructive Query Blocked</p>
+          </div>
+          <h3>🔴 Destructive Query — Blocked</h3>
+          <p>DROP TABLE, TRUNCATE, and unscoped DELETE queries are automatically blocked with a warning message.</p>
+        </div>
+        <div class="demo-card">
+          <!-- TODO: Screenshot showing a write query with confirmation dialog -->
+          <!-- SUGGESTED: Screenshot of chat showing "Update salary" → confirmation prompt with row count -->
+          <div class="demo-placeholder small">
+            <span class="placeholder-icon">📸</span>
+            <p>Write Confirmation</p>
+          </div>
+          <h3>⚠️ Write Query — Confirm</h3>
+          <p>UPDATE and INSERT operations show the affected row count and require explicit user approval before executing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack</h2>
+      <div class="tech-stack-grid">
+        <div class="tech-item">
+          <h4>LLM</h4>
+          <p>Ollama (Mistral 7B)</p>
+        </div>
+        <div class="tech-item">
+          <h4>Agent Framework</h4>
+          <p>LangChain</p>
+        </div>
+        <div class="tech-item">
+          <h4>Database</h4>
+          <p>MySQL + SQLAlchemy</p>
+        </div>
+        <div class="tech-item">
+          <h4>UI</h4>
+          <p>Streamlit</p>
+        </div>
+        <div class="tech-item">
+          <h4>Safety</h4>
+          <p>sqlparse + regex</p>
+        </div>
+        <div class="tech-item">
+          <h4>Language</h4>
+          <p>Python 3.11+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHALLENGES & LEARNINGS ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🧩 Challenges & Learnings</h2>
+      <div class="challenges-list">
+        <div class="challenge-item">
+          <h3>Reliable SQL Generation from a 7B Model</h3>
+          <p>
+            Smaller LLMs can hallucinate column names or generate invalid syntax. Solved this by feeding the full 
+            database schema into the system prompt, so the model always knows the exact table and column names available.
+            Added auto-retry logic that catches SQL errors and asks the LLM to self-correct.
+          </p>
+        </div>
+        <div class="challenge-item">
+          <h3>Balancing Safety with Usability</h3>
+          <p>
+            Too many confirmation dialogs frustrate users; too few create risk. The tiered approach (allow/confirm/block) 
+            based on SQL classification strikes the right balance — reads are instant, writes need one click, and 
+            destructive operations are impossible.
+          </p>
+        </div>
+        <div class="challenge-item">
+          <h3>Keeping Everything Local</h3>
+          <p>
+            Unlike cloud-based solutions (OpenAI API), running Ollama locally means zero data exposure but requires 
+            handling model loading times, GPU memory management, and graceful fallbacks when the model server is unavailable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal JS for hamburger on project pages
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

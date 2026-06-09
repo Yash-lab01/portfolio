@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Bhawar — AI/ML Engineer & Data Analyst</title>
+  <meta name="description"
+    content="Portfolio of Yash Bhawar — AI/ML Engineer and Data Analyst specializing in LLM applications, machine learning models, and data analytics dashboards.">
+  <meta property="og:title" content="Yash Bhawar — AI/ML Engineer & Data Analyst">
+  <meta property="og:description" content="Explore my projects in AI, Machine Learning, and Data Analytics.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#data-analytics">Analytics</a></li>
+        <li><a href="#machine-learning">ML</a></li>
+        <li><a href="#ai-llm">AI & LLM</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-resume-dropdown" id="resumeDropdown">
+          <a href="#" class="nav-resume-btn">Resume ↓</a>
+          <div class="resume-dropdown-menu">
+            <a href="assets/resume/Yash_Bhawar_DA_Resume.pdf" download class="resume-option" id="resume-da">
+              <span class="resume-icon">📊</span>
+              <span>Data Analyst</span>
+            </a>
+            <a href="assets/resume/Yash_Bhawar_AIML_Resume.pdf" download class="resume-option" id="resume-aiml">
+              <span class="resume-icon">🤖</span>
+              <span>AI / ML Engineer</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Yash Bhawar</h1>
+      <p class="hero-tagline">
+        <span class="hero-typed" id="heroTyped"></span>
+      </p>
+      <p class="hero-description">
+        Transforming raw data into intelligent solutions — from interactive dashboards and predictive models to
+        AI-powered applications built with large language models.
+      </p>
+      <div class="hero-buttons">
+        <a href="#data-analytics" class="btn btn-primary">
+          View My Work ↓
+        </a>
+        <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-outline">
+          GitHub →
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Building with Data & AI</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image-card">
+            <span class="about-avatar-placeholder">👨‍💻</span>
+          </div>
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <h3>AI/ML Engineer & Data Analyst</h3>
+          <p>
+            I'm a passionate technologist who sits at the intersection of <strong>data analytics</strong> and
+            <strong>artificial intelligence</strong>. I love turning complex datasets into clear, actionable insights
+            through interactive dashboards, and building intelligent systems powered by machine learning and large
+            language models.
+          </p>
+          <p>
+            Whether it's crafting a Power BI dashboard that tells a compelling data story, training a machine learning
+            model to predict outcomes, or architecting an LLM-powered agent that understands natural language — I'm
+            driven by the challenge of making data work smarter.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Power BI</span>
+            <span class="tech-badge">SQL</span>
+            <span class="tech-badge">Excel</span>
+            <span class="tech-badge purple">TensorFlow</span>
+            <span class="tech-badge purple">scikit-learn</span>
+            <span class="tech-badge purple">LangChain</span>
+            <span class="tech-badge purple">Streamlit</span>
+            <span class="tech-badge">Pandas</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge purple">Ollama</span>
+            <span class="tech-badge">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== AI & LLM PROJECTS ========== -->
+  <section class="projects-section" id="ai-llm">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">AI & LLM</span>
+        <h2 class="section-title">Intelligent Agents & Applications</h2>
+        <p class="section-subtitle">AI-powered applications leveraging large language models, agents, and conversational
+          AI systems.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- AI Project 1: SQL Assistant -->
+        <div class="project-card reveal reveal-delay-1" id="project-ai-1">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">🤖</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">AI SQL Assistant</h3>
+            <p class="project-card-description">
+              Local-first AI agent that translates natural language to MySQL queries using a 7B LLM via Ollama. Features
+              a tiered safety framework with query classification, destructive query blocking, audit logging, and a
+              Streamlit interface.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag ml">LangChain</span>
+              <span class="tag ml">Ollama</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="projects/sql-assistant.html" class="card-btn card-btn-primary">View Details</a>
+              <a href="https://github.com/Yash-lab01/AI-SQL-Assistant" target="_blank" rel="noopener"
+                class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Project 2: Museum Chatbot -->
+        <div class="project-card reveal reveal-delay-2" id="project-ai-2">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">🎟️</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Museum Booking Chatbot</h3>
+            <p class="project-card-description">
+              Local LLM based conversational chatbot for museum ticket booking. Built with a stateful LangGraph agent,
+              database connection pooling, fuzzy-matching search, and deployed as a Flask API with Streamlit frontend.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag ml">LangGraph</span>
+              <span class="tag ml">LLM Agent</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="projects/museum-chatbot.html" class="card-btn card-btn-primary">View Details</a>
+              <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener"
+                class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MACHINE LEARNING PROJECTS ========== -->
+  <section class="projects-section" id="machine-learning">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Machine Learning</span>
+        <h2 class="section-title">Models & Predictions</h2>
+        <p class="section-subtitle">Predictive models and ML pipelines solving real-world classification, regression,
+          and NLP problems.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- ML Project 1 -->
+        <div class="project-card reveal reveal-delay-1" id="project-ml-1">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">🔮</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Customer Churn Predictor</h3>
+            <p class="project-card-description">
+              End-to-end ML pipeline predicting customer churn with 92% accuracy using ensemble methods. Features EDA,
+              feature engineering, hyperparameter tuning, and model interpretability with SHAP.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag ml">scikit-learn</span>
+              <span class="tag ml">XGBoost</span>
+              <span class="tag ml">SHAP</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="#" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML Project 2 -->
+        <div class="project-card reveal reveal-delay-2" id="project-ml-2">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">🎥</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Movie Recommendation Site</h3>
+            <p class="project-card-description">
+              Built a movie recommendation system using TFIDF vectorization on movie data to represent content features.
+              Implemented cosine similarity to measure closeness between movies and generate top-N recommendations for
+              users. Built a end-to-end ML project with efficient data preprocessing, feature engineering, and
+              recommendation retrieval. Used Flask for the backend to integrate with the frontend site.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag ml">Regression</span>
+              <span class="tag ml">Pandas</span>
+              <span class="tag ml">Matplotlib</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/Yash-lab01/MovieRecommendationSite" target="_blank" rel="noopener"
+                class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML Project 3 -->
+        <div class="project-card reveal reveal-delay-3" id="project-ml-3">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">📑</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Document AI</h3>
+            <p class="project-card-description">
+              An advanced document intelligence platform that combines TensorFlow deep learning computer
+              vision models with Local LLM-based RAG to parse, classify, enhance,
+              summarize, and query complex PDF documents.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag ml">NLP</span>
+              <span class="tag ml">TensorFlow</span>
+              <span class="tag ml">NLTK</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/Yash-lab01/Document_AI" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DATA ANALYTICS PROJECTS ========== -->
+  <section class="projects-section" id="data-analytics">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Data Analytics</span>
+        <h2 class="section-title">Dashboards & Data Stories</h2>
+        <p class="section-subtitle">Interactive dashboards and analytical deep-dives using Power BI, Excel, and SQL.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- DA Project 1 -->
+        <div class="project-card reveal reveal-delay-1" id="project-da-1">
+          <div class="project-card-thumbnail">
+            <img src="assets/images/sales.png" alt="Sales Performance Dashboard">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Sales Performance Dashboard</h3>
+            <p class="project-card-description">
+              End-to-end Power BI dashboard analyzing regional sales trends, product performance, and revenue KPIs with
+              interactive drill-down capabilities and dynamic filtering.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag data">Power BI</span>
+              <span class="tag data">DAX</span>
+              <span class="tag data">SQL</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/Yash-lab01/sales_analysis_dashboard"
+                class="card-btn card-btn-ghost">GitHub→</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DA Project 2 -->
+        <div class="project-card reveal reveal-delay-2" id="project-da-2">
+          <div class="project-card-thumbnail">
+            <img src="assets/images/olympics.png" alt="Olympics Analysis Dashboard">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Olympics Analysis Dashboard</h3>
+            <p class="project-card-description">
+              An interactive Dashboard analyzing historical Olympic Games data spanning 1896–2016(120 years). The
+              dashboard provides country-level insights into athlete participation, medal tallies, sport-wise
+              performance, gender distribution, and age demographics,
+              all dynamically filterable by country and year range.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag data">Excel</span>
+              <span class="tag data">Power BI</span>
+              <span class="tag data">Data Modeling</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/Yash-lab01/Olympics_analysis_dashboard" class="card-btn card-btn-ghost">GitHub
+                →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DA Project 3 -->
+        <div class="project-card reveal reveal-delay-3" id="project-da-3">
+          <div class="project-card-thumbnail">
+            <span class="placeholder-icon">💰</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Financial Reporting Model</h3>
+            <p class="project-card-description">
+              Automated financial reporting pipeline built in Excel with dynamic pivot tables, variance analysis, and
+              forecasting models for quarterly business reviews.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag data">Excel</span>
+              <span class="tag data">VBA</span>
+              <span class="tag data">Financial Analysis</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="#" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-wrapper reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="contact-cta">Let's Build Something Together</h2>
+        <p class="contact-text">
+          I'm always open to discussing new projects, collaboration opportunities, or just chatting about AI and data.
+          Feel free to reach out!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:yash@example.com" class="contact-link" id="contact-email">
+            ✉️ Email Me
+          </a>
+          <a href="https://linkedin.com/in/yashbhawar" target="_blank" rel="noopener" class="contact-link"
+            id="contact-linkedin">
+            💼 LinkedIn
+          </a>
+          <a href="https://github.com/yashbhawar" target="_blank" rel="noopener" class="contact-link"
+            id="contact-github">
+            🐙 GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
