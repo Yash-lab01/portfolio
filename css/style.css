@@ -642,9 +642,13 @@ img {
 
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+#ai-llm .projects-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
   justify-content: center;
-  gap: 28px;
 }
 
 /* ---------- Project Card ---------- */
@@ -894,6 +898,9 @@ img {
     justify-content: center;
   }
 
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
