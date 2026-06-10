@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">Museum Booking Chatbot</h1>
         <p class="project-detail-tagline">
-          Discover Indian museums, explore detailed information, and book tickets — all through natural conversation 
+          Discover Indian museums, explore detailed information, and book tickets — all through natural conversation
           with an AI agent.
         </p>
         <div class="project-detail-tags">
@@ -53,357 +53,481 @@
           <span class="tag">Python</span>
         </div>
         <div class="project-detail-links">
-          <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener"
-            class="btn btn-primary">
+          <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener" class="btn btn-primary">
             View on GitHub →
           </a>
         </div>
       </div>
     </div>
-  </section>
+    <!-- ========== DEMO SHOWCASE (VIDEO & LANDING SCREEN) ========== -->
+    <section class="project-section">
+      <div class="container">
+        <div class="demo-showcase-container">
 
-  <!-- ========== DEMO SCREENSHOT ========== -->
-  <section class="project-section">
-    <div class="container">
-      <div class="demo-showcase">
-        <!-- TODO: Replace with actual screenshot or GIF of the Streamlit chat UI -->
-        <!-- SUGGESTED GIF: Record a conversation flow — search "museums in Kolkata" → get results → ask details about Indian Museum → book tickets. Shows the full multi-turn workflow. -->
-        <div class="demo-placeholder">
-          <span class="placeholder-icon">📸</span>
-          <p>Chatbot Conversation Demo GIF</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PROBLEM & SOLUTION ========== -->
-  <section class="project-section">
-    <div class="container">
-      <div class="content-grid">
-        <div class="content-block">
-          <h2 class="detail-section-title">💡 The Problem</h2>
-          <p>
-            Tourists and locals wanting to visit Indian museums face fragmented information — scattered across multiple 
-            websites with no unified way to search, compare, and book tickets. Museums need 24/7 booking capability 
-            but can't afford dedicated staff for every inquiry.
-          </p>
-        </div>
-        <div class="content-block">
-          <h2 class="detail-section-title">🎯 The Solution</h2>
-          <p>
-            A <strong>conversational AI agent</strong> that understands natural language queries about museums. 
-            Users can search by city or theme, get detailed info (timings, prices, facilities), and complete 
-            ticket bookings — all within a single chat interface. The agent remembers context across turns, enabling 
-            natural multi-step workflows like <em>search → details → book</em>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== KEY FEATURES ========== -->
-  <section class="project-section section-alt">
-    <div class="container">
-      <h2 class="detail-section-title center">⚡ Key Features</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">🔍</span>
-          <h3>Fuzzy-Matched Search</h3>
-          <p>Typo-tolerant museum search using Python's difflib. Users can type "Kalkutta" and still find museums in Kolkata.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🧠</span>
-          <h3>Stateful LangGraph Agent</h3>
-          <p>ReAct agent with MemorySaver checkpointing — remembers the entire conversation context for multi-turn workflows.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🎟️</span>
-          <h3>End-to-End Booking</h3>
-          <p>Search museums → get details → book tickets with automatic price calculation for adults and children.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">✂️</span>
-          <h3>Context History Trimming</h3>
-          <p>Intelligent message trimming keeps conversations within the LLM's 8192 token context window without losing critical context.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🆕</span>
-          <h3>New Chat / Thread Support</h3>
-          <p>Users can start fresh conversations with a new thread ID, keeping previous booking history intact while starting a clean chat.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">♿</span>
-          <h3>Wheelchair Accessibility Filter</h3>
-          <p>Dedicated search parameter for wheelchair-accessible museums, making the tool inclusive for all users.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ARCHITECTURE ========== -->
-  <section class="project-section">
-    <div class="container">
-      <h2 class="detail-section-title center">🏗️ Architecture</h2>
-      <div class="architecture-flow">
-        <div class="arch-node">
-          <span class="arch-icon">👤</span>
-          <span class="arch-label">User Message</span>
-          <span class="arch-sublabel">Streamlit Chat UI</span>
-        </div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node">
-          <span class="arch-icon">🧠</span>
-          <span class="arch-label">LangGraph ReAct Agent</span>
-          <span class="arch-sublabel">Llama 3.2 via Ollama</span>
-        </div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node">
-          <span class="arch-icon">🔧</span>
-          <span class="arch-label">Tool Selection</span>
-          <span class="arch-sublabel">Search / Details / Book</span>
-        </div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node">
-          <span class="arch-icon">🗄️</span>
-          <span class="arch-label">MySQL Database</span>
-          <span class="arch-sublabel">Connection Pool</span>
-        </div>
-      </div>
-
-      <div class="architecture-detail">
-        <div class="arch-component">
-          <h3>Agent & Tools (core/)</h3>
-          <ul>
-            <li><code>llm.py</code> — LangGraph ReAct agent with history trimming & checkpointing</li>
-            <li><code>tools.py</code> — Three LangChain tools: search_museums, get_museum_details, book_ticket</li>
-            <li><code>db.py</code> — MySQL connection pool for handling concurrent requests</li>
-          </ul>
-        </div>
-        <div class="arch-component">
-          <h3>Frontend & Entry Points</h3>
-          <ul>
-            <li><code>app.py</code> — Streamlit web UI with chat interface & new conversation button</li>
-            <li><code>terminal.py</code> — CLI entry point for terminal-based interaction</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONVERSATION DEMO ========== -->
-  <section class="project-section section-alt">
-    <div class="container">
-      <h2 class="detail-section-title center">💬 Conversation Flow</h2>
-      <div class="conversation-demo">
-        <div class="chat-message user">
-          <span class="chat-role">You</span>
-          <p>Show me museums in Kolkata</p>
-        </div>
-        <div class="chat-message bot">
-          <span class="chat-role">Museum Bot</span>
-          <p>Found 3 matching museums:</p>
-          <ul>
-            <li><strong>Indian Museum</strong> in Kolkata, West Bengal (Open: 10:00 AM - 5:00 PM)</li>
-            <li><strong>Victoria Memorial Hall</strong> in Kolkata, West Bengal (Open: 10:00 AM - 6:00 PM)</li>
-            <li><strong>Science City</strong> in Kolkata, West Bengal (Open: 9:00 AM - 8:00 PM)</li>
-          </ul>
-        </div>
-        <div class="chat-message user">
-          <span class="chat-role">You</span>
-          <p>Tell me more about Indian Museum</p>
-        </div>
-        <div class="chat-message bot">
-          <span class="chat-role">Museum Bot</span>
-          <p>
-            <strong>Indian Museum</strong> (Kolkata)<br>
-            📍 27, Jawaharlal Nehru Rd, West Bengal<br>
-            🎨 Theme: General (Est. 1814)<br>
-            🎫 Adult: ₹75 | Child: ₹20<br>
-            ⏰ 10:00 AM - 5:00 PM (Closed on Mondays)
-          </p>
-        </div>
-        <div class="chat-message user">
-          <span class="chat-role">You</span>
-          <p>Book 2 adult tickets for 2026-06-15</p>
-        </div>
-        <div class="chat-message bot">
-          <span class="chat-role">Museum Bot</span>
-          <p>
-            ✅ <strong>Booking Confirmed!</strong><br>
-            2 Adults, 0 Children for Indian Museum (Kolkata)<br>
-            📅 Date: 2026-06-15<br>
-            💰 Total: ₹150
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== STREAMLIT APP SCREENSHOTS ========== -->
-  <section class="project-section">
-    <div class="container">
-      <h2 class="detail-section-title center">📱 Streamlit App</h2>
-      <div class="demo-grid">
-        <div class="demo-card">
-          <!-- TODO: Screenshot of the Streamlit chat UI with messages -->
-          <!-- SUGGESTED: Screenshot showing the Streamlit sidebar + chat interface with a museum search conversation -->
-          <div class="demo-placeholder small">
-            <span class="placeholder-icon">📸</span>
-            <p>Chat Interface</p>
+          <!-- Screen Recording Player -->
+          <div class="demo-showcase-item">
+            <h3 class="showcase-item-title">🎬 Streamlit App Screen Recording</h3>
+            <div class="video-wrapper">
+              <video class="showcase-video" controls preload="metadata"
+                poster="../assets/project_images/museum_chatbot/10.png">
+                <source
+                  src="../assets/project_images/museum_chatbot/recording/Screen%20Recording%202026-06-10%20001802.mp4"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <h3>Chat Interface</h3>
-          <p>Clean Streamlit chat UI with message history, typing indicators, and a natural conversation flow.</p>
-        </div>
-        <div class="demo-card">
-          <!-- TODO: Screenshot showing the "New Chat" button and thread switching -->
-          <!-- SUGGESTED: Screenshot showing the new chat button in the sidebar, demonstrating thread management -->
-          <div class="demo-placeholder small">
-            <span class="placeholder-icon">📸</span>
-            <p>New Chat Feature</p>
+
+          <!-- Chatbot Landing Screen (Image 10) -->
+          <div class="demo-showcase-item">
+            <h3 class="showcase-item-title">📱 Chatbot Landing Interface</h3>
+            <div class="image-wrapper">
+              <img src="../assets/project_images/museum_chatbot/10.png" alt="Museum Chatbot Landing Screen"
+                class="showcase-img">
+            </div>
           </div>
-          <h3>Thread Management</h3>
-          <p>Start new conversations with a fresh thread ID. Previous booking data persists in the database.</p>
-        </div>
-        <div class="demo-card">
-          <!-- TODO: Screenshot showing a booking confirmation in the chat -->
-          <!-- SUGGESTED: Screenshot of the bot confirming a ticket booking with price breakdown -->
-          <div class="demo-placeholder small">
-            <span class="placeholder-icon">📸</span>
-            <p>Booking Flow</p>
-          </div>
-          <h3>Ticket Booking</h3>
-          <p>Complete end-to-end booking flow — from museum discovery to confirmed tickets with price calculation.</p>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== TOOLS REFERENCE ========== -->
-  <section class="project-section section-alt">
-    <div class="container">
-      <h2 class="detail-section-title center">🧩 Agent Tools</h2>
-      <div class="tools-grid">
-        <div class="tool-card">
-          <h3><code>search_museums_tool</code></h3>
-          <p>Search museums by city name, theme, or keyword. Supports wheelchair accessibility filtering. Uses fuzzy matching to handle typos and partial names.</p>
-          <div class="tool-params">
-            <span class="tool-param">query</span>
-            <span class="tool-param">needs_wheelchair</span>
+    <section class="project-section">
+      <div class="container">
+        <div class="content-grid">
+          <div class="content-block">
+            <h2 class="detail-section-title">💡 The Problem</h2>
+            <p>
+              Tourists and locals wanting to visit Indian museums face fragmented information — scattered across
+              multiple
+              websites with no unified way to search, compare, and book tickets. Museums need 24/7 booking capability
+              but can't afford dedicated staff for every inquiry.
+            </p>
           </div>
-        </div>
-        <div class="tool-card">
-          <h3><code>get_museum_details_tool</code></h3>
-          <p>Retrieve complete information for a specific museum — address, timings, prices, facilities, overview, and closed days.</p>
-          <div class="tool-params">
-            <span class="tool-param">museum_name</span>
-            <span class="tool-param">city</span>
-          </div>
-        </div>
-        <div class="tool-card">
-          <h3><code>book_ticket_tool</code></h3>
-          <p>Book tickets for a specific museum, date, and party size. Automatically calculates total price based on adult and child counts.</p>
-          <div class="tool-params">
-            <span class="tool-param">museum_name</span>
-            <span class="tool-param">city</span>
-            <span class="tool-param">booking_date</span>
-            <span class="tool-param">adult_count</span>
-            <span class="tool-param">child_count</span>
+          <div class="content-block">
+            <h2 class="detail-section-title">🎯 The Solution</h2>
+            <p>
+              A <strong>conversational AI agent</strong> that understands natural language queries about museums.
+              Users can search by city or theme, get detailed info (timings, prices, facilities), and complete
+              ticket bookings — all within a single chat interface. The agent remembers context across turns, enabling
+              natural multi-step workflows like <em>search → details → book</em>.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== TECH STACK ========== -->
-  <section class="project-section">
-    <div class="container">
-      <h2 class="detail-section-title center">🛠️ Tech Stack</h2>
-      <div class="tech-stack-grid">
-        <div class="tech-item">
-          <h4>LLM</h4>
-          <p>Llama 3.2 (local via Ollama)</p>
-        </div>
-        <div class="tech-item">
-          <h4>Agent Framework</h4>
-          <p>LangGraph (ReAct + checkpointing)</p>
-        </div>
-        <div class="tech-item">
-          <h4>Tool Bindings</h4>
-          <p>LangChain</p>
-        </div>
-        <div class="tech-item">
-          <h4>Frontend</h4>
-          <p>Streamlit</p>
-        </div>
-        <div class="tech-item">
-          <h4>Database</h4>
-          <p>MySQL + Connection Pool</p>
-        </div>
-        <div class="tech-item">
-          <h4>Fuzzy Matching</h4>
-          <p>Python difflib</p>
+    <!-- ========== KEY FEATURES ========== -->
+    <section class="project-section section-alt">
+      <div class="container">
+        <h2 class="detail-section-title center">⚡ Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🔍</span>
+            <h3>Fuzzy-Matched Search</h3>
+            <p>Typo-tolerant museum search using Python's difflib. Users can type "Kalkutta" and still find museums in
+              Kolkata.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🧠</span>
+            <h3>Stateful LangGraph Agent</h3>
+            <p>ReAct agent with MemorySaver checkpointing — remembers the entire conversation context for multi-turn
+              workflows.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🎟️</span>
+            <h3>End-to-End Booking</h3>
+            <p>Search museums → get details → book tickets with automatic price calculation for adults and children.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">✂️</span>
+            <h3>Context History Trimming</h3>
+            <p>Intelligent message trimming keeps conversations within the LLM's 8192 token context window without
+              losing critical context.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🆕</span>
+            <h3>New Chat / Thread Support</h3>
+            <p>Users can start fresh conversations with a new thread ID, keeping previous booking history intact while
+              starting a clean chat.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">♿</span>
+            <h3>Wheelchair Accessibility Filter</h3>
+            <p>Dedicated search parameter for wheelchair-accessible museums, making the tool inclusive for all users.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== CHALLENGES & LEARNINGS ========== -->
-  <section class="project-section section-alt">
-    <div class="container">
-      <h2 class="detail-section-title center">🧩 Challenges & Learnings</h2>
-      <div class="challenges-list">
-        <div class="challenge-item">
-          <h3>Preventing LLM Tool-Call Hallucinations</h3>
-          <p>
-            The Llama 3.2 model would sometimes fabricate museum data instead of calling the database tools. Solved 
-            by refining the system prompt with strict instructions to always use tools for museum queries, and building 
-            an evaluation dataset to test accuracy across different query types.
-          </p>
+    <!-- ========== ARCHITECTURE ========== -->
+    <section class="project-section">
+      <div class="container">
+        <h2 class="detail-section-title center">🏗️ Architecture</h2>
+        <div class="architecture-flow">
+          <div class="arch-node">
+            <span class="arch-icon">👤</span>
+            <span class="arch-label">User Message</span>
+            <span class="arch-sublabel">Streamlit Chat UI</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-icon">🧠</span>
+            <span class="arch-label">LangGraph ReAct Agent</span>
+            <span class="arch-sublabel">qwen2.5(base) via Ollama</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-icon">🔧</span>
+            <span class="arch-label">Tool Selection</span>
+            <span class="arch-sublabel">Search / Details / Book</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-icon">🗄️</span>
+            <span class="arch-label">MySQL Database</span>
+            <span class="arch-sublabel">Connection Pool</span>
+          </div>
         </div>
-        <div class="challenge-item">
-          <h3>Context Window Overflow in Long Conversations</h3>
-          <p>
-            Booking workflows can span 10+ messages, easily overflowing the 8192 token limit. Implemented 
-            <code>trim_messages</code> with <code>start_on="human"</code> to intelligently prune older messages while 
-            keeping the conversation coherent. Made the max history configurable via <code>MAX_HISTORY_MESSAGES</code>.
-          </p>
-        </div>
-        <div class="challenge-item">
-          <h3>Handling User Typos in Museum Names</h3>
-          <p>
-            Users type museum names in many ways — "indian museum", "Indian Musuem", "indain museum". Implemented 
-            fuzzy matching with Python's difflib to find the closest match and return relevant results even with 
-            significant spelling errors.
-          </p>
+
+        <div class="architecture-detail">
+          <div class="arch-component">
+            <h3>Agent & Tools (core/)</h3>
+            <ul>
+              <li><code>llm.py</code> — LangGraph ReAct agent with history trimming & checkpointing</li>
+              <li><code>tools.py</code> — Three LangChain tools: search_museums, get_museum_details, book_ticket</li>
+              <li><code>db.py</code> — MySQL connection pool for handling concurrent requests</li>
+            </ul>
+          </div>
+          <div class="arch-component">
+            <h3>Frontend & Entry Points</h3>
+            <ul>
+              <li><code>app.py</code> — Streamlit web UI with chat interface & new conversation button</li>
+              <li><code>terminal.py</code> — CLI entry point for terminal-based interaction</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
-    </div>
-  </footer>
+    <!-- ========== CONVERSATION FLOWS (CAROUSELS) ========== -->
+    <section class="project-section">
+      <div class="container">
+        <h2 class="detail-section-title center">💬 Interactive Conversation Walkthroughs</h2>
+        <p class="section-subtitle center">Step-by-step walkthroughs of the chatbot performing museum discovery, ticket
+          booking, and error handling.</p>
 
-  <script>
-    // Minimal JS for hamburger on project pages
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-      });
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('open');
+        <!-- Carousel 1: Pune Museum Flow (1, 2, 3, 4) -->
+        <div class="carousel-wrapper">
+          <h3 class="carousel-section-title">🔄 Flow 1: Search & Successful Booking (Pune)</h3>
+          <div class="custom-carousel" id="carousel-pune">
+            <div class="carousel-track-container">
+              <ul class="carousel-track">
+                <li class="carousel-slide active">
+                  <img src="../assets/project_images/museum_chatbot/1.png" alt="Listing Museums in Pune"
+                    class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 1: Discovering Museums</h4>
+                    <p>The user searches for "list of museums in pune", prompting the chatbot to retrieve matching
+                      entries from the MySQL database.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/2.png" alt="Detailed Information"
+                    class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 2: Exploring Museum Details</h4>
+                    <p>The chatbot provides comprehensive information including address, timings, entry fees, and
+                      facilities for the selected museum.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/3.png" alt="Booking Intention" class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 3: Booking Request</h4>
+                    <p>The user asks to book tickets. The chatbot automatically extracts parameters and queries for
+                      confirmation with a pricing summary.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/4.png" alt="Successful Booking Confirmation"
+                    class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 4: Ticket Confirmed</h4>
+                    <p>Upon user confirmation, the system creates a secure booking entry in the database and returns a
+                      validation receipt.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-btn btn-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn btn-next" aria-label="Next slide">›</button>
+            <!-- Indicators -->
+            <div class="carousel-nav-dots">
+              <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" aria-label="Go to slide 3"></button>
+              <button class="carousel-dot" aria-label="Go to slide 4"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel 2: Goa Museum & Validation Flow (5, 6, 7, 8) -->
+        <div class="carousel-wrapper">
+          <h3 class="carousel-section-title">🔄 Flow 2: Multi-Turn Corrections & Handling Edge Cases</h3>
+          <div class="custom-carousel" id="carousel-goa">
+            <div class="carousel-track-container">
+              <ul class="carousel-track">
+                <li class="carousel-slide active">
+                  <img src="../assets/project_images/museum_chatbot/5.png" alt="Goa Museums List" class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 1: Regional Search</h4>
+                    <p>Searching for "museums in goa" lists all matching options. The system displays 10 cultural sites
+                      in the region.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/6.png" alt="Location Correction"
+                    class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 2: Cross-Region Clarification</h4>
+                    <p>When requesting a museum outside Goa (Heritage Transport Museum), the bot identifies the correct
+                      state (Haryana) and continues.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/7.png" alt="Name Correction" class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 3: Name & State Disambiguation</h4>
+                    <p>For ambiguous names like "Darpan Art Gallery", the agent checks matching database entries and
+                      asks the user to confirm the state.</p>
+                  </div>
+                </li>
+                <li class="carousel-slide">
+                  <img src="../assets/project_images/museum_chatbot/8.png" alt="Date Validation Error"
+                    class="carousel-img">
+                  <div class="carousel-caption">
+                    <h4>Step 4: Date Validation Error</h4>
+                    <p>If the booking date is set in the past, the database transaction aborts and the agent notifies
+                      the user of the validation failure.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-btn btn-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn btn-next" aria-label="Next slide">›</button>
+            <!-- Indicators -->
+            <div class="carousel-nav-dots">
+              <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" aria-label="Go to slide 3"></button>
+              <button class="carousel-dot" aria-label="Go to slide 4"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== TOOLS REFERENCE ========== -->
+    <section class="project-section section-alt">
+      <div class="container">
+        <h2 class="detail-section-title center">🧩 Agent Tools</h2>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <h3><code>search_museums_tool</code></h3>
+            <p>Search museums by city name, theme, or keyword. Supports wheelchair accessibility filtering. Uses fuzzy
+              matching to handle typos and partial names.</p>
+            <div class="tool-params">
+              <span class="tool-param">query</span>
+              <span class="tool-param">needs_wheelchair</span>
+            </div>
+          </div>
+          <div class="tool-card">
+            <h3><code>get_museum_details_tool</code></h3>
+            <p>Retrieve complete information for a specific museum — address, timings, prices, facilities, overview, and
+              closed days.</p>
+            <div class="tool-params">
+              <span class="tool-param">museum_name</span>
+              <span class="tool-param">city</span>
+            </div>
+          </div>
+          <div class="tool-card">
+            <h3><code>book_ticket_tool</code></h3>
+            <p>Book tickets for a specific museum, date, and party size. Automatically calculates total price based on
+              adult and child counts.</p>
+            <div class="tool-params">
+              <span class="tool-param">museum_name</span>
+              <span class="tool-param">city</span>
+              <span class="tool-param">booking_date</span>
+              <span class="tool-param">adult_count</span>
+              <span class="tool-param">child_count</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TECH STACK ========== -->
+    <section class="project-section">
+      <div class="container">
+        <h2 class="detail-section-title center">🛠️ Tech Stack</h2>
+        <div class="tech-stack-grid">
+          <div class="tech-item">
+            <h4>LLM</h4>
+            <p>qwen2.5 local via Ollama)</p>
+          </div>
+          <div class="tech-item">
+            <h4>Agent Framework</h4>
+            <p>LangGraph (ReAct + checkpointing)</p>
+          </div>
+          <div class="tech-item">
+            <h4>Tool Bindings</h4>
+            <p>LangChain</p>
+          </div>
+          <div class="tech-item">
+            <h4>Frontend</h4>
+            <p>Streamlit</p>
+          </div>
+          <div class="tech-item">
+            <h4>Database</h4>
+            <p>MySQL + Connection Pool</p>
+          </div>
+          <div class="tech-item">
+            <h4>Fuzzy Matching</h4>
+            <p>Python difflib</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CHALLENGES & LEARNINGS ========== -->
+    <section class="project-section section-alt">
+      <div class="container">
+        <h2 class="detail-section-title center">🧩 Challenges & Learnings</h2>
+        <div class="challenges-list">
+          <div class="challenge-item">
+            <h3>Preventing LLM Tool-Call Hallucinations</h3>
+            <p>
+              The qwen2.5 model would sometimes fabricate museum data instead of calling the database tools. Solved
+              by refining the system prompt with strict instructions to always use tools for museum queries, and
+              building
+              an evaluation dataset to test accuracy across different query types.
+            </p>
+          </div>
+          <div class="challenge-item">
+            <h3>Context Window Overflow in Long Conversations</h3>
+            <p>
+              Booking workflows can span 10+ messages, easily overflowing the 8192 token limit. Implemented
+              <code>trim_messages</code> with <code>start_on="human"</code> to intelligently prune older messages while
+              keeping the conversation coherent. Made the max history configurable via
+              <code>MAX_HISTORY_MESSAGES</code>.
+            </p>
+          </div>
+          <div class="challenge-item">
+            <h3>Handling User Typos in Museum Names</h3>
+            <p>
+              Users type museum names in many ways — "indian museum", "Indian Musuem", "indain museum". Implemented
+              fuzzy matching with Python's difflib to find the closest match and return relevant results even with
+              significant spelling errors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+      </div>
+    </footer>
+
+    <script>
+      // Minimal JS for hamburger on project pages
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('open');
         });
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('open');
+          });
+        });
+
+        // Carousel logic for Pune and Goa flows
+        const initCarousel = (carouselId) => {
+          const carousel = document.getElementById(carouselId);
+          if (!carousel) return;
+
+          const track = carousel.querySelector('.carousel-track');
+          const slides = Array.from(track.children);
+          const nextButton = carousel.querySelector('.btn-next');
+          const prevButton = carousel.querySelector('.btn-prev');
+          const dotsNav = carousel.querySelector('.carousel-nav-dots');
+          const dots = Array.from(dotsNav.children);
+
+          let currentIndex = 0;
+
+          const updateCarousel = (index) => {
+            // Track sliding (each slide occupies 25% of the 400% wide track)
+            track.style.transform = `translateX(-${index * 25}%)`;
+
+            // Update active slide class
+            slides.forEach((slide, i) => {
+              if (i === index) {
+                slide.classList.add('active');
+              } else {
+                slide.classList.remove('active');
+              }
+            });
+
+            // Update active dot
+            dots.forEach((dot, i) => {
+              if (i === index) {
+                dot.classList.add('active');
+              } else {
+                dot.classList.remove('active');
+              }
+            });
+
+            currentIndex = index;
+          };
+
+          nextButton.addEventListener('click', () => {
+            let nextIndex = currentIndex + 1;
+            if (nextIndex >= slides.length) {
+              nextIndex = 0; // loop back to first slide
+            }
+            updateCarousel(nextIndex);
+          });
+
+          prevButton.addEventListener('click', () => {
+            let prevIndex = currentIndex - 1;
+            if (prevIndex < 0) {
+              prevIndex = slides.length - 1; // loop to last slide
+            }
+            updateCarousel(prevIndex);
+          });
+
+          dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              updateCarousel(index);
+            });
+          });
+        };
+
+        initCarousel('carousel-pune');
+        initCarousel('carousel-goa');
       });
-    });
-  </script>
+    </script>
 </body>
 
 </html>
