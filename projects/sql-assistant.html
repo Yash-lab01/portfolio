@@ -60,19 +60,63 @@
     </div>
   </section>
 
-  <!-- ========== DEMO SCREENSHOT ========== -->
-  <section class="project-section">
-    <div class="container">
-      <div class="demo-showcase">
-        <!-- TODO: Replace with actual screenshot or GIF of the Streamlit UI -->
-        <!-- SUGGESTED SCREENSHOT: Full Streamlit app showing sidebar (connected DB) + chat with a natural language query and SQL result table -->
-        <div class="demo-placeholder">
-          <span class="placeholder-icon">📸</span>
-          <p>App Demo Screenshot / GIF</p>
+    <!-- ========== TOP IMAGE ========== -->
+    <section class="project-section">
+      <div class="container">
+        <div class="image-wrapper">
+          <img src="../assets/project_images/sql/1.png" alt="SQL Assistant Overview" class="showcase-img lightbox-img">
         </div>
       </div>
+    </section>
+
+    <!-- ========== IMAGE CAROUSEL ========== -->
+    <section class="project-section">
+      <div class="container">
+        <h2 class="detail-section-title center">📸 Screenshots</h2>
+        <div class="carousel-wrapper">
+          <div class="custom-carousel" id="carousel-sql">
+            <div class="carousel-track-container">
+              <ul class="carousel-track" style="width: 500%;">
+                <li class="carousel-slide active" style="width: 20%;">
+                  <img src="../assets/project_images/sql/2.png" alt="SQL Assistant Screenshot 2" class="carousel-img lightbox-img">
+                </li>
+                <li class="carousel-slide" style="width: 20%;">
+                  <img src="../assets/project_images/sql/3.png" alt="SQL Assistant Screenshot 3" class="carousel-img lightbox-img">
+                </li>
+                <li class="carousel-slide" style="width: 20%;">
+                  <img src="../assets/project_images/sql/4.png" alt="SQL Assistant Screenshot 4" class="carousel-img lightbox-img">
+                </li>
+                <li class="carousel-slide" style="width: 20%;">
+                  <img src="../assets/project_images/sql/5.png" alt="SQL Assistant Screenshot 5" class="carousel-img lightbox-img">
+                </li>
+                <li class="carousel-slide" style="width: 20%;">
+                  <img src="../assets/project_images/sql/6.png" alt="SQL Assistant Screenshot 6" class="carousel-img lightbox-img">
+                </li>
+              </ul>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-btn btn-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn btn-next" aria-label="Next slide">›</button>
+            <!-- Indicators -->
+            <div class="carousel-nav-dots">
+              <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" aria-label="Go to slide 3"></button>
+              <button class="carousel-dot" aria-label="Go to slide 4"></button>
+              <button class="carousel-dot" aria-label="Go to slide 5"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" style="display:none;">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged image">
     </div>
-  </section>
+
+
 
   <!-- ========== PROBLEM & SOLUTION ========== -->
   <section class="project-section">
@@ -302,8 +346,9 @@
   </footer>
 
   <script>
-    // Minimal JS for hamburger on project pages
     document.addEventListener('DOMContentLoaded', () => {
+
+      // ---------- Hamburger ----------
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('navLinks');
       hamburger.addEventListener('click', () => {
@@ -316,6 +361,61 @@
           navLinks.classList.remove('open');
         });
       });
+
+      // ---------- Carousel ----------
+      const initCarousel = (carouselId, slideCount) => {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = carousel.querySelector('.btn-next');
+        const prevButton = carousel.querySelector('.btn-prev');
+        const dotsNav = carousel.querySelector('.carousel-nav-dots');
+        const dots = Array.from(dotsNav.children);
+        let currentIndex = 0;
+        const slideWidthPct = 100 / slideCount;
+
+        const updateCarousel = (index) => {
+          track.style.transform = `translateX(-${index * slideWidthPct}%)`;
+          slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+          dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+          currentIndex = index;
+        };
+
+        nextButton.addEventListener('click', () => {
+          updateCarousel((currentIndex + 1) % slides.length);
+        });
+        prevButton.addEventListener('click', () => {
+          updateCarousel((currentIndex - 1 + slides.length) % slides.length);
+        });
+        dots.forEach((dot, i) => dot.addEventListener('click', () => updateCarousel(i)));
+      };
+
+      initCarousel('carousel-sql', 5);
+
+      // ---------- Lightbox ----------
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg   = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      document.querySelectorAll('.lightbox-img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightboxModal.style.display = 'flex';
+        });
+      });
+      lightboxClose.addEventListener('click', () => {
+        lightboxModal.style.display = 'none';
+      });
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) lightboxModal.style.display = 'none';
+      });
+      // Close with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightboxModal.style.display = 'none';
+      });
+
     });
   </script>
 </body>
