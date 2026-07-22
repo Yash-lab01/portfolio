@@ -647,8 +647,27 @@ img {
 }
 
 #ai-llm .projects-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 992px) {
+  #ai-llm .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #ai-llm .project-card:nth-child(7) {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+  #ai-llm .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #ai-llm .project-card:nth-child(7) {
+    grid-column: auto;
+  }
 }
 
 /* ---------- Project Card ---------- */

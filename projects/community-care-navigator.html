@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Care Navigator — Google GenAI Hackathon — Yash Bhawar</title>
+  <meta name="description"
+    content="An AI-powered Decision Intelligence Platform built for Google GenAI Hackathon using Google ADK, Gemini 2.5 Flash, Multimodal Vision OCR, BigQuery, and RAG to assist vulnerable populations with government welfare schemes.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Project · Google GenAI Hackathon</span>
+        <h1 class="project-detail-title">Community Care Navigator</h1>
+        <p class="project-detail-tagline">
+          Built for the <strong>Google GenAI Hackathon (Hack2Skill)</strong>. An AI-powered Decision Intelligence Platform helping vulnerable populations discover welfare schemes, locate healthcare facilities, and receive personalized guidance through natural conversation in English, Hindi, and regional languages.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">Google ADK</span>
+          <span class="tag ml">Gemini 2.5 Flash</span>
+          <span class="tag ml">Multimodal Vision</span>
+          <span class="tag">BigQuery / RAG</span>
+          <span class="tag">Plotly Mapbox</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Vulnerable citizens often miss out on life-changing government welfare programs due to language barriers, complex eligibility criteria, fragmented administrative websites, and difficulty filling out official paperwork manually.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            <strong>Community Care Navigator</strong> leverages Google ADK and Gemini 2.5 Flash to act as a warm, multilingual conversational guide. Users can speak naturally in regional languages or upload photos of official ID/income documents for instant multimodal OCR profile parsing and explainable scheme matching.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🤝</span>
+          <h3>Conversational Welfare Agent</h3>
+          <p>Orchestrated with <strong>Google ADK</strong> and Gemini 2.5 Flash to provide empathetic, multilingual guidance across English, Hindi, and regional dialects.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📷</span>
+          <h3>Multimodal Document Ingestion</h3>
+          <p>Upload photos of Aadhaar cards, Income certificates, or Disability documents to let Gemini Vision automatically extract records and pre-fill profiles.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔍</span>
+          <h3>Explainable Scheme Matching</h3>
+          <p>RAG engine matches citizens with eligible government policies and displays transparent visual checklists detailing why criteria passed.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🗺️</span>
+          <h3>Interactive Healthcare Density Map</h3>
+          <p>Plotly Mapbox overlays show real-time hospital locations, bed capacities, emergency contact details, and infrastructure gap analysis.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Hybrid / Local-First Database</h3>
+          <p>Auto-detects GCP configurations to utilize BigQuery Native Vector Search or falls back seamlessly to local SQLite vector embeddings.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📈</span>
+          <h3>Policy Analytics Dashboard</h3>
+          <p>Comprehensive Streamlit UI featuring regional coverage KPIs, scheme distribution metrics, and interactive filtering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ System Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">👤</span>
+          <span class="arch-label">User Input</span>
+          <span class="arch-sublabel">Voice / Photo / Text</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🧠</span>
+          <span class="arch-label">Google ADK Agent</span>
+          <span class="arch-sublabel">Gemini 2.5 Flash</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📷</span>
+          <span class="arch-label">Vision & Tools</span>
+          <span class="arch-sublabel">OCR + Scheme RAG</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🗄️</span>
+          <span class="arch-label">BigQuery / SQLite</span>
+          <span class="arch-sublabel">Vector Embeddings</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📊</span>
+          <span class="arch-label">Dashboard UI</span>
+          <span class="arch-sublabel">Plotly Mapbox + Metrics</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>Agent & AI Engine</h3>
+          <ul>
+            <li><code>agent/care_agent.py</code> — Google ADK agent configuration & tools coordinator</li>
+            <li><code>agent/tools.py</code> — 5 specialized agent tools (Database, RAG search, Vision OCR)</li>
+            <li><code>agent/prompts.py</code> — Empathetic system prompts & Pydantic structured schemas</li>
+            <li><code>data/embeddings.py</code> — Vertex AI <code>text-embedding-004</code> vector retriever</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Analytics & Maps</h3>
+          <ul>
+            <li><code>dashboard/analytics.py</code> — KPI cards and scheme eligibility breakdown charts</li>
+            <li><code>dashboard/maps.py</code> — Interactive Plotly Mapbox hospital density map</li>
+            <li><code>data/pipeline.py</code> — Automatic database initialization & local fallback loader</li>
+            <li><code>Dockerfile</code> — Container blueprint for Google Cloud Run deployment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Google ADK & Gemini 2.5</h3>
+          <p>Agent Development Kit framework paired with Gemini 2.5 Flash for conversational reasoning.</p>
+        </div>
+        <div class="feature-card">
+          <h3>BigQuery & Vertex AI</h3>
+          <p>Enterprise data warehouse vector search with <code>text-embedding-004</code> embeddings.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Streamlit & Plotly Mapbox</h3>
+          <p>Interactive web interface displaying live policy charts and spatial GIS map overlays.</p>
+        </div>
+        <div class="feature-card">
+          <h3>SQLite & Docker</h3>
+          <p>Zero-config local database fallback mode and Docker deployment pipeline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

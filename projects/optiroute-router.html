@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptiRoute — Remote-First AI Accuracy Router (AMD Hackathon) — Yash Bhawar</title>
+  <meta name="description"
+    content="An intelligent AI routing agent built for AMD Developer Hackathon Act II, featuring TF-IDF classification, Tier-0 deterministic Python solvers, Fireworks AI remote LLMs, and local quantized Qwen 1.5B GGUF fallback.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Project · AMD Developer Hackathon</span>
+        <h1 class="project-detail-title">OptiRoute — AI Accuracy Router</h1>
+        <p class="project-detail-tagline">
+          Built for the <strong>AMD Developer Hackathon (Act II — Track 1)</strong>. An intelligent hybrid accuracy routing agent that classifies tasks, executes deterministic solvers first (0 tokens), and routes complex prompts to specialized remote LLMs with chain-of-thought reasoning and self-consistency voting.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">AMD Hackathon</span>
+          <span class="tag ml">Fireworks AI</span>
+          <span class="tag ml">Qwen 1.5B GGUF</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Docker</span>
+          <span class="tag">SymPy</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/amd-track1-tokenrouter" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TOP SHOWCASE IMAGE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="image-wrapper" style="text-align: center;">
+        <img src="../assets/project_images/optiroute/1.png" alt="OptiRoute Architecture & Benchmarks" class="showcase-img lightbox-img" style="border-radius: 12px; border: 1px solid var(--border);">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Challenge</h2>
+          <p>
+            In hackathon scenarios and production environments, routing every query blindly to massive LLMs causes excessive latency, ballooning token costs, and unnecessary halluncinations for deterministic math or factual lookups. Conversely, relying solely on small local models leads to low accuracy on complex logic, code, and reasoning tasks.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            <strong>OptiRoute</strong> introduces a <strong>remote-first accuracy routing architecture</strong>. It utilizes sub-millisecond TF-IDF domain classification, checks for zero-token deterministic Python solvers (math, fact tables, AST code analysis), routes complex queries to specialized remote models (Fireworks AI), and falls back to a thread-safe local quantized Qwen 1.5B GGUF model if remote connections fail.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Tier 0 Deterministic Solvers</h3>
+          <p>Instantly solves math (SymPy, regex), fact lookups (59 verified facts), sentiment rules, and AST code fixes at <strong>0 token cost</strong> in < 1ms.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎯</span>
+          <h3>TF-IDF Domain Classifier</h3>
+          <p>Ultra-lightweight domain classifier (< 10MB model weight) that accurately categorizes incoming prompts into 8 specialized domain types.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🪤</span>
+          <h3>Semantic Trap Detector</h3>
+          <p>Identifies spatial puzzles, tricky wordings, and logic traps, ensuring trick queries bypass shortcuts and route directly to deep reasoning models.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🗳️</span>
+          <h3>Self-Consistency Voting & CoT</h3>
+          <p>Executes multi-candidate self-consistency voting (3 calls for math, 2 calls for logic) with Chain-of-Thought system prompts and answer extraction.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>Model Specialization</h3>
+          <p>Routes dynamically based on model strengths (e.g., Kimi for code execution, Minimax for complex logic, Gemma for factual reasoning).</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💻</span>
+          <h3>Local Quantized Fallback</h3>
+          <p>Embeds local Qwen2.5 1.5B GGUF via <code>llama-cpp-python</code> as a thread-safe emergency fallback to guarantee 100% service uptime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Routing Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">💬</span>
+          <span class="arch-label">Prompt Input</span>
+          <span class="arch-sublabel">Cache & Trap Check</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🎯</span>
+          <span class="arch-label">TF-IDF Classifier</span>
+          <span class="arch-sublabel">Domain Matching (< 1ms)</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">⚡</span>
+          <span class="arch-label">Tier 0 / Tier 1</span>
+          <span class="arch-sublabel">Deterministic vs Remote LLM</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🗳️</span>
+          <span class="arch-label">CoT & Voting</span>
+          <span class="arch-sublabel">Postprocessing & Validation</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">✅</span>
+          <span class="arch-label">Final Answer</span>
+          <span class="arch-sublabel">Validated Output</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>Routing & Classification Engine</h3>
+          <ul>
+            <li><code>agent/classifier.py</code> — High-speed TF-IDF domain classifier (< 10MB weight)</li>
+            <li><code>agent/trap_detector.py</code> — Semantic puzzle & trap detector override</li>
+            <li><code>agent/router.py</code> — Core remote-first router with deterministic zero-token shortcuts</li>
+            <li><code>agent/evaluator.py</code> — SymPy math evaluator, AST code parser, and output validators</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Inference & Execution Layer</h3>
+          <ul>
+            <li><code>agent/remote_model.py</code> — Fireworks AI API client with CoT, voting, and model fallback</li>
+            <li><code>agent/local_model.py</code> — Thread-safe local Qwen2.5 1.5B GGUF fallback runner</li>
+            <li><code>streamlit_app.py</code> — Interactive web application displaying real-time routing diagnostics</li>
+            <li><code>Dockerfile</code> — Multi-stage container setup ready for Hugging Face Spaces deployment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Fireworks AI</h3>
+          <p>Remote API provider for high-performance LLMs (Minimax, Kimi, Gemma 4).</p>
+        </div>
+        <div class="feature-card">
+          <h3>Qwen2.5 1.5B GGUF</h3>
+          <p>Quantized local LLM fallback integrated via <code>llama-cpp-python</code>.</p>
+        </div>
+        <div class="feature-card">
+          <h3>SymPy & AST</h3>
+          <p>Deterministic mathematical symbolic computation and Python AST code structure validation.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Streamlit & Docker</h3>
+          <p>Diagnostic web dashboard and automated container deployment for Hugging Face Spaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

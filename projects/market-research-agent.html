@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Market Research Agent System — Yash Bhawar</title>
+  <meta name="description"
+    content="An autonomous multi-agent market research system using LangGraph, Ollama, Groq, Tavily, and ChromaDB to search, verify, and synthesize deep business reports into structured PDFs.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Project</span>
+        <h1 class="project-detail-title">Autonomous Market Research Agent</h1>
+        <p class="project-detail-tagline">
+          Type a single market research question — 5 autonomous AI agents search the web, cross-verify claims, and synthesize structured executive reports with publication-quality PDF exports.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">LangGraph</span>
+          <span class="tag ml">Ollama</span>
+          <span class="tag ml">Groq</span>
+          <span class="tag">Tavily</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">n8n</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/Market-Research-Agent" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Conducting comprehensive market research is time-consuming and fragmented. Researchers must query multiple search engines, filter reliable sources from noise, cross-check facts, structure insights, and generate exportable reports — taking hours or days for every single query.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            An <strong>autonomous multi-agent workflow</strong> powered by LangGraph. Five specialized AI agents divide and conquer research tasks: breaking queries into sub-topics, executing real-time web searches, scraping full page content, verifying facts with local LLMs, and generating comprehensive reports complete with vector-search RAG and PDF export.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>5-Agent Collaboration</h3>
+          <p>Planner, Search, Scraper, Verifier, and Summarizer agents coordinate seamlessly through a stateful LangGraph execution engine.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Hybrid Model Topology</h3>
+          <p>Combines local privacy & cost efficiency (Ollama <code>qwen2.5:7b</code> for planning & verification) with high-speed cloud reasoning (Groq <code>llama-3.3-70b</code> for synthesis).</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🌐</span>
+          <h3>Real-time Web Scraping</h3>
+          <p>Leverages Tavily search API and <code>httpx</code> + <code>BeautifulSoup</code> web scrapers to parse live source articles, news, and market data.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📚</span>
+          <h3>Interactive Vector RAG</h3>
+          <p>Embeds scraped research articles into ChromaDB, allowing users to ask follow-up questions directly grounded in fetched source context.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📄</span>
+          <h3>ReportLab PDF Engine</h3>
+          <p>Generates publication-ready, multi-page executive PDFs containing executive summaries, key trends, source citations, and visual charts.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔄</span>
+          <h3>n8n Automation Workflows</h3>
+          <p>Includes pre-configured n8n workflows for Telegram trigger bots, automated daily re-research, and email PDF delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Multi-Agent Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">📋</span>
+          <span class="arch-label">Planner</span>
+          <span class="arch-sublabel">Ollama qwen2.5:7b</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🔍</span>
+          <span class="arch-label">Search & Scrape</span>
+          <span class="arch-sublabel">Tavily + BeautifulSoup</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🛡️</span>
+          <span class="arch-label">Fact Verifier</span>
+          <span class="arch-sublabel">Ollama Cross-Check</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🧠</span>
+          <span class="arch-label">Summarizer</span>
+          <span class="arch-sublabel">Groq Llama-3.3-70b</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📊</span>
+          <span class="arch-label">PDF & RAG</span>
+          <span class="arch-sublabel">ChromaDB + ReportLab</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>Agent Microservices</h3>
+          <ul>
+            <li><code>agents/planner.py</code> — Decomposes complex queries into focused research sub-tasks</li>
+            <li><code>agents/search.py</code> — Executes Tavily search queries for targeted market domains</li>
+            <li><code>agents/scraper.py</code> — Resilient HTML content extractor stripping site clutter</li>
+            <li><code>agents/verifier.py</code> — Evaluates source credibility and cross-verifies statistical claims</li>
+            <li><code>agents/summarizer.py</code> — Synthesizes structured JSON reports using Groq 70B</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Storage & Delivery Layer</h3>
+          <ul>
+            <li><code>graph/workflow.py</code> — LangGraph StateGraph connecting agent state transitions</li>
+            <li><code>db/chroma_client.py</code> — ChromaDB vector store for semantic interactive Q&A</li>
+            <li><code>report/pdf_builder.py</code> — ReportLab engine generating styled PDF reports</li>
+            <li><code>n8n/</code> — Automation JSONs for Telegram triggers and automated email delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>LangGraph</h3>
+          <p>Stateful multi-agent orchestration framework for complex cyclic AI graph workflows.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Ollama & Groq</h3>
+          <p>Hybrid local LLM (qwen2.5:7b) and ultra-fast cloud LLM inference API (llama-3.3-70b).</p>
+        </div>
+        <div class="feature-card">
+          <h3>FastAPI & Streamlit</h3>
+          <p>Production REST API backend with Swagger docs and an intuitive 4-tab Streamlit dashboard.</p>
+        </div>
+        <div class="feature-card">
+          <h3>ChromaDB & SQLite</h3>
+          <p>Vector store for conversational document RAG and relational database for research history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
