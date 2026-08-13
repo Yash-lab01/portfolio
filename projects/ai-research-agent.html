@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Research OS — Autonomous Research Assistant — Yash Bhawar</title>
+  <meta name="description"
+    content="An autonomous AI research operating system and multi-agent assistant built with LangGraph, Next.js 15, FastAPI, Qdrant, Groq, and Ollama to discover, ingest, and synthesize scientific papers with paragraph-level citation traceability.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Project</span>
+        <h1 class="project-detail-title">AI Research OS — Autonomous Research Assistant</h1>
+        <p class="project-detail-tagline">
+          An autonomous, local-first & cloud-boosted AI research assistant. Discovers arXiv papers, parses complex layouts, captions figures with vision models, and generates literature reviews & comparisons via a LangGraph multi-agent pipeline with paragraph-level citation traceability.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">LangGraph</span>
+          <span class="tag ml">Next.js 15</span>
+          <span class="tag ml">FastAPI</span>
+          <span class="tag">Qdrant</span>
+          <span class="tag">Groq 70B</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">Docling</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Academic and industrial researchers are overwhelmed by thousands of new papers published weekly. Ingesting, cross-comparing backbones, identifying novel open gaps, verifying mathematical proofs, and extracting architectural diagrams is slow, manual, and prone to hallucinated literature citations when using standard chat LLMs.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            <strong>AI Research OS</strong> builds an end-to-end multi-agent research pipeline. It fetches papers directly from arXiv, runs hybrid PDF layout parsing with vision figure captioning, indexes embeddings in Qdrant, and coordinates specialized LangGraph agents (Planner, Search, Reading, Writing) to deliver streaming chat with verified paragraph citations, literature reviews, and research gap matrices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🔍</span>
+          <h3>arXiv Discovery & Smart Ingest</h3>
+          <p>Search arXiv with relevance/date filters, batch-queue papers in one click with duplicate prevention, and track real-time parsing pipelines.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📄</span>
+          <h3>Hybrid PDF Intelligence</h3>
+          <p>Combines fast-path <code>pdfplumber</code> with <code>Docling</code> layout-aware fallback, extracting formulas <code>[MATH]</code>, markdown tables <code>[TABLE]</code>, and figures.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🖼️</span>
+          <h3>AI Figure Captioning</h3>
+          <p>Extracts architecture diagrams and benchmark plots, generating detailed technical captions using local <code>qwen2.5vl:3b</code> vision models.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💬</span>
+          <h3>Streaming Chat & Verified RAG</h3>
+          <p>Server-Sent Events (SSE) streaming chat with live agent step-logs and clickable paragraph-level citation badges opening exact source context.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>Dual LLM Router & Auto-Failover</h3>
+          <p>Routes interactive tasks to Groq (<code>llama-3.3-70b</code>) for lightning speed and background bulk extraction to local Ollama (<code>qwen2.5:7b</code>) with automatic rate-limit failovers.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📊</span>
+          <h3>Survey Generator & Gap Finder</h3>
+          <p>Surfaces open research problems by cross-referencing paper limitations, builds side-by-side taxonomy matrices, and exports citations in BibTeX/APA format.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Multi-Agent Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">🔍</span>
+          <span class="arch-label">Search / Ingest</span>
+          <span class="arch-sublabel">arXiv + Docling PDF</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📋</span>
+          <span class="arch-label">Planner Agent</span>
+          <span class="arch-sublabel">Intent: QA / Survey / Gap</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📚</span>
+          <span class="arch-label">Reading Agent</span>
+          <span class="arch-sublabel">Qdrant Vector Retrieval</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">✍️</span>
+          <span class="arch-label">Writing Agent</span>
+          <span class="arch-sublabel">Groq 70B + Citation RAG</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">⚡</span>
+          <span class="arch-label">Next.js 15 UI</span>
+          <span class="arch-sublabel">SSE Stream & Inspector</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>LangGraph Multi-Agent Backend</h3>
+          <ul>
+            <li><code>backend/app/agents/planner.py</code> — Intent classifier routing to QA, comparison, or literature survey pipelines</li>
+            <li><code>backend/app/agents/reading.py</code> — Qdrant vector retriever fetching paragraph-level context</li>
+            <li><code>backend/app/agents/writing.py</code> — Synthesis and citation engine enforcing inline verification badges</li>
+            <li><code>backend/app/agents/gap_finder.py</code> — Cross-references paper limitations to uncover unexplored research directions</li>
+            <li><code>backend/app/services/llm_factory.py</code> — Dynamic dual router connecting Groq 70B and local Ollama instances</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Frontend & Storage Subsystems</h3>
+          <ul>
+            <li><code>frontend/src/</code> — Next.js 15 App Router interface with responsive glassmorphic dark theme and audio voice research mode</li>
+            <li><code>backend/app/services/pdf_parser.py</code> — Layout extraction engine integrating pdfplumber, Docling, and vision captioning</li>
+            <li><code>backend/app/services/vector_store.py</code> — Persistent Qdrant vector database with semantic similarity search</li>
+            <li><code>backend/app/main.py</code> — FastAPI server providing SSE streaming endpoints and BibTeX/CSV export APIs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Next.js 15 & React 19</h3>
+          <p>Modern frontend with SSE real-time streaming, interactive matrix views, and citation drawers.</p>
+        </div>
+        <div class="feature-card">
+          <h3>LangGraph & FastAPI</h3>
+          <p>Stateful cyclic multi-agent graph orchestration paired with high-performance asynchronous REST endpoints.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Groq 70B & Ollama Vision</h3>
+          <p>Ultra-low latency Llama-3.3-70b cloud inference with local Qwen2.5-7B and Qwen2.5-VL-3B vision models.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Qdrant & Docling</h3>
+          <p>High-dimensional vector similarity store with layout-aware multimodal PDF document extraction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
