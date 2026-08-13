@@ -6,40 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yash Bhawar — AI/ML Engineer & Data Analyst</title>
   <meta name="description"
-    content="Portfolio of Yash Bhawar — AI/ML Engineer and Data Analyst specializing in LLM applications, machine learning models, and data analytics dashboards.">
+    content="Portfolio of Yash Bhawar — AI/ML Engineer and Data Analyst specializing in multi-agent LLM systems, machine learning architectures, and data analytics dashboards.">
   <meta property="og:title" content="Yash Bhawar — AI/ML Engineer & Data Analyst">
-  <meta property="og:description" content="Explore my projects in AI, Machine Learning, and Data Analytics.">
+  <meta property="og:description" content="Explore my projects in Multi-Agent AI, LLMs, Machine Learning, and Data Analytics.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 
 <body>
 
+  <!-- ========== LIVE ANIMATED CANVAS BACKGROUND ========== -->
+  <canvas id="bgCanvas"></canvas>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#hero" class="nav-logo">YB.</a>
+      <a href="#hero" class="nav-logo">
+        <span>YB</span><span style="color: var(--accent-cyan);">.</span>
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#data-analytics">Analytics</a></li>
-        <li><a href="#machine-learning">ML</a></li>
         <li><a href="#ai-llm">AI & LLM</a></li>
+        <li><a href="#machine-learning">Machine Learning</a></li>
+        <li><a href="#data-analytics">Data Analytics</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="nav-resume-dropdown" id="resumeDropdown">
-          <a href="#" class="nav-resume-btn">Resume ↓</a>
+          <a href="#" class="nav-resume-btn">
+            <span>Resume</span> <span>↓</span>
+          </a>
           <div class="resume-dropdown-menu">
-            <a href="assets/resume/Yash_Bhawar_DA_Resume.pdf" download class="resume-option" id="resume-da">
-              <span class="resume-icon">📊</span>
-              <span>Data Analyst</span>
-            </a>
-            <a href="assets/resume/Yash_Bhawar_AIML_Resume..pdf" download class="resume-option" id="resume-aiml">
+            <a href="assets/resume/Yash_Bhawar_Resume.pdf" download class="resume-option" id="resume-aiml">
               <span class="resume-icon">🤖</span>
               <span>AI / ML Engineer</span>
+            </a>
+            <a href="assets/resume/DA_Resume.pdf" download class="resume-option" id="resume-da">
+              <span class="resume-icon">📊</span>
+              <span>Data Analyst</span>
             </a>
           </div>
         </li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -47,113 +54,178 @@
     </div>
   </nav>
 
-  <!-- ========== HERO ========== -->
+  <!-- ========== HERO SECTION ========== -->
   <section class="hero" id="hero">
     <div class="hero-content">
+      
+      <!-- Live Availability Status Badge -->
+      <div class="hero-status-badge">
+        <span class="status-dot"></span>
+        <span>Available for AI/ML & Data Engineering Roles</span>
+      </div>
+
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Yash Bhawar</h1>
       <p class="hero-tagline">
         <span class="hero-typed" id="heroTyped"></span>
       </p>
       <p class="hero-description">
-        Transforming raw data into intelligent solutions — from interactive dashboards and predictive models to
-        AI-powered applications built with large language models.
+        Architecting intelligent multi-agent systems, fine-tuning local & cloud LLMs, and translating complex data into actionable predictive insights and interactive dashboards.
       </p>
+
       <div class="hero-buttons">
         <a href="#ai-llm" class="btn btn-primary">
-          View My Work ↓
+          Explore Projects ↓
         </a>
         <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-outline">
-          GitHub →
+          GitHub Profile →
         </a>
       </div>
+
+      <!-- Hero Impact Metrics Bar -->
+      <div class="hero-stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">7+</span>
+          <span class="stat-label">AI & LLM Agents</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Hackathon Solutions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Datasets Analyzed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Open Source Code</span>
+        </div>
+      </div>
+
     </div>
+
     <div class="hero-scroll-indicator">
       <span>scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
+  <!-- ========== ABOUT SECTION ========== -->
   <section class="about" id="about">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">About Me</span>
-        <h2 class="section-title">Building with Data & AI</h2>
+        <h2 class="section-title">Engineering with Intelligence & Data</h2>
+        <p class="section-subtitle">Bridging the gap between cutting-edge LLM agent architectures and high-impact data analytics.</p>
       </div>
+
       <div class="about-grid">
         <div class="about-image-wrapper reveal">
           <div class="about-image-card">
             <span class="about-avatar-placeholder">👨‍💻</span>
           </div>
         </div>
+
         <div class="about-text reveal reveal-delay-1">
           <h3>AI/ML Engineer & Data Analyst</h3>
           <p>
-            I'm a passionate technologist who sits at the intersection of <strong>data analytics</strong> and
-            <strong>artificial intelligence</strong>. I love turning complex datasets into clear, actionable insights
-            through interactive dashboards, and building intelligent systems powered by machine learning and large
-            language models.
+            I specialize in building <strong>autonomous multi-agent workflows</strong>, local-first LLM applications, and predictive machine learning models. I enjoy solving complex latency, cost, and hallucination challenges through hybrid architectures (Ollama, Groq, LangGraph, and Vector RAG).
           </p>
           <p>
-            Whether it's crafting a Power BI dashboard that tells a compelling data story, training a machine learning
-            model to predict outcomes, or architecting an LLM-powered agent that understands natural language — I'm
-            driven by the challenge of making data work smarter.
+            On the analytics side, I craft high-performance <strong>Power BI dashboards</strong> and SQL pipelines that transform messy data into clean, visual business decisions.
           </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Power BI</span>
-            <span class="tech-badge">SQL</span>
-            <span class="tech-badge">Excel</span>
-            <span class="tech-badge purple">TensorFlow</span>
-            <span class="tech-badge purple">scikit-learn</span>
-            <span class="tech-badge purple">LangChain</span>
-            <span class="tech-badge purple">Streamlit</span>
-            <span class="tech-badge">Pandas</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge purple">Ollama</span>
-            <span class="tech-badge">Git</span>
+
+          <!-- Categorized Skill Clusters -->
+          <div class="tech-stack-group">
+            <div class="tech-stack-title">AI & Agent Orchestration</div>
+            <div class="tech-stack">
+              <span class="tech-badge purple">LangGraph</span>
+              <span class="tech-badge purple">LangChain</span>
+              <span class="tech-badge purple">Google ADK</span>
+              <span class="tech-badge purple">Ollama</span>
+              <span class="tech-badge purple">Groq Cloud</span>
+              <span class="tech-badge purple">ChromaDB</span>
+              <span class="tech-badge purple">Qdrant</span>
+            </div>
           </div>
+
+          <div class="tech-stack-group">
+            <div class="tech-stack-title">Machine Learning & Backend</div>
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">scikit-learn</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Next.js 15</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+          </div>
+
+          <div class="tech-stack-group">
+            <div class="tech-stack-title">Data Analytics & Databases</div>
+            <div class="tech-stack">
+              <span class="tech-badge">Power BI</span>
+              <span class="tech-badge">DAX</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">BigQuery</span>
+              <span class="tech-badge">Excel (VBA)</span>
+              <span class="tech-badge">Pandas</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== CATEGORY FILTER TABS ========== -->
+  <div class="container">
+    <div class="projects-filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="ai-llm">AI & LLM Agents</button>
+      <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+      <button class="filter-btn" data-filter="data-analytics">Data Analytics</button>
+    </div>
+  </div>
 
-  <!-- ========== AI & LLM PROJECTS ========== -->
+  <!-- ========== AI & LLM PROJECTS SECTION ========== -->
   <section class="projects-section" id="ai-llm">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">AI & LLM</span>
-        <h2 class="section-title">Intelligent Agents & Applications</h2>
-        <p class="section-subtitle">AI-powered applications leveraging large language models, agents, and conversational
-          AI systems.</p>
+        <span class="section-label">AI & LLM Projects</span>
+        <h2 class="section-title">Autonomous Agents & Applications</h2>
+        <p class="section-subtitle">Multi-agent graphs, local-first inference pipelines, and reasoning systems built for enterprise speed and privacy.</p>
       </div>
+
       <div class="projects-grid">
 
         <!-- AI Project 1: SQL Assistant -->
         <div class="project-card reveal reveal-delay-1" id="project-ai-1">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">🤖 Local Agent</span>
             <span class="placeholder-icon">🤖</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">AI SQL Assistant</h3>
             <p class="project-card-description">
-              Local-first AI agent that translates natural language to MySQL queries using a 7B LLM via Ollama. Features
-              a tiered safety framework with query classification, destructive query blocking, audit logging, and a
-              Streamlit interface.
+              Local-first AI agent converting natural language into precise MySQL queries with zero cloud dependency.
             </p>
+            <ul class="project-card-highlights">
+              <li>Tiered safety framework blocking destructive SQL commands</li>
+              <li>Schema introspection & auto-query correction loop</li>
+              <li>Full audit trail logging & Streamlit web interface</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">LangChain</span>
-              <span class="tag ml">Ollama</span>
+              <span class="tag ml">Ollama 7B</span>
               <span class="tag">Streamlit</span>
               <span class="tag">MySQL</span>
               <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/sql-assistant.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/AI-SQL-Assistant" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/sql-assistant.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/AI-SQL-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -161,25 +233,29 @@
         <!-- AI Project 2: Museum Chatbot -->
         <div class="project-card reveal reveal-delay-2" id="project-ai-2">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill purple">🎟️ LangGraph Agent</span>
             <span class="placeholder-icon">🎟️</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">Museum Booking Chatbot</h3>
             <p class="project-card-description">
-              Local LLM based conversational chatbot for museum ticket booking. Built with a stateful LangGraph agent,
-              database connection pooling, fuzzy-matching search, and deployed as a Flask API with Streamlit frontend.
+              Conversational ticketing agent navigating national museum catalogs with stateful booking flows.
             </p>
+            <ul class="project-card-highlights">
+              <li>LangGraph cyclic agent handling complex multi-turn dialog</li>
+              <li>Fuzzy string matching & database connection pooling</li>
+              <li>FastAPI backend paired with interactive Streamlit UI</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">LangGraph</span>
-              <span class="tag ml">LLM Agent</span>
-              <span class="tag">Flask</span>
+              <span class="tag ml">Ollama</span>
+              <span class="tag">Flask / FastAPI</span>
               <span class="tag">Streamlit</span>
-              <span class="tag">Python</span>
+              <span class="tag">MySQL</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/museum-chatbot.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/museum-chatbot.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -187,25 +263,29 @@
         <!-- AI Project 3: Market Research Agent -->
         <div class="project-card reveal reveal-delay-3" id="project-ai-3">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">📊 5-Agent System</span>
             <span class="placeholder-icon">📊</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">Market Research Agent</h3>
             <p class="project-card-description">
-              Autonomous multi-agent research system powered by LangGraph, Ollama, and Groq. 5 specialized AI agents search the web, cross-verify statistical claims, synthesize reports, embed context in ChromaDB vector store, and output executive PDF reports.
+              Autonomous multi-agent research engine that decomposes questions, scrapes live data, and drafts PDF reports.
             </p>
+            <ul class="project-card-highlights">
+              <li>5 specialized agents: Planner, Search, Scraper, Verifier, Summarizer</li>
+              <li>Hybrid model routing: Ollama 7B verifier + Groq 70B synthesizer</li>
+              <li>ChromaDB vector store RAG & ReportLab executive PDF builder</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Ollama</span>
-              <span class="tag ml">Groq</span>
+              <span class="tag ml">Groq 70B</span>
+              <span class="tag">ChromaDB</span>
               <span class="tag">FastAPI</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Python</span>
+              <span class="tag">n8n</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/market-research-agent.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/Market-Research-Agent" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/market-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Market-Research-Agent" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -213,24 +293,29 @@
         <!-- AI Project 4: CompanyLens AI Web Scraper -->
         <div class="project-card reveal reveal-delay-1" id="project-ai-4">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill emerald">🔍 Prospect AI</span>
             <span class="placeholder-icon">🔍</span>
           </div>
           <div class="project-card-body">
-            <h3 class="project-card-title">CompanyLens — AI Scraper Agent</h3>
+            <h3 class="project-card-title">CompanyLens — AI Scraper</h3>
             <p class="project-card-description">
-              Resilient enterprise AI web scraper and prospect intelligence agent. Features fuzzy sitemap crawler routing, Cloudflare bypass protection, regex contact pre-harvesting, Gemini 2.5 LLM reasoning fallback chain, and a glassmorphism dashboard.
+              Enterprise company enrichment pipeline with intelligent sitemap crawling and verified contact extraction.
             </p>
+            <ul class="project-card-highlights">
+              <li>Fuzzy sitemap routing & Cloudflare anti-bot bypass chain</li>
+              <li>Regex pre-harvesting with Gemini 2.5 Flash verification</li>
+              <li>Glassmorphism dashboard with multi-step live status indicators</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">Gemini 2.5</span>
-              <span class="tag ml">FastAPI</span>
-              <span class="tag">Cloudscraper</span>
+              <span class="tag ml">Cloudscraper</span>
+              <span class="tag">FastAPI</span>
               <span class="tag">SQLite</span>
               <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/company-enrichment-agent.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/AI-powered-Website-Scraper-Agent-" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/company-enrichment-agent.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/AI-powered-Website-Scraper-Agent-" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -238,25 +323,29 @@
         <!-- AI Project 5: OptiRoute Router -->
         <div class="project-card reveal reveal-delay-2" id="project-ai-5">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill amber">⚡ AMD Hackathon</span>
             <img src="assets/images/optiroute.png" alt="OptiRoute Accuracy Router">
           </div>
           <div class="project-card-body">
-            <h3 class="project-card-title">OptiRoute — AI Accuracy Router</h3>
+            <h3 class="project-card-title">OptiRoute — Accuracy Router</h3>
             <p class="project-card-description">
-              Built for the AMD Developer Hackathon (Act II). Hybrid remote-first accuracy routing agent using sub-ms TF-IDF classification, 0-token Tier 0 Python deterministic solvers, Fireworks AI remote LLMs (CoT & self-consistency voting), and local Qwen 1.5B fallback.
+              AMD Developer Hackathon (Act II) accuracy router combining 0-token solvers with remote LLM self-consistency.
             </p>
+            <ul class="project-card-highlights">
+              <li>Sub-ms TF-IDF classification & semantic trap detection</li>
+              <li>Tier-0 Python deterministic solvers (SymPy, AST) at 0 token cost</li>
+              <li>Fireworks AI CoT voting + local quantized Qwen 1.5B GGUF fallback</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">AMD Hackathon</span>
               <span class="tag ml">Fireworks AI</span>
               <span class="tag ml">Qwen 1.5B</span>
-              <span class="tag">Streamlit</span>
               <span class="tag">Docker</span>
               <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/optiroute-router.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/amd-track1-tokenrouter" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/optiroute-router.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/amd-track1-tokenrouter" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -264,141 +353,171 @@
         <!-- AI Project 6: Community Care Navigator -->
         <div class="project-card reveal reveal-delay-3" id="project-ai-6">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill purple">🏆 Google Hackathon</span>
             <span class="placeholder-icon">🏛️</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">Community Care Navigator</h3>
             <p class="project-card-description">
-              Built for Google GenAI Hackathon. AI decision intelligence platform helping citizens discover welfare schemes, extract document records via Gemini 2.5 Vision OCR, and query policy RAG vector stores.
+              Google GenAI Hackathon platform matching vulnerable citizens with welfare schemes in regional languages.
             </p>
+            <ul class="project-card-highlights">
+              <li>Google ADK & Gemini 2.5 Flash empathetic conversational agent</li>
+              <li>Multimodal Vision OCR extracting IDs and income certificates</li>
+              <li>BigQuery / SQLite hybrid vector RAG with Plotly Mapbox GIS</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">Google ADK</span>
               <span class="tag ml">Gemini 2.5</span>
               <span class="tag ml">Vision OCR</span>
               <span class="tag">BigQuery / RAG</span>
               <span class="tag">Streamlit</span>
-              <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/community-care-navigator.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/Community-Care-Navigator---Google-GenAI-Hackathon" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/community-care-navigator.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Community-Care-Navigator---Google-GenAI-Hackathon" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
 
         <!-- AI Project 7: AI Research OS -->
-        <div class="project-card reveal reveal-delay-1" id="project-ai-7">
+        <div class="project-card reveal reveal-delay-1 hidden-project" id="project-ai-7">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">🧠 Research OS</span>
             <span class="placeholder-icon">🧠</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">AI Research OS</h3>
             <p class="project-card-description">
-              Autonomous research operating system powered by LangGraph, Groq 70B, and Ollama. Discovers arXiv papers, parses PDFs with Docling, captions figures via vision models, and generates literature reviews & comparisons with paragraph-level citation traceability.
+              Autonomous AI research assistant with arXiv discovery, hybrid PDF parsing, and citation traceability.
             </p>
+            <ul class="project-card-highlights">
+              <li>Docling hybrid layout parser + vision figure captioning (qwen2.5vl:3b)</li>
+              <li>LangGraph 4-agent team with dual LLM router (Groq 70B & Ollama)</li>
+              <li>Streaming SSE chat with paragraph-level clickable citation inspector</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">LangGraph</span>
               <span class="tag ml">Next.js 15</span>
               <span class="tag ml">FastAPI</span>
               <span class="tag">Qdrant</span>
               <span class="tag">Groq 70B</span>
-              <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/ai-research-agent.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/ai-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
 
       </div>
+
+      <!-- View All AI Projects Button -->
+      <div class="view-more-container reveal">
+        <button class="view-more-btn" id="toggleAiProjectsBtn">
+          <span>Explore All 7 AI Agents & Projects</span>
+          <span class="btn-arrow">▼</span>
+        </button>
+      </div>
+
     </div>
   </section>
 
-  <!-- ========== MACHINE LEARNING PROJECTS ========== -->
+  <!-- ========== MACHINE LEARNING PROJECTS SECTION ========== -->
   <section class="projects-section" id="machine-learning">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Machine Learning</span>
-        <h2 class="section-title">Models & Predictions</h2>
-        <p class="section-subtitle">Predictive models and ML pipelines solving real-world classification, regression,
-          and NLP problems.</p>
+        <h2 class="section-title">Predictive Models & Architectures</h2>
+        <p class="section-subtitle">Supervised, unsupervised, and deep learning computer vision pipelines solving real-world challenges.</p>
       </div>
+
       <div class="projects-grid">
 
-        <!-- ML Project 2 -->
-        <div class="project-card reveal reveal-delay-2" id="project-ml-2">
+        <!-- ML Project 1: Document AI -->
+        <div class="project-card reveal reveal-delay-1" id="project-ml-1">
           <div class="project-card-thumbnail">
-            <span class="placeholder-icon">🎥</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Movie Recommendation Site</h3>
-            <p class="project-card-description">
-              Built a movie recommendation system using TFIDF vectorization on movie data to represent content features.
-              Implemented cosine similarity to measure closeness between movies and generate top-N recommendations for
-              users. Built a end-to-end ML project with efficient data preprocessing, feature engineering, and
-              recommendation retrieval. Used Flask for the backend to integrate with the frontend site.
-            </p>
-            <div class="project-card-tags">
-              <span class="tag ml">Regression</span>
-              <span class="tag ml">Pandas</span>
-              <span class="tag ml">Matplotlib</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/MovieRecommendationSite" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- ML Project 3 -->
-        <div class="project-card reveal reveal-delay-3" id="project-ml-3">
-          <div class="project-card-thumbnail">
+            <span class="card-category-pill purple">📑 Computer Vision</span>
             <span class="placeholder-icon">📑</span>
           </div>
           <div class="project-card-body">
-            <h3 class="project-card-title">Document AI</h3>
+            <h3 class="project-card-title">Document AI Platform</h3>
             <p class="project-card-description">
-              An advanced document intelligence platform that combines TensorFlow deep learning computer
-              vision models with Local LLM-based RAG to parse, classify, enhance,
-              summarize, and query complex PDF documents.
+              Deep learning document intelligence platform combining TensorFlow vision models with Local LLM RAG.
             </p>
+            <ul class="project-card-highlights">
+              <li>TensorFlow visual layout segmentation & document classification</li>
+              <li>ChromaDB vector embeddings for private offline document Q&A</li>
+              <li>Automated multi-page executive summaries & table extraction</li>
+            </ul>
             <div class="project-card-tags">
-              <span class="tag ml">NLP</span>
               <span class="tag ml">TensorFlow</span>
-              <span class="tag ml">NLTK</span>
+              <span class="tag ml">Local LLM</span>
+              <span class="tag ml">ChromaDB RAG</span>
+              <span class="tag">NLTK</span>
               <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="projects/document-ai.html" class="card-btn card-btn-primary">View Details</a>
-              <a href="https://github.com/Yash-lab01/Document_AI" target="_blank" rel="noopener"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="projects/document-ai.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Document_AI" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
 
-        <!-- ML Project 1 -->
-        <div class="project-card reveal reveal-delay-1" id="project-ml-1">
+        <!-- ML Project 2: Movie Recommendation -->
+        <div class="project-card reveal reveal-delay-2" id="project-ml-2">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">🎥 NLP Recommendation</span>
+            <span class="placeholder-icon">🎥</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Movie Recommendation Engine</h3>
+            <p class="project-card-description">
+              Content-based recommendation engine utilizing TF-IDF vectorization and cosine similarity matrix scoring.
+            </p>
+            <ul class="project-card-highlights">
+              <li>Feature extraction across cast, crew, genres, and synopsis keywords</li>
+              <li>Real-time Top-N similarity matching & efficient ranking</li>
+              <li>Flask backend integrated with responsive web interface</li>
+            </ul>
+            <div class="project-card-tags">
+              <span class="tag ml">TF-IDF</span>
+              <span class="tag ml">Cosine Sim</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/Yash-lab01/MovieRecommendationSite" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML Project 3: Churn Predictor -->
+        <div class="project-card reveal reveal-delay-3" id="project-ml-3">
+          <div class="project-card-thumbnail">
+            <span class="card-category-pill emerald">🔮 Predictive Model</span>
             <span class="placeholder-icon">🔮</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">Customer Churn Predictor</h3>
             <p class="project-card-description">
-              End-to-end ML pipeline predicting customer churn with 92% accuracy using ensemble methods. Features EDA,
-              feature engineering, hyperparameter tuning, and model interpretability with SHAP.
+              End-to-end classification pipeline predicting customer churn with 92% accuracy using ensemble models.
             </p>
+            <ul class="project-card-highlights">
+              <li>Exploratory data analysis & automated feature engineering</li>
+              <li>Hyperparameter tuning on XGBoost and Random Forest ensembles</li>
+              <li>Feature importance and model interpretability via SHAP values</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag ml">scikit-learn</span>
               <span class="tag ml">XGBoost</span>
               <span class="tag ml">SHAP</span>
+              <span class="tag">Pandas</span>
               <span class="tag">Python</span>
             </div>
             <div class="project-card-actions">
-              <a href="#" class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -407,83 +526,97 @@
     </div>
   </section>
 
-  <!-- ========== DATA ANALYTICS PROJECTS ========== -->
+  <!-- ========== DATA ANALYTICS PROJECTS SECTION ========== -->
   <section class="projects-section" id="data-analytics">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Data Analytics</span>
-        <h2 class="section-title">Dashboards & Data Stories</h2>
-        <p class="section-subtitle">Interactive dashboards and analytical deep-dives using Power BI, Excel, and SQL.</p>
+        <h2 class="section-title">Interactive Dashboards & Data Stories</h2>
+        <p class="section-subtitle">Transforming millions of data points into intuitive Power BI dashboards, DAX metrics, and SQL models.</p>
       </div>
+
       <div class="projects-grid">
 
-        <!-- DA Project 1 -->
+        <!-- DA Project 1: Sales Dashboard -->
         <div class="project-card reveal reveal-delay-1" id="project-da-1">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">📊 Power BI</span>
             <img src="assets/images/sales.png" alt="Sales Performance Dashboard">
           </div>
           <div class="project-card-body">
             <h3 class="project-card-title">Sales Performance Dashboard</h3>
             <p class="project-card-description">
-              End-to-end Power BI dashboard analyzing regional sales trends, product performance, and revenue KPIs with
-              interactive drill-down capabilities and dynamic filtering.
+              Enterprise Power BI dashboard analyzing regional sales trends, product categories, and revenue margins.
             </p>
+            <ul class="project-card-highlights">
+              <li>Complex DAX time-intelligence metrics (MoM, YoY growth)</li>
+              <li>Dynamic parameter drill-down & customer segmentation</li>
+              <li>SQL data transformation & Star-Schema modeling</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag data">Power BI</span>
               <span class="tag data">DAX</span>
               <span class="tag data">SQL</span>
+              <span class="tag">Data Modeling</span>
             </div>
             <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/sales_analysis_dashboard"
-                class="card-btn card-btn-ghost">GitHub→</a>
+              <a href="https://github.com/Yash-lab01/sales_analysis_dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
 
-        <!-- DA Project 2 -->
+        <!-- DA Project 2: Olympics Dashboard -->
         <div class="project-card reveal reveal-delay-2" id="project-da-2">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill purple">🏅 120-Year Analysis</span>
             <img src="assets/images/olympics.png" alt="Olympics Analysis Dashboard">
           </div>
           <div class="project-card-body">
-            <h3 class="project-card-title">Olympics Analysis Dashboard</h3>
+            <h3 class="project-card-title">Olympics Analysis (1896–2016)</h3>
             <p class="project-card-description">
-              An interactive Dashboard analyzing historical Olympic Games data spanning 1896–2016(120 years). The
-              dashboard provides country-level insights into athlete participation, medal tallies, sport-wise
-              performance, gender distribution, and age demographics,
-              all dynamically filterable by country and year range.
+              Interactive historical analysis exploring 120 years of Olympic Games athlete and country statistics.
             </p>
+            <ul class="project-card-highlights">
+              <li>Country-level medal tallies and sport-wise performance trends</li>
+              <li>Gender distribution & athlete age demographic shifts over time</li>
+              <li>Dynamically filterable by edition, country, and event type</li>
+            </ul>
             <div class="project-card-tags">
-              <span class="tag data">Excel</span>
               <span class="tag data">Power BI</span>
-              <span class="tag data">Data Modeling</span>
+              <span class="tag data">Excel</span>
+              <span class="tag data">DAX</span>
+              <span class="tag">Data Storytelling</span>
             </div>
             <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/Olympics_analysis_dashboard" class="card-btn card-btn-ghost">GitHub
-                →</a>
+              <a href="https://github.com/Yash-lab01/Olympics_analysis_dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
 
-        <!-- DA Project 3 -->
+        <!-- DA Project 3: Credit Card Model -->
         <div class="project-card reveal reveal-delay-3" id="project-da-3">
           <div class="project-card-thumbnail">
+            <span class="card-category-pill emerald">💳 Financial Model</span>
             <img src="assets/images/cc.png" alt="Credit Card Analysis Dashboard">
           </div>
           <div class="project-card-body">
-            <h3 class="project-card-title">Financial Reporting Model</h3>
+            <h3 class="project-card-title">Credit Card & Financial Model</h3>
             <p class="project-card-description">
-              Automated financial reporting pipeline built in Excel with dynamic pivot tables, variance analysis, and
-              forecasting models for quarterly business reviews.
+              Automated financial reporting and customer delinquency risk model with dynamic scenario forecasting.
             </p>
+            <ul class="project-card-highlights">
+              <li>Automated Excel VBA data pipelines for quarterly reviews</li>
+              <li>Transaction variance analysis & spending pattern clustering</li>
+              <li>Delinquency rate indicators and KPI health scorecards</li>
+            </ul>
             <div class="project-card-tags">
               <span class="tag data">Excel</span>
               <span class="tag data">VBA</span>
               <span class="tag data">Financial Analysis</span>
+              <span class="tag">Risk Modeling</span>
             </div>
             <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/Credit-Card-Analysis-Dashboard"
-                class="card-btn card-btn-ghost">GitHub →</a>
+              <a href="https://github.com/Yash-lab01/Credit-Card-Analysis-Dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
             </div>
           </div>
         </div>
@@ -492,27 +625,26 @@
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
+  <!-- ========== CONTACT SECTION ========== -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-wrapper reveal">
         <span class="section-label">Get In Touch</span>
-        <h2 class="contact-cta">Let's Build Something Together</h2>
+        <h2 class="contact-cta">Let's Build Something Extraordinary</h2>
         <p class="contact-text">
-          I'm always open to discussing new projects, collaboration opportunities, or just chatting about AI and data.
-          Feel free to reach out!
+          I'm always open to discussing new high-impact AI/ML engineering opportunities, multi-agent LLM systems, or data analytics collaborations.
         </p>
         <div class="contact-links">
           <a href="mailto:yashpbhawar2003@gmail.com" class="contact-link" id="contact-email">
-            ✉️ Email Me
+            <span>✉️</span> <span>Email Me</span>
           </a>
           <a href="https://www.linkedin.com/in/yash-bhawar-77b5752b7/" target="_blank" rel="noopener"
             class="contact-link" id="contact-linkedin">
-            💼 LinkedIn
+            <span>💼</span> <span>LinkedIn</span>
           </a>
           <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="contact-link"
             id="contact-github">
-            🐙 GitHub
+            <span>🐙</span> <span>GitHub</span>
           </a>
         </div>
       </div>
@@ -522,7 +654,7 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+      <p>Designed & built by Yash Bhawar · 2026 <span class="footer-heart">♥</span> · Powered by Modern AI</p>
     </div>
   </footer>
 
