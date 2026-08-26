@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isExpanded) {
         toggleAiBtn.innerHTML = '<span>Show Less Projects</span> <span class="btn-arrow">▲</span>';
       } else {
-        toggleAiBtn.innerHTML = '<span>Explore All 7 AI Agents & Projects</span> <span class="btn-arrow">▼</span>';
+        toggleAiBtn.innerHTML = '<span>Explore All 8 AI Agents & Projects</span> <span class="btn-arrow">▼</span>';
         const aiSection = document.getElementById('ai-llm');
         if (aiSection) {
           aiSection.scrollIntoView({ behavior: 'smooth' });

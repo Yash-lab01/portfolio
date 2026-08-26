@@ -1130,13 +1130,13 @@ img {
   transform: translateY(0);
 }
 
-/* Center 7th project in 3-column desktop layout */
+/* 3-column desktop layout for AI & LLM section */
 @media (min-width: 992px) {
   #ai-llm .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   #ai-llm .project-card:nth-child(7) {
-    grid-column: 2;
+    grid-column: auto;
   }
 }
 

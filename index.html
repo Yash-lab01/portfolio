@@ -85,7 +85,7 @@
       <!-- Hero Impact Metrics Bar -->
       <div class="hero-stats-bar">
         <div class="stat-item">
-          <span class="stat-number">7+</span>
+          <span class="stat-number">8+</span>
           <span class="stat-label">AI & LLM Agents</span>
         </div>
         <div class="stat-item">
@@ -156,7 +156,7 @@
               <span class="tech-badge">TensorFlow</span>
               <span class="tech-badge">scikit-learn</span>
               <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">Next.js 15</span>
+              <span class="tech-badge">Next.js 16</span>
               <span class="tech-badge">Streamlit</span>
               <span class="tech-badge">Docker</span>
             </div>
@@ -200,8 +200,70 @@
 
       <div class="projects-grid">
 
-        <!-- AI Project 1: SQL Assistant -->
+        <!-- AI Project 1: WanderAI Travel Planner -->
         <div class="project-card reveal reveal-delay-1" id="project-ai-1">
+          <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">✈️ Multi-Agent Planner</span>
+            <img src="assets/images/wanderai.png" alt="WanderAI Travel Planner">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">WanderAI — AI Travel Planner</h3>
+            <p class="project-card-description">
+              Conversational multi-agent state machine crafting personalized day-by-day itineraries with live weather, hidden gem discovery, and Leaflet interactive maps.
+            </p>
+            <ul class="project-card-highlights">
+              <li>3-Agent LangGraph State Machine (Intake, Ranker, Planner) with streaming SSE</li>
+              <li>Hidden Gem Engine cross-referencing Reddit API + Tavily sentiment scoring</li>
+              <li>K-means++ spatial POI clustering & OpenTripMap + Google Places enrichment</li>
+            </ul>
+            <div class="project-card-tags">
+              <span class="tag ml">LangGraph</span>
+              <span class="tag ml">Next.js 16</span>
+              <span class="tag ml">Gemini 3.5</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Leaflet</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="projects/ai-travel-assistant.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/AI-Travel-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Project 2: AI Research OS -->
+        <div class="project-card reveal reveal-delay-2" id="project-ai-2">
+          <div class="project-card-thumbnail">
+            <span class="card-category-pill cyan">🧠 Research OS</span>
+            <span class="placeholder-icon">🧠</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">AI Research OS</h3>
+            <p class="project-card-description">
+              Autonomous AI research assistant with arXiv discovery, hybrid PDF parsing, vision figure captioning, and literature survey generation.
+            </p>
+            <ul class="project-card-highlights">
+              <li>Docling hybrid layout parser + vision figure captioning (qwen2.5vl:3b)</li>
+              <li>LangGraph 4-agent team with dual LLM router (Groq 70B & Ollama)</li>
+              <li>Streaming SSE chat with paragraph-level clickable citation inspector</li>
+            </ul>
+            <div class="project-card-tags">
+              <span class="tag ml">LangGraph</span>
+              <span class="tag ml">Next.js 15</span>
+              <span class="tag ml">FastAPI</span>
+              <span class="tag">Qdrant</span>
+              <span class="tag">Groq 70B</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="projects/ai-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
+              <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Project 3: SQL Assistant -->
+        <div class="project-card reveal reveal-delay-3" id="project-ai-3">
           <div class="project-card-thumbnail">
             <span class="card-category-pill cyan">🤖 Local Agent</span>
             <span class="placeholder-icon">🤖</span>
@@ -230,8 +292,8 @@
           </div>
         </div>
 
-        <!-- AI Project 2: Museum Chatbot -->
-        <div class="project-card reveal reveal-delay-2" id="project-ai-2">
+        <!-- AI Project 4: Museum Chatbot -->
+        <div class="project-card reveal reveal-delay-1" id="project-ai-4">
           <div class="project-card-thumbnail">
             <span class="card-category-pill purple">🎟️ LangGraph Agent</span>
             <span class="placeholder-icon">🎟️</span>
@@ -260,8 +322,8 @@
           </div>
         </div>
 
-        <!-- AI Project 3: Market Research Agent -->
-        <div class="project-card reveal reveal-delay-3" id="project-ai-3">
+        <!-- AI Project 5: Market Research Agent -->
+        <div class="project-card reveal reveal-delay-2" id="project-ai-5">
           <div class="project-card-thumbnail">
             <span class="card-category-pill cyan">📊 5-Agent System</span>
             <span class="placeholder-icon">📊</span>
@@ -290,8 +352,8 @@
           </div>
         </div>
 
-        <!-- AI Project 4: CompanyLens AI Web Scraper -->
-        <div class="project-card reveal reveal-delay-1" id="project-ai-4">
+        <!-- AI Project 6: CompanyLens AI Web Scraper -->
+        <div class="project-card reveal reveal-delay-3" id="project-ai-6">
           <div class="project-card-thumbnail">
             <span class="card-category-pill emerald">🔍 Prospect AI</span>
             <span class="placeholder-icon">🔍</span>
@@ -320,8 +382,8 @@
           </div>
         </div>
 
-        <!-- AI Project 5: OptiRoute Router -->
-        <div class="project-card reveal reveal-delay-2" id="project-ai-5">
+        <!-- AI Project 7: OptiRoute Router -->
+        <div class="project-card reveal reveal-delay-1 hidden-project" id="project-ai-7">
           <div class="project-card-thumbnail">
             <span class="card-category-pill amber">⚡ AMD Hackathon</span>
             <img src="assets/images/optiroute.png" alt="OptiRoute Accuracy Router">
@@ -350,8 +412,8 @@
           </div>
         </div>
 
-        <!-- AI Project 6: Community Care Navigator -->
-        <div class="project-card reveal reveal-delay-3" id="project-ai-6">
+        <!-- AI Project 8: Community Care Navigator -->
+        <div class="project-card reveal reveal-delay-2 hidden-project" id="project-ai-8">
           <div class="project-card-thumbnail">
             <span class="card-category-pill purple">🏆 Google Hackathon</span>
             <span class="placeholder-icon">🏛️</span>
@@ -380,42 +442,12 @@
           </div>
         </div>
 
-        <!-- AI Project 7: AI Research OS -->
-        <div class="project-card reveal reveal-delay-1 hidden-project" id="project-ai-7">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">🧠 Research OS</span>
-            <span class="placeholder-icon">🧠</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">AI Research OS</h3>
-            <p class="project-card-description">
-              Autonomous AI research assistant with arXiv discovery, hybrid PDF parsing, and citation traceability.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Docling hybrid layout parser + vision figure captioning (qwen2.5vl:3b)</li>
-              <li>LangGraph 4-agent team with dual LLM router (Groq 70B & Ollama)</li>
-              <li>Streaming SSE chat with paragraph-level clickable citation inspector</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Next.js 15</span>
-              <span class="tag ml">FastAPI</span>
-              <span class="tag">Qdrant</span>
-              <span class="tag">Groq 70B</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/ai-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <!-- View All AI Projects Button -->
       <div class="view-more-container reveal">
         <button class="view-more-btn" id="toggleAiProjectsBtn">
-          <span>Explore All 7 AI Agents & Projects</span>
+          <span>Explore All 8 AI Agents & Projects</span>
           <span class="btn-arrow">▼</span>
         </button>
       </div>

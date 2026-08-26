@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderAI — Multi-Agent AI Travel Planner — Yash Bhawar</title>
+  <meta name="description"
+    content="An autonomous conversational multi-agent AI travel planner built with LangGraph, Next.js 16, FastAPI, Gemini 3.5 Flash, ChromaDB, and Leaflet for personalized day-by-day itineraries and hidden gem discovery.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">YB.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#ai-llm">AI & LLM</a></li>
+        <li><a href="../index.html#machine-learning">ML</a></li>
+        <li><a href="../index.html#data-analytics">Analytics</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#ai-llm" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">Flagship AI & LLM Project</span>
+        <h1 class="project-detail-title">WanderAI — Multi-Agent AI Travel Planner</h1>
+        <p class="project-detail-tagline">
+          An autonomous conversational multi-agent system crafting complete, personalized day-by-day itineraries for any global or regional destination — balancing iconic landmarks, authentic Reddit hidden gems, live weather, budget, and spatial coherence.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">LangGraph</span>
+          <span class="tag ml">Next.js 16</span>
+          <span class="tag ml">FastAPI</span>
+          <span class="tag">Gemini 3.5 Flash</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">Leaflet</span>
+          <span class="tag">OpenTripMap</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/AI-Travel-Assistant" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHOWCASE IMAGE SECTION ========== -->
+  <section class="project-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="image-wrapper" style="text-align: center; max-width: 1000px; margin: 0 auto;">
+        <img src="../assets/project_images/travel_assistant/1.png" alt="WanderAI Nocturnal Voyager Interface" class="showcase-img lightbox-img" style="border-radius: 14px; border: 1px solid var(--border-light); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Most AI travel tools are superficial wrappers around a single LLM prompt. They hallucinate non-existent attractions, ignore geographic distances (causing erratic zig-zag travel across cities), recommend generic tourist traps, and fail to adapt to unpredictable real-time weather and budget constraints.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            <strong>WanderAI</strong> replaces simple prompt wrappers with an <strong>autonomous multi-agent state machine</strong> (LangGraph). Three dedicated agents (Intake, Ranker, Planner) extract structured travel slots, scrape authentic community signals from Reddit and travel blogs via custom sentiment scoring, cluster POIs geographically with K-means++, and attach live Open-Meteo forecasts and Leaflet map routes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Engineering Highlights</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🤖</span>
+          <h3>Conversational Intake & Clarifying Qs</h3>
+          <p>Detects underspecified prompts (e.g., "3 days in Goa") and dynamically asks targeted follow-ups (vibe, pace, dietary preferences) before executing the pipeline.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💎</span>
+          <h3>Log-Normalized Hidden Gem Engine</h3>
+          <p>Cross-references Google Places popularity with Reddit and travel blog sentiment via VADER and Tavily search to surface authentic, under-the-radar spots.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🗺️</span>
+          <h3>K-means++ Spatial POI Clustering</h3>
+          <p>Clusters attractions by spatial distance with maximally spread centroid initialization, ensuring each day explores a logically grouped neighborhood without criss-cross transit.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🌤️</span>
+          <h3>Live Weather & Haversine Routing</h3>
+          <p>Attaches live Open-Meteo daily weather forecasts and calculates sequential haversine transit durations between consecutive itinerary stops.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📍</span>
+          <h3>Interactive Leaflet + CartoDB Maps</h3>
+          <p>Renders day-wise colored markers, transit polylines, and popups on CartoDB Dark Matter tiles with zero credit-card API dependencies.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Streaming SSE & PDF Export</h3>
+          <p>Server-Sent Events (SSE) stream live agent progress step-logs into the Next.js 16 UI and support instant publication-quality PDF export.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Multi-Agent Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">💬</span>
+          <span class="arch-label">Intake Agent</span>
+          <span class="arch-sublabel">Groq + Gemini Slots</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🔍</span>
+          <span class="arch-label">Ranker Agent</span>
+          <span class="arch-sublabel">OTM + Reddit Niche Gem</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">📍</span>
+          <span class="arch-label">Planner Agent</span>
+          <span class="arch-sublabel">K-means++ Clustering</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🌤️</span>
+          <span class="arch-label">Tools & RAG</span>
+          <span class="arch-sublabel">Open-Meteo + ChromaDB</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🗺️</span>
+          <span class="arch-label">Next.js 16 UI</span>
+          <span class="arch-sublabel">Leaflet Map + SSE Stream</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>LangGraph Multi-Agent Backend</h3>
+          <ul>
+            <li><code>intake_node.py</code> — Extracts destination, duration, budget, and generates clarifying questions</li>
+            <li><code>ranker_node.py</code> — Concurrent fetch of OpenTripMap landmarks and Reddit/Tavily community gems</li>
+            <li><code>planner_node.py</code> — K-means++ clustering (k = num_days) and Gemini day-theme generation</li>
+            <li><code>scoring.py</code> — Log-normalized mathematical formula for niche score computation (7/7 unit tests passing)</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Frontend UI & Data Subsystems</h3>
+          <ul>
+            <li><code>frontend/src/</code> — Next.js 16 App Router with React 19, TypeScript, and Nocturnal Voyager design system</li>
+            <li><code>MapView.tsx</code> — Leaflet interactive map with custom POI icon markers and day filter toggles</li>
+            <li><code>backend/app/tools/</code> — Haversine transit estimator, Open-Meteo weather client, and versioned ChromaDB cache (v4)</li>
+            <li><code>backend/app/main.py</code> — Async FastAPI server with SSE streaming endpoints and ReportLab PDF export</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>LangGraph & FastAPI</h3>
+          <p>Deterministic state machine orchestration with SQLite checkpoints and high-speed async endpoints.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Next.js 16 & Leaflet</h3>
+          <p>React 19 frontend with server-sent events, real-time map integration, and glassmorphism styling.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Gemini 3.5 Flash & Groq</h3>
+          <p>Google AI Studio for day narratives paired with Groq for sub-second slot extraction.</p>
+        </div>
+        <div class="feature-card">
+          <h3>ChromaDB & Reddit API</h3>
+          <p>Versioned on-disk vector cache (v4) and public community discussions for genuine hidden gem retrieval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2026 <span class="footer-heart">♥</span> · Powered by Modern AI</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
