@@ -209,20 +209,21 @@
           <div class="project-card-body">
             <h3 class="project-card-title">WanderAI — AI Travel Planner</h3>
             <p class="project-card-description">
-              Conversational multi-agent state machine crafting personalized day-by-day itineraries with live weather, hidden gem discovery, and Leaflet interactive maps.
+              Conversational multi-agent state machine crafting spatial day-by-day itineraries with live multi-turn editing, Reddit hidden gems, interactive maps, and timeline scheduling.
             </p>
             <ul class="project-card-highlights">
-              <li>3-Agent LangGraph State Machine (Intake, Ranker, Planner) with streaming SSE</li>
-              <li>Hidden Gem Engine cross-referencing Reddit API + Tavily sentiment scoring</li>
-              <li>K-means++ spatial POI clustering & OpenTripMap + Google Places enrichment</li>
+              <li>4-Agent LangGraph State Machine (Intake, Ranker, Planner, Editor) with SQLite checkpoints & SSE streaming</li>
+              <li>Log-normalized Hidden Gem scoring formula blending Reddit API & Tavily sentiment</li>
+              <li>K-means++ spatial POI clustering, drag-and-drop reordering & Playwright PDF / iCal export</li>
             </ul>
             <div class="project-card-tags">
               <span class="tag ml">LangGraph</span>
               <span class="tag ml">Next.js 16</span>
               <span class="tag ml">Gemini 3.5</span>
+              <span class="tag">FastAPI</span>
               <span class="tag">ChromaDB</span>
               <span class="tag">Leaflet</span>
-              <span class="tag">FastAPI</span>
+              <span class="tag">LoRA Llama 3.2</span>
             </div>
             <div class="project-card-actions">
               <a href="projects/ai-travel-assistant.html" class="card-btn card-btn-primary">View Details →</a>

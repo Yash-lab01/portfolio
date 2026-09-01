@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WanderAI — Multi-Agent AI Travel Planner — Yash Bhawar</title>
   <meta name="description"
-    content="An autonomous conversational multi-agent AI travel planner built with LangGraph, Next.js 16, FastAPI, Gemini 3.5 Flash, ChromaDB, and Leaflet for personalized day-by-day itineraries and hidden gem discovery.">
+    content="An autonomous conversational multi-agent AI travel planner built with LangGraph, Next.js 16, FastAPI, Gemini 3.5 Flash, Groq, ChromaDB, Leaflet, and Playwright for personalized day-by-day itineraries and hidden gem discovery.">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/project-detail.css">
 </head>
@@ -40,17 +40,19 @@
         <span class="section-label">Flagship AI & LLM Project</span>
         <h1 class="project-detail-title">WanderAI — Multi-Agent AI Travel Planner</h1>
         <p class="project-detail-tagline">
-          An autonomous conversational multi-agent system crafting complete, personalized day-by-day itineraries for any global or regional destination — balancing iconic landmarks, authentic Reddit hidden gems, live weather, budget, and spatial coherence.
+          An autonomous conversational multi-agent system crafting spatial day-by-day itineraries for any global or regional destination — balancing iconic landmarks, authentic Reddit hidden gems, live weather, budget pacing, drag-and-drop reordering, and multi-turn conversational editing.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangGraph</span>
           <span class="tag ml">Next.js 16</span>
           <span class="tag ml">FastAPI</span>
           <span class="tag">Gemini 3.5 Flash</span>
+          <span class="tag">Groq (Qwen 3.6 27B)</span>
           <span class="tag">ChromaDB</span>
           <span class="tag">Leaflet</span>
-          <span class="tag">OpenTripMap</span>
-          <span class="tag">Python</span>
+          <span class="tag">Playwright PDF</span>
+          <span class="tag">LoRA Llama 3.2</span>
+          <span class="tag">Python 3.12</span>
         </div>
         <div class="project-detail-links">
           <a href="https://github.com/Yash-lab01/AI-Travel-Assistant" target="_blank" rel="noopener"
@@ -65,8 +67,9 @@
   <!-- ========== SHOWCASE IMAGE SECTION ========== -->
   <section class="project-section" style="padding-top: 0;">
     <div class="container">
-      <div class="image-wrapper" style="text-align: center; max-width: 1000px; margin: 0 auto;">
-        <img src="../assets/project_images/travel_assistant/1.png" alt="WanderAI Nocturnal Voyager Interface" class="showcase-img lightbox-img" style="border-radius: 14px; border: 1px solid var(--border-light); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+      <div class="image-wrapper" style="text-align: center; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+        <img src="../assets/project_images/travel_assistant/1.png" alt="WanderAI Nocturnal Voyager Planning Studio" class="showcase-img lightbox-img" style="border-radius: 14px; border: 1px solid var(--border-light); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        <img src="../assets/project_images/travel_assistant/2.png" alt="WanderAI Interactive Timeline & Leaflet Map" class="showcase-img lightbox-img" style="border-radius: 14px; border: 1px solid var(--border-light); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
       </div>
     </div>
   </section>
@@ -78,73 +81,108 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Most AI travel tools are superficial wrappers around a single LLM prompt. They hallucinate non-existent attractions, ignore geographic distances (causing erratic zig-zag travel across cities), recommend generic tourist traps, and fail to adapt to unpredictable real-time weather and budget constraints.
+            Standard AI travel planners are simple wrappers around single LLM prompts. They hallucinate attractions, schedule geographically chaotic routes (causing zig-zag transit across cities), recommend generic tourist traps, fail to adapt to live weather, and cannot handle iterative conversational modifications or realistic daily schedules.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            <strong>WanderAI</strong> replaces simple prompt wrappers with an <strong>autonomous multi-agent state machine</strong> (LangGraph). Three dedicated agents (Intake, Ranker, Planner) extract structured travel slots, scrape authentic community signals from Reddit and travel blogs via custom sentiment scoring, cluster POIs geographically with K-means++, and attach live Open-Meteo forecasts and Leaflet map routes.
+            <strong>WanderAI</strong> is an <strong>autonomous multi-agent state machine</strong> (LangGraph) backed by real-time tools. Four specialized agents (Intake, Ranker, Planner, Editor) parse requirements with dynamic clarifying questions, scrape niche community signals from Reddit & travel blogs via mathematical scoring, group attractions with K-means++ spatial clustering, and provide interactive timeline drag-and-drop editing, Playwright PDF export, and local fine-tuned LoRA narrations.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== KEY FEATURES ========== -->
+  <!-- ========== KEY ENGINEERING HIGHLIGHTS ========== -->
   <section class="project-section section-alt">
     <div class="container">
       <h2 class="detail-section-title center">⚡ Key Engineering Highlights</h2>
       <div class="features-grid">
         <div class="feature-card">
           <span class="feature-icon">🤖</span>
-          <h3>Conversational Intake & Clarifying Qs</h3>
-          <p>Detects underspecified prompts (e.g., "3 days in Goa") and dynamically asks targeted follow-ups (vibe, pace, dietary preferences) before executing the pipeline.</p>
+          <h3>Dynamic Clarifying Questions</h3>
+          <p>Detects brief prompts (e.g., "3 days in Kyoto") and leverages Gemini 2.0/3.5 Flash to generate context-specific preference chips (vibe, dietary needs, pace) before execution.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon">💎</span>
           <h3>Log-Normalized Hidden Gem Engine</h3>
-          <p>Cross-references Google Places popularity with Reddit and travel blog sentiment via VADER and Tavily search to surface authentic, under-the-radar spots.</p>
+          <p>Cross-references Google Places popularity with Reddit and travel blog sentiment via VADER intensity and Tavily search to surface verified, under-the-radar local gems.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon">🗺️</span>
-          <h3>K-means++ Spatial POI Clustering</h3>
-          <p>Clusters attractions by spatial distance with maximally spread centroid initialization, ensuring each day explores a logically grouped neighborhood without criss-cross transit.</p>
+          <h3>K-means++ Spatial Clustering</h3>
+          <p>Partitions attractions into geographically coherent daily clusters with maximally-spread centroid initialization and regional multi-zone dispersion for wide destinations (Goa, Rajasthan, Bali).</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon">🌤️</span>
-          <h3>Live Weather & Haversine Routing</h3>
-          <p>Attaches live Open-Meteo daily weather forecasts and calculates sequential haversine transit durations between consecutive itinerary stops.</p>
+          <span class="feature-icon">🔄</span>
+          <h3>Multi-Turn Conversational Editor</h3>
+          <p>Autonomous Editor Agent classifies user feedback (<code>swap_stop</code>, <code>remove_stop</code>, <code>adjust_pace</code>, <code>tell_me_more</code>) and performs live state patching with transit recalculations.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon">📍</span>
-          <h3>Interactive Leaflet + CartoDB Maps</h3>
-          <p>Renders day-wise colored markers, transit polylines, and popups on CartoDB Dark Matter tiles with zero credit-card API dependencies.</p>
+          <span class="feature-icon">⏱️</span>
+          <h3>Timeline & Drag-and-Drop Reordering</h3>
+          <p>Interactive dual view (Cards 🗂️ vs Timeline ⏱️) with concrete time-slot scheduling (<code>09:00 AM – 10:15 AM</code>), drag handles <code>⋮⋮</code>, and live sequential transit recalculations.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon">⚡</span>
-          <h3>Streaming SSE & PDF Export</h3>
-          <p>Server-Sent Events (SSE) stream live agent progress step-logs into the Next.js 16 UI and support instant publication-quality PDF export.</p>
+          <span class="feature-icon">📸</span>
+          <h3>4-Tier Real Photography Cascade</h3>
+          <p>Zero-auth image pipeline: Wikipedia REST Summary → Wikipedia OpenSearch → Generator PageImages → Wikimedia Commons direct search, ensuring 100% verified real landmark photos.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🧠</span>
+          <h3>Fine-Tuned Local LoRA Narration (Llama 3.2)</h3>
+          <p>Custom atmospheric travel narration model fine-tuned on Llama 3.2 3B Instruct via Unsloth/PEFT with GGUF export and zero-latency local Ollama inference fallback.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📄</span>
+          <h3>Playwright PDF & iCalendar Export</h3>
+          <p>Headless Playwright PDF brochure generation with Google Fonts & hero covers, RFC 5545 <code>.ics</code> calendar sync, and public shareable <code>/trip/[slug]</code> routes.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎒</span>
+          <h3>Smart Packing Checklist & Weather</h3>
+          <p>Activity- and climate-aware packing checklist generator with interactive checkboxes, live Open-Meteo forecasts, and Google Maps turn-by-turn navigation deep links.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== ARCHITECTURE ========== -->
+  <!-- ========== HIDDEN GEM FORMULA ========== -->
   <section class="project-section">
     <div class="container">
-      <h2 class="detail-section-title center">🏗️ Multi-Agent Architecture</h2>
+      <h2 class="detail-section-title center">📐 Log-Normalized Hidden Gem Scoring</h2>
+      <div class="content-block" style="max-width: 820px; margin: 0 auto; background: var(--bg-card); padding: 28px; border-radius: var(--card-radius); border: 1px solid var(--border);">
+        <pre style="font-family: var(--font-mono); font-size: 0.88rem; color: #38bdf8; overflow-x: auto; line-height: 1.6;"><code>hidden_gem_score = clamp(
+    (min(mention_count, 20) / 20) * ((avg_sentiment + 1) / 2)   # Niche community signal
+  + (0.2 if source_diversity >= 2 else 0)                        # Cross-platform bonus (Reddit + Tavily)
+  - log(review_count + 1) / log(max_review_count + 1),          # Log-normalized popularity penalty
+  min=0.0, max=1.0
+)</code></pre>
+        <ul style="margin-top: 18px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; list-style: disc; padding-left: 20px;">
+          <li><strong>Log-normalization</strong> prevents 10k vs 50k reviews from looking equally "popular".</li>
+          <li><strong>Source diversity bonus</strong> rewards spots mentioned independently on multiple platforms (Reddit threads + local food blogs).</li>
+          <li><strong>Sentiment weighting</strong> prioritizes enthusiastic recommendations over casual passing mentions (7/7 unit tests passing).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE & FLOW ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Multi-Agent Architecture (LangGraph)</h2>
       <div class="architecture-flow">
         <div class="arch-node">
           <span class="arch-icon">💬</span>
           <span class="arch-label">Intake Agent</span>
-          <span class="arch-sublabel">Groq + Gemini Slots</span>
+          <span class="arch-sublabel">Groq + Gemini Clarifications</span>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node">
           <span class="arch-icon">🔍</span>
           <span class="arch-label">Ranker Agent</span>
-          <span class="arch-sublabel">OTM + Reddit Niche Gem</span>
+          <span class="arch-sublabel">OTM + Reddit Niche Scraper</span>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node">
@@ -154,9 +192,9 @@
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node">
-          <span class="arch-icon">🌤️</span>
-          <span class="arch-label">Tools & RAG</span>
-          <span class="arch-sublabel">Open-Meteo + ChromaDB</span>
+          <span class="arch-icon">🔄</span>
+          <span class="arch-label">Editor Agent</span>
+          <span class="arch-sublabel">Multi-Turn State Patching</span>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-node">
@@ -170,45 +208,47 @@
         <div class="arch-component">
           <h3>LangGraph Multi-Agent Backend</h3>
           <ul>
-            <li><code>intake_node.py</code> — Extracts destination, duration, budget, and generates clarifying questions</li>
-            <li><code>ranker_node.py</code> — Concurrent fetch of OpenTripMap landmarks and Reddit/Tavily community gems</li>
-            <li><code>planner_node.py</code> — K-means++ clustering (k = num_days) and Gemini day-theme generation</li>
-            <li><code>scoring.py</code> — Log-normalized mathematical formula for niche score computation (7/7 unit tests passing)</li>
+            <li><code>intake_agent.py</code> — Extracts destination, dates, budget; invokes dynamic clarifying questions</li>
+            <li><code>ranker_agent.py</code> — Concurrently pulls OpenTripMap POIs and Reddit/Tavily community gems, blending by niche weight</li>
+            <li><code>planner_agent.py</code> — Performs K-means++ clustering (k = num_days), assigns day themes, and attaches Open-Meteo weather</li>
+            <li><code>editor_agent.py</code> — Handles user adjustments (swap, remove, adjust pace) and updates itinerary state with SQLite checkpoints</li>
+            <li><code>ollama_narrator.py</code> — Connects to local LoRA fine-tuned Llama 3.2 3B model for atmospheric, non-cliché stop descriptions</li>
           </ul>
         </div>
         <div class="arch-component">
-          <h3>Frontend UI & Data Subsystems</h3>
+          <h3>Frontend Visuals & Production Services</h3>
           <ul>
-            <li><code>frontend/src/</code> — Next.js 16 App Router with React 19, TypeScript, and Nocturnal Voyager design system</li>
-            <li><code>MapView.tsx</code> — Leaflet interactive map with custom POI icon markers and day filter toggles</li>
-            <li><code>backend/app/tools/</code> — Haversine transit estimator, Open-Meteo weather client, and versioned ChromaDB cache (v4)</li>
-            <li><code>backend/app/main.py</code> — Async FastAPI server with SSE streaming endpoints and ReportLab PDF export</li>
+            <li><code>Next.js 16 (React 19)</code> — Nocturnal Voyager glassmorphic design system with Aurora animated background mesh</li>
+            <li><code>MapView.tsx</code> — Leaflet interactive map with CartoDB Dark Matter tiles, marker popups, and route polylines</li>
+            <li><code>pdf_generator.py</code> — Headless Playwright service rendering print-ready multi-page travel brochures</li>
+            <li><code>history_store.py</code> — SQLite trip database with dual-layer auto-saving and slide-over history drawer</li>
+            <li><code>currency.ts</code> — Smart currency engine rendering <code>₹ INR</code> for Indian destinations and <code>$ USD</code> internationally</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== TECH STACK ========== -->
-  <section class="project-section section-alt">
+  <!-- ========== TECH STACK TABLE ========== -->
+  <section class="project-section">
     <div class="container">
-      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <h2 class="detail-section-title center">🛠️ Comprehensive Tech Stack</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <h3>LangGraph & FastAPI</h3>
-          <p>Deterministic state machine orchestration with SQLite checkpoints and high-speed async endpoints.</p>
+          <h3>Orchestration & Backend</h3>
+          <p>LangGraph StateGraph, FastAPI (async), SQLite checkpoints, Pydantic v2 schemas, Python 3.12.</p>
         </div>
         <div class="feature-card">
-          <h3>Next.js 16 & Leaflet</h3>
-          <p>React 19 frontend with server-sent events, real-time map integration, and glassmorphism styling.</p>
+          <h3>Frontend & Maps</h3>
+          <p>Next.js 16 App Router, TypeScript, React 19, Leaflet, CartoDB Dark Matter, HTML5 Canvas live wallpaper.</p>
         </div>
         <div class="feature-card">
-          <h3>Gemini 3.5 Flash & Groq</h3>
-          <p>Google AI Studio for day narratives paired with Groq for sub-second slot extraction.</p>
+          <h3>LLMs & Model Routing</h3>
+          <p>Gemini 3.5 Flash (themes & narrations), Groq Qwen 3.6 27B (fast slot-filling), Fine-Tuned Llama 3.2 3B (LoRA / Ollama).</p>
         </div>
         <div class="feature-card">
-          <h3>ChromaDB & Reddit API</h3>
-          <p>Versioned on-disk vector cache (v4) and public community discussions for genuine hidden gem retrieval.</p>
+          <h3>Data & Vector Storage</h3>
+          <p>ChromaDB embedded vector store (v7 cache), OpenTripMap, Nominatim, Reddit JSON API, Tavily, VADER.</p>
         </div>
       </div>
     </div>
