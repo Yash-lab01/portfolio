@@ -4,44 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yash Bhawar — AI/ML Engineer & Data Analyst</title>
+  <title>Yash Bhawar — AI/ML Engineer & Systems Builder</title>
   <meta name="description"
-    content="Portfolio of Yash Bhawar — AI/ML Engineer and Data Analyst specializing in multi-agent LLM systems, machine learning architectures, and data analytics dashboards.">
-  <meta property="og:title" content="Yash Bhawar — AI/ML Engineer & Data Analyst">
-  <meta property="og:description" content="Explore my projects in Multi-Agent AI, LLMs, Machine Learning, and Data Analytics.">
+    content="Engineering portfolio of Yash Bhawar. Deterministic agent graphs, local-first LLM pipelines, and analytical data systems.">
+  <meta property="og:title" content="Yash Bhawar — AI/ML Engineer & Systems Builder">
+  <meta property="og:description" content="Deterministic multi-agent graphs, offline-first LLM pipelines, and analytical data systems.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
 
 <body>
 
-  <!-- ========== LIVE ANIMATED CANVAS BACKGROUND ========== -->
-  <canvas id="bgCanvas"></canvas>
-
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#hero" class="nav-logo">
-        <span>YB</span><span style="color: var(--accent-cyan);">.</span>
-      </a>
+      <div class="nav-brand">
+        <a href="#hero" class="nav-logo">Yash Bhawar</a>
+        <span class="nav-role-badge">AI/ML & Systems</span>
+      </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#ai-llm">AI & LLM</a></li>
-        <li><a href="#machine-learning">Machine Learning</a></li>
-        <li><a href="#data-analytics">Data Analytics</a></li>
+        <li><a href="#hero">Overview</a></li>
+        <li><a href="#systems-profile">System Profile</a></li>
+        <li><a href="#about">Philosophy</a></li>
+        <li><a href="#flagships">Flagship Systems</a></li>
+        <li><a href="#catalog">Repository Index</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="nav-resume-dropdown" id="resumeDropdown">
-          <a href="#" class="nav-resume-btn">
-            <span>Resume</span> <span>↓</span>
-          </a>
+          <button class="nav-resume-btn" type="button" aria-haspopup="true">
+            <span>Resume</span>
+            <span>↓</span>
+          </button>
           <div class="resume-dropdown-menu">
-            <a href="assets/resume/Yash_Bhawar_Resume.pdf" download class="resume-option" id="resume-aiml">
-              <span class="resume-icon">🤖</span>
-              <span>AI / ML Engineer</span>
+            <a href="assets/resume/Yash_Bhawar_AIML_Resume..pdf" download class="resume-option">
+              <span>🤖</span>
+              <span>AI / ML Engineer (PDF)</span>
             </a>
-            <a href="assets/resume/DA_Resume.pdf" download class="resume-option" id="resume-da">
-              <span class="resume-icon">📊</span>
-              <span>Data Analyst</span>
+            <a href="assets/resume/Yash_Bhawar_DA_Resume.pdf" download class="resume-option">
+              <span>📊</span>
+              <span>Data Analyst (PDF)</span>
             </a>
           </div>
         </li>
@@ -54,602 +55,532 @@
     </div>
   </nav>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      
-      <!-- Live Availability Status Badge -->
-      <div class="hero-status-badge">
-        <span class="status-dot"></span>
-        <span>Available for AI/ML & Data Engineering Roles</span>
-      </div>
-
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Yash Bhawar</h1>
-      <p class="hero-tagline">
-        <span class="hero-typed" id="heroTyped"></span>
-      </p>
-      <p class="hero-description">
-        Architecting intelligent multi-agent systems, fine-tuning local & cloud LLMs, and translating complex data into actionable predictive insights and interactive dashboards.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#ai-llm" class="btn btn-primary">
-          Explore Projects ↓
-        </a>
-        <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-outline">
-          GitHub Profile →
-        </a>
-      </div>
-
-      <!-- Hero Impact Metrics Bar -->
-      <div class="hero-stats-bar">
-        <div class="stat-item">
-          <span class="stat-number">8+</span>
-          <span class="stat-label">AI & LLM Agents</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">3+</span>
-          <span class="stat-label">Hackathon Solutions</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">120+</span>
-          <span class="stat-label">Datasets Analyzed</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Open Source Code</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="hero-scroll-indicator">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT SECTION ========== -->
-  <section class="about" id="about">
+  <!-- ========== 1ST PAGE: FULLSCREEN LANDING HERO (BIG NAME) ========== -->
+  <section class="hero-landing" id="hero">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">About Me</span>
-        <h2 class="section-title">Engineering with Intelligence & Data</h2>
-        <p class="section-subtitle">Bridging the gap between cutting-edge LLM agent architectures and high-impact data analytics.</p>
-      </div>
+      <div class="hero-landing-content">
+        
+        <div class="hero-status-tag">
+          <span class="status-dot"></span>
+          <span>Available for AI/ML & Data Engineering Roles</span>
+        </div>
 
-      <div class="about-grid">
-        <div class="about-image-wrapper reveal">
-          <div class="about-image-card">
-            <span class="about-avatar-placeholder">👨‍💻</span>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-big-name">Yash Bhawar</h1>
+        
+        <p class="hero-tagline">
+          <span class="hero-typed" id="heroTyped"></span>
+        </p>
+
+        <p class="hero-landing-desc">
+          Architecting deterministic multi-agent graphs, local-first LLM pipelines, and analytical data models. Less hallucination, zero fluff, verified latency.
+        </p>
+
+        <div class="hero-landing-buttons">
+          <a href="#systems-profile" class="btn btn-primary">Explore Systems ↓</a>
+          <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile (Yash-lab01) ↗</a>
+        </div>
+
+        <!-- Verified Impact Metrics Bar -->
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">AI & LLM Systems</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Hackathon Solutions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">120+</span>
+            <span class="stat-label">Datasets Analyzed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Open Source Code</span>
           </div>
         </div>
 
-        <div class="about-text reveal reveal-delay-1">
-          <h3>AI/ML Engineer & Data Analyst</h3>
-          <p>
-            I specialize in building <strong>autonomous multi-agent workflows</strong>, local-first LLM applications, and predictive machine learning models. I enjoy solving complex latency, cost, and hallucination challenges through hybrid architectures (Ollama, Groq, LangGraph, and Vector RAG).
-          </p>
-          <p>
-            On the analytics side, I craft high-performance <strong>Power BI dashboards</strong> and SQL pipelines that transform messy data into clean, visual business decisions.
-          </p>
-
-          <!-- Categorized Skill Clusters -->
-          <div class="tech-stack-group">
-            <div class="tech-stack-title">AI & Agent Orchestration</div>
-            <div class="tech-stack">
-              <span class="tech-badge purple">LangGraph</span>
-              <span class="tech-badge purple">LangChain</span>
-              <span class="tech-badge purple">Google ADK</span>
-              <span class="tech-badge purple">Ollama</span>
-              <span class="tech-badge purple">Groq Cloud</span>
-              <span class="tech-badge purple">ChromaDB</span>
-              <span class="tech-badge purple">Qdrant</span>
-            </div>
-          </div>
-
-          <div class="tech-stack-group">
-            <div class="tech-stack-title">Machine Learning & Backend</div>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">TensorFlow</span>
-              <span class="tech-badge">scikit-learn</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">Next.js 16</span>
-              <span class="tech-badge">Streamlit</span>
-              <span class="tech-badge">Docker</span>
-            </div>
-          </div>
-
-          <div class="tech-stack-group">
-            <div class="tech-stack-title">Data Analytics & Databases</div>
-            <div class="tech-stack">
-              <span class="tech-badge">Power BI</span>
-              <span class="tech-badge">DAX</span>
-              <span class="tech-badge">MySQL</span>
-              <span class="tech-badge">BigQuery</span>
-              <span class="tech-badge">Excel (VBA)</span>
-              <span class="tech-badge">Pandas</span>
-            </div>
-          </div>
-
+        <div class="hero-scroll-prompt">
+          <span>Scroll to Profile</span>
+          <div class="scroll-stem"></div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ========== CATEGORY FILTER TABS ========== -->
-  <div class="container">
-    <div class="projects-filter-bar reveal">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="ai-llm">AI & LLM Agents</button>
-      <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-      <button class="filter-btn" data-filter="data-analytics">Data Analytics</button>
-    </div>
-  </div>
-
-  <!-- ========== AI & LLM PROJECTS SECTION ========== -->
-  <section class="projects-section" id="ai-llm">
+  <!-- ========== 2ND PAGE: SYSTEM PROFILE & TECHNICAL INSPECTOR ========== -->
+  <section class="systems-profile" id="systems-profile">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">AI & LLM Projects</span>
-        <h2 class="section-title">Autonomous Agents & Applications</h2>
-        <p class="section-subtitle">Multi-agent graphs, local-first inference pipelines, and reasoning systems built for enterprise speed and privacy.</p>
+      <div class="hero-grid">
+
+        <!-- Left Column: Personal Manifesto & Context -->
+        <div class="hero-intro">
+          <span class="section-label">Engineering Profile</span>
+          <h2 class="hero-title" style="font-size: clamp(2rem, 3.8vw, 3rem);">
+            Systems that reason.<br>
+            Data that delivers.
+          </h2>
+
+          <p class="hero-manifesto">
+            I build <strong>deterministic multi-agent graphs</strong>, local-first LLM pipelines, and analytical data models. Less hallucination, zero fluff, verified latency.
+          </p>
+
+          <div class="hero-specs">
+            <div class="hero-spec-item">
+              <span class="spec-label">Core Focus:</span>
+              <span>LangGraph state machines, hybrid local/cloud inference (Ollama + Groq), RAG citation tracing</span>
+            </div>
+            <div class="hero-spec-item">
+              <span class="spec-label">Open Source:</span>
+              <span>8 production codebases published on GitHub with runnable benchmarks</span>
+            </div>
+            <div class="hero-spec-item">
+              <span class="spec-label">Location:</span>
+              <span>Pune, India · Open to high-impact onsite and remote engineering roles</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#flagships" class="btn btn-primary">Browse Flagships ↓</a>
+            <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile (Yash-lab01) ↗</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Technical System Inspector -->
+        <div class="hero-inspector">
+          <div class="inspector-header">
+            <div class="inspector-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>ACTIVE_SYSTEM: WanderAI v4.2</span>
+            <span style="color: #34d399;">● RUNNING</span>
+          </div>
+          <div class="inspector-body">
+            <div class="inspector-row">
+              <span class="inspector-key">Architecture</span>
+              <span class="inspector-val">LangGraph (4-Agent StateMachine)</span>
+            </div>
+            <div class="inspector-row">
+              <span class="inspector-key">Persistence</span>
+              <span class="inspector-val">SQLite (checkpoints.db)</span>
+            </div>
+            <div class="inspector-row">
+              <span class="inspector-key">Spatial Engine</span>
+              <span class="inspector-val">K-means++ Coordinate Clustering</span>
+            </div>
+            <div class="inspector-row">
+              <span class="inspector-key">Gem Discovery</span>
+              <span class="inspector-val amber">Log-Norm Formula (Reddit+Tavily)</span>
+            </div>
+            <div class="inspector-row">
+              <span class="inspector-key">Model Routing</span>
+              <span class="inspector-val">Gemini 3.5 + Groq Qwen 27B</span>
+            </div>
+            <div class="inspector-row">
+              <span class="inspector-key">Export Formats</span>
+              <span class="inspector-val emerald">Playwright PDF + RFC 5545 .ics</span>
+            </div>
+
+            <div class="inspector-code-block">
+// Log-normalized scoring formula (7/7 tests passing)
+hidden_gem_score = clamp(
+  (min(mentions, 20)/20) * ((sentiment + 1)/2)
+  + (source_diversity >= 2 ? 0.2 : 0)
+  - log(reviews + 1) / log(max_reviews + 1),
+  0.0, 1.0
+)
+            </div>
+          </div>
+          <div class="inspector-footer">
+            <span>Verified with 24/24 unit tests</span>
+            <a href="projects/ai-travel-assistant.html">Inspect Architecture →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: ENGINEERING PHILOSOPHY ========== -->
+  <section class="philosophy-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Engineering Philosophy</span>
+        <h2 class="section-title">How I Build Systems That Work in the Real World</h2>
+        <p class="section-subtitle">A candid perspective on production AI: why monolithic prompts fail, where local quantization matters, and how data integrity drives every model.</p>
       </div>
 
-      <div class="projects-grid">
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <span class="philosophy-index">PRINCIPLE 01</span>
+          <h3 class="philosophy-title">Determinism Over Raw Prompts</h3>
+          <p>
+            Monolithic LLM prompts hallucinate geography, fail at arithmetic, and produce erratic structures. I isolate responsibilities into <strong>stateful LangGraph nodes</strong>, enforce Pydantic contracts, and offload calculations to deterministic solvers (AST parsing, K-means++, Haversine routing) at 0 token cost.
+          </p>
+        </div>
 
-        <!-- AI Project 1: WanderAI Travel Planner -->
-        <div class="project-card reveal reveal-delay-1" id="project-ai-1">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">✈️ Multi-Agent Planner</span>
-            <img src="assets/images/wanderai.png" alt="WanderAI Travel Planner">
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">WanderAI — AI Travel Planner</h3>
-            <p class="project-card-description">
-              Conversational multi-agent state machine crafting spatial day-by-day itineraries with live multi-turn editing, Reddit hidden gems, interactive maps, and timeline scheduling.
-            </p>
-            <ul class="project-card-highlights">
-              <li>4-Agent LangGraph State Machine (Intake, Ranker, Planner, Editor) with SQLite checkpoints & SSE streaming</li>
-              <li>Log-normalized Hidden Gem scoring formula blending Reddit API & Tavily sentiment</li>
-              <li>K-means++ spatial POI clustering, drag-and-drop reordering & Playwright PDF / iCal export</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Next.js 16</span>
-              <span class="tag ml">Gemini 3.5</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">ChromaDB</span>
-              <span class="tag">Leaflet</span>
-              <span class="tag">LoRA Llama 3.2</span>
+        <div class="philosophy-card">
+          <span class="philosophy-index">PRINCIPLE 02</span>
+          <h3 class="philosophy-title">Pragmatic Latency & Cost Routing</h3>
+          <p>
+            Sending every request to a 70B cloud model is economically reckless and slow. I architect <strong>hybrid multi-tier routers</strong>: sub-millisecond TF-IDF classification, fast slot extraction via Groq, local quantized Ollama fallbacks, and frontier cloud models reserved exclusively for synthesis.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <span class="philosophy-index">PRINCIPLE 03</span>
+          <h3 class="philosophy-title">Verifiable Grounding, Zero Fluff</h3>
+          <p>
+            An AI answer without verifiable source traceability is a liability. Whether building an academic paper assistant or an enterprise company scraper, every output is tethered to raw data: <strong>paragraph-level citation anchors</strong>, vector similarity scores, and strict schema validation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: FLAGSHIP SPOTLIGHT SHOWCASES ========== -->
+  <section class="flagship-section" id="flagships">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Deep-Dive Spotlights</span>
+        <h2 class="section-title">Flagship Engineering Projects</h2>
+        <p class="section-subtitle">Comprehensive systems engineered from scratch: complete state machines, custom mathematical scoring, real-time data pipelines, and production UI.</p>
+      </div>
+
+      <!-- Flagship 1: WanderAI -->
+      <div class="flagship-showcase">
+        <div class="flagship-preview">
+          <img src="assets/images/wanderai.png" alt="WanderAI Travel Planner Interface Screenshot">
+        </div>
+        <div class="flagship-body">
+          <span class="flagship-badge">FLAGSHIP SYSTEM 01 · MULTI-AGENT STATE MACHINE</span>
+          <h3 class="flagship-title">WanderAI — AI Travel Planner</h3>
+          <p class="flagship-description">
+            Autonomous multi-agent system that crafts day-by-day travel itineraries with spatial coherence, live weather, real community hidden gems, and interactive timeline drag-and-drop editing.
+          </p>
+          <div class="flagship-specs-box">
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Core Problem:</span>
+              <span class="flagship-spec-detail">Raw LLMs produce chaotic zig-zag routes, hallucinate closed spots, and push tourist traps.</span>
             </div>
-            <div class="project-card-actions">
-              <a href="projects/ai-travel-assistant.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/AI-Travel-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Architecture:</span>
+              <span class="flagship-spec-detail">4-Agent LangGraph workflow (Intake, Ranker, Planner, Editor) with SQLite checkpoints.</span>
+            </div>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Custom Engine:</span>
+              <span class="flagship-spec-detail">Log-normalized scoring balancing Reddit API + Tavily sentiment against Google review counts.</span>
+            </div>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Real Data:</span>
+              <span class="flagship-spec-detail">K-means++ spatial POI clustering, Open-Meteo forecasts, 4-tier Wikipedia photo cascade.</span>
+            </div>
+          </div>
+          <div class="flagship-tags">
+            <span class="tag">LangGraph</span>
+            <span class="tag">Next.js 16</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Gemini 3.5</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">Leaflet</span>
+            <span class="tag">LoRA Llama 3.2</span>
+          </div>
+          <div class="flagship-actions">
+            <a href="projects/ai-travel-assistant.html" class="btn btn-primary">Read Architecture Log →</a>
+            <a href="https://github.com/Yash-lab01/AI-Travel-Assistant" target="_blank" rel="noopener" class="btn btn-secondary">Source Code ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flagship 2: AI Research OS -->
+      <div class="flagship-showcase reverse">
+        <div class="flagship-body">
+          <span class="flagship-badge">FLAGSHIP SYSTEM 02 · LOCAL-FIRST RAG SYSTEM</span>
+          <h3 class="flagship-title">AI Research OS</h3>
+          <p class="flagship-description">
+            Autonomous literature research assistant combining arXiv paper discovery, hybrid layout PDF parsing, vision figure captioning, and multi-agent literature survey generation.
+          </p>
+          <div class="flagship-specs-box">
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Core Problem:</span>
+              <span class="flagship-spec-detail">Naive text splitters shred multi-column academic papers, mathematical formulas, and figures.</span>
+            </div>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Parsing Pipeline:</span>
+              <span class="flagship-spec-detail">Docling layout analyzer + vision-language figure extraction (Qwen2.5-VL 3B).</span>
+            </div>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Orchestration:</span>
+              <span class="flagship-spec-detail">4-agent team with dual router: local Ollama for parsing, Groq 70B for synthesis.</span>
+            </div>
+            <div class="flagship-spec-row">
+              <span class="flagship-spec-label">Traceability:</span>
+              <span class="flagship-spec-detail">Qdrant vector embeddings with SSE streaming paragraph-level clickable citation anchors.</span>
+            </div>
+          </div>
+          <div class="flagship-tags">
+            <span class="tag">LangGraph</span>
+            <span class="tag">Docling</span>
+            <span class="tag">Qdrant</span>
+            <span class="tag">Groq 70B</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Next.js 15</span>
+          </div>
+          <div class="flagship-actions">
+            <a href="projects/ai-research-agent.html" class="btn btn-primary">Read Architecture Log →</a>
+            <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener" class="btn btn-secondary">Source Code ↗</a>
+          </div>
+        </div>
+        <div class="flagship-preview">
+          <div style="padding: 32px; font-family: var(--font-mono); font-size: 0.82rem; color: #94a3b8; line-height: 1.7; width: 100%;">
+            <div style="color: var(--accent); margin-bottom: 12px; font-weight: 600;">[PIPELINE_ARCHITECTURE: RESEARCH_OS]</div>
+            <div>├── 1. Ingestion: arXiv API + PDF Upload</div>
+            <div>├── 2. Layout Extraction: Docling (Tables + OCR)</div>
+            <div>├── 3. Vision Model: Qwen2.5-VL (Figure Captions)</div>
+            <div>├── 4. Vector Storage: Qdrant Dense Embeddings</div>
+            <div>├── 5. Survey Agent: LangGraph 4-Agent Cyclic Team</div>
+            <div>└── 6. Interactive Inspector: SSE Paragraph Citations</div>
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border); color: #f8fafc;">
+              Status: 100% Functional · Next.js 15 + FastAPI
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- AI Project 2: AI Research OS -->
-        <div class="project-card reveal reveal-delay-2" id="project-ai-2">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">🧠 Research OS</span>
-            <span class="placeholder-icon">🧠</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">AI Research OS</h3>
-            <p class="project-card-description">
-              Autonomous AI research assistant with arXiv discovery, hybrid PDF parsing, vision figure captioning, and literature survey generation.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Docling hybrid layout parser + vision figure captioning (qwen2.5vl:3b)</li>
-              <li>LangGraph 4-agent team with dual LLM router (Groq 70B & Ollama)</li>
-              <li>Streaming SSE chat with paragraph-level clickable citation inspector</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Next.js 15</span>
-              <span class="tag ml">FastAPI</span>
-              <span class="tag">Qdrant</span>
-              <span class="tag">Groq 70B</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/ai-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Autonomous-Research-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
+    </div>
+  </section>
 
-        <!-- AI Project 3: SQL Assistant -->
-        <div class="project-card reveal reveal-delay-3" id="project-ai-3">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">🤖 Local Agent</span>
-            <span class="placeholder-icon">🤖</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">AI SQL Assistant</h3>
-            <p class="project-card-description">
-              Local-first AI agent converting natural language into precise MySQL queries with zero cloud dependency.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Tiered safety framework blocking destructive SQL commands</li>
-              <li>Schema introspection & auto-query correction loop</li>
-              <li>Full audit trail logging & Streamlit web interface</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangChain</span>
-              <span class="tag ml">Ollama 7B</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/sql-assistant.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/AI-SQL-Assistant" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
+  <!-- ========== SECTION 4: REPOSITORY INDEX & CATALOG ========== -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Engineering Index</span>
+        <h2 class="section-title">All Systems & Repositories</h2>
+        <p class="section-subtitle">Explore solutions built for hackathons, automated data pipelines, machine learning predictions, and enterprise dashboards.</p>
+      </div>
 
-        <!-- AI Project 4: Museum Chatbot -->
-        <div class="project-card reveal reveal-delay-1" id="project-ai-4">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill purple">🎟️ LangGraph Agent</span>
-            <span class="placeholder-icon">🎟️</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Museum Booking Chatbot</h3>
-            <p class="project-card-description">
-              Conversational ticketing agent navigating national museum catalogs with stateful booking flows.
-            </p>
-            <ul class="project-card-highlights">
-              <li>LangGraph cyclic agent handling complex multi-turn dialog</li>
-              <li>Fuzzy string matching & database connection pooling</li>
-              <li>FastAPI backend paired with interactive Streamlit UI</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Ollama</span>
-              <span class="tag">Flask / FastAPI</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">MySQL</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/museum-chatbot.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Museum-Chatbot" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
+      <!-- Filter Tabs -->
+      <div class="catalog-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Systems (8)</button>
+        <button class="filter-btn" data-filter="ai-agent">AI Agents & LLM (4)</button>
+        <button class="filter-btn" data-filter="machine-learning">Machine Learning (2)</button>
+        <button class="filter-btn" data-filter="data-analytics">Data Analytics (2)</button>
+      </div>
 
-        <!-- AI Project 5: Market Research Agent -->
-        <div class="project-card reveal reveal-delay-2" id="project-ai-5">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">📊 5-Agent System</span>
-            <span class="placeholder-icon">📊</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Market Research Agent</h3>
-            <p class="project-card-description">
-              Autonomous multi-agent research engine that decomposes questions, scrapes live data, and drafts PDF reports.
-            </p>
-            <ul class="project-card-highlights">
-              <li>5 specialized agents: Planner, Search, Scraper, Verifier, Summarizer</li>
-              <li>Hybrid model routing: Ollama 7B verifier + Groq 70B synthesizer</li>
-              <li>ChromaDB vector store RAG & ReportLab executive PDF builder</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">LangGraph</span>
-              <span class="tag ml">Groq 70B</span>
-              <span class="tag">ChromaDB</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">n8n</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/market-research-agent.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Market-Research-Agent" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
+      <!-- Catalog Grid -->
+      <div class="catalog-grid">
 
-        <!-- AI Project 6: CompanyLens AI Web Scraper -->
-        <div class="project-card reveal reveal-delay-3" id="project-ai-6">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill emerald">🔍 Prospect AI</span>
-            <span class="placeholder-icon">🔍</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">CompanyLens — AI Scraper</h3>
-            <p class="project-card-description">
-              Enterprise company enrichment pipeline with intelligent sitemap crawling and verified contact extraction.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Fuzzy sitemap routing & Cloudflare anti-bot bypass chain</li>
-              <li>Regex pre-harvesting with Gemini 2.5 Flash verification</li>
-              <li>Glassmorphism dashboard with multi-step live status indicators</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">Gemini 2.5</span>
-              <span class="tag ml">Cloudscraper</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/company-enrichment-agent.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/AI-powered-Website-Scraper-Agent-" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Project 7: OptiRoute Router -->
-        <div class="project-card reveal reveal-delay-1 hidden-project" id="project-ai-7">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill amber">⚡ AMD Hackathon</span>
+        <!-- Project: OptiRoute (AMD Hackathon) -->
+        <div class="catalog-card" data-category="ai-agent">
+          <div class="catalog-card-thumbnail">
             <img src="assets/images/optiroute.png" alt="OptiRoute Accuracy Router">
           </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">OptiRoute — Accuracy Router</h3>
-            <p class="project-card-description">
-              AMD Developer Hackathon (Act II) accuracy router combining 0-token solvers with remote LLM self-consistency.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Sub-ms TF-IDF classification & semantic trap detection</li>
-              <li>Tier-0 Python deterministic solvers (SymPy, AST) at 0 token cost</li>
-              <li>Fireworks AI CoT voting + local quantized Qwen 1.5B GGUF fallback</li>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">HACKATHON WINNER ENTRY · AMD ACT II</span>
+            <h3 class="catalog-card-title">OptiRoute — Accuracy Router</h3>
+            <p class="catalog-card-desc">Hybrid accuracy router combining zero-token AST solvers with remote LLM self-consistency voting.</p>
+            <ul class="catalog-specs-list">
+              <li>Sub-ms TF-IDF query classification</li>
+              <li>Tier-0 Python AST & SymPy solvers (0 token cost)</li>
+              <li>Fireworks AI CoT voting + local Qwen 1.5B fallback</li>
             </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">AMD Hackathon</span>
-              <span class="tag ml">Fireworks AI</span>
-              <span class="tag ml">Qwen 1.5B</span>
+            <div class="catalog-card-tags">
+              <span class="tag">AMD Hackathon</span>
+              <span class="tag">Fireworks AI</span>
+              <span class="tag">Qwen 1.5B</span>
               <span class="tag">Docker</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a href="projects/optiroute-router.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/amd-track1-tokenrouter" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Community Care Navigator (Google GenAI) -->
+        <div class="catalog-card" data-category="ai-agent">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">Google GenAI Hackathon Platform</span>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">NATIONAL HACKATHON · GOOGLE GENAI</span>
+            <h3 class="catalog-card-title">Community Care Navigator</h3>
+            <p class="catalog-card-desc">Decision intelligence platform matching citizens with welfare schemes in regional languages.</p>
+            <ul class="catalog-specs-list">
+              <li>Google ADK & Gemini 2.5 Flash conversational agent</li>
+              <li>Multimodal Vision OCR parsing government certificates</li>
+              <li>BigQuery / SQLite hybrid vector RAG with Plotly GIS</li>
+            </ul>
+            <div class="catalog-card-tags">
+              <span class="tag">Google ADK</span>
+              <span class="tag">Gemini 2.5</span>
+              <span class="tag">BigQuery RAG</span>
+              <span class="tag">Vision OCR</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a href="projects/community-care-navigator.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/Community-Care-Navigator---Google-GenAI-Hackathon" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Market Research Agent -->
+        <div class="catalog-card" data-category="ai-agent">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">5-Agent Cyclic LangGraph System</span>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">AUTONOMOUS MULTI-AGENT SYSTEM</span>
+            <h3 class="catalog-card-title">Market Research Agent</h3>
+            <p class="catalog-card-desc">Autonomous research engine decomposing inquiries, scraping live web data, and drafting PDF reports.</p>
+            <ul class="catalog-specs-list">
+              <li>5 agents: Planner, Search, Scraper, Verifier, Summarizer</li>
+              <li>ChromaDB vector store RAG for document indexing</li>
+              <li>ReportLab automated executive PDF report generator</li>
+            </ul>
+            <div class="catalog-card-tags">
+              <span class="tag">LangGraph</span>
+              <span class="tag">Groq 70B</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a href="projects/market-research-agent.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/Market-Research-Agent" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: CompanyLens AI Web Scraper -->
+        <div class="catalog-card" data-category="ai-agent">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">Intelligent Sitemap & Scraping Agent</span>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">PROSPECT INTELLIGENCE PIPELINE</span>
+            <h3 class="catalog-card-title">CompanyLens — AI Scraper</h3>
+            <p class="catalog-card-desc">Enterprise company enrichment pipeline with intelligent sitemap crawling and verified contact extraction.</p>
+            <ul class="catalog-specs-list">
+              <li>Fuzzy sitemap routing & Cloudflare anti-bot bypass</li>
+              <li>Regex pre-harvesting with Gemini 2.5 Flash validation</li>
+              <li>FastAPI backend paired with interactive dashboard</li>
+            </ul>
+            <div class="catalog-card-tags">
+              <span class="tag">Gemini 2.5</span>
+              <span class="tag">Cloudscraper</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a href="projects/company-enrichment-agent.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/AI-powered-Website-Scraper-Agent-" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Document AI Platform -->
+        <div class="catalog-card" data-category="machine-learning">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">TensorFlow Layout + Local RAG</span>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">DEEP LEARNING & COMPUTER VISION</span>
+            <h3 class="catalog-card-title">Document AI Platform</h3>
+            <p class="catalog-card-desc">Deep learning document intelligence platform combining TensorFlow vision models with Local LLM RAG.</p>
+            <ul class="catalog-specs-list">
+              <li>Visual layout segmentation & document classification</li>
+              <li>ChromaDB vector embeddings for offline Q&A</li>
+              <li>Automated multi-page executive summaries</li>
+            </ul>
+            <div class="catalog-card-tags">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Local LLM</span>
+              <span class="tag">ChromaDB</span>
               <span class="tag">Python</span>
             </div>
-            <div class="project-card-actions">
-              <a href="projects/optiroute-router.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/amd-track1-tokenrouter" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            <div class="catalog-card-actions">
+              <a href="projects/document-ai.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/Document_AI" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
             </div>
           </div>
         </div>
 
-        <!-- AI Project 8: Community Care Navigator -->
-        <div class="project-card reveal reveal-delay-2 hidden-project" id="project-ai-8">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill purple">🏆 Google Hackathon</span>
-            <span class="placeholder-icon">🏛️</span>
+        <!-- Project: Movie Recommendation Engine -->
+        <div class="catalog-card" data-category="machine-learning">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">TF-IDF Vector Space Ranking</span>
           </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Community Care Navigator</h3>
-            <p class="project-card-description">
-              Google GenAI Hackathon platform matching vulnerable citizens with welfare schemes in regional languages.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Google ADK & Gemini 2.5 Flash empathetic conversational agent</li>
-              <li>Multimodal Vision OCR extracting IDs and income certificates</li>
-              <li>BigQuery / SQLite hybrid vector RAG with Plotly Mapbox GIS</li>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">NLP & INFORMATION RETRIEVAL</span>
+            <h3 class="catalog-card-title">Recommendation Engine</h3>
+            <p class="catalog-card-desc">Content-based recommendation engine utilizing TF-IDF vectorization and cosine similarity matrix scoring.</p>
+            <ul class="catalog-specs-list">
+              <li>Feature extraction across cast, crew, and synopsis</li>
+              <li>Real-time Top-N similarity matching & ranking</li>
+              <li>Flask backend integrated with responsive web UI</li>
             </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">Google ADK</span>
-              <span class="tag ml">Gemini 2.5</span>
-              <span class="tag ml">Vision OCR</span>
-              <span class="tag">BigQuery / RAG</span>
-              <span class="tag">Streamlit</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/community-care-navigator.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Community-Care-Navigator---Google-GenAI-Hackathon" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- View All AI Projects Button -->
-      <div class="view-more-container reveal">
-        <button class="view-more-btn" id="toggleAiProjectsBtn">
-          <span>Explore All 8 AI Agents & Projects</span>
-          <span class="btn-arrow">▼</span>
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========== MACHINE LEARNING PROJECTS SECTION ========== -->
-  <section class="projects-section" id="machine-learning">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Machine Learning</span>
-        <h2 class="section-title">Predictive Models & Architectures</h2>
-        <p class="section-subtitle">Supervised, unsupervised, and deep learning computer vision pipelines solving real-world challenges.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- ML Project 1: Document AI -->
-        <div class="project-card reveal reveal-delay-1" id="project-ml-1">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill purple">📑 Computer Vision</span>
-            <span class="placeholder-icon">📑</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Document AI Platform</h3>
-            <p class="project-card-description">
-              Deep learning document intelligence platform combining TensorFlow vision models with Local LLM RAG.
-            </p>
-            <ul class="project-card-highlights">
-              <li>TensorFlow visual layout segmentation & document classification</li>
-              <li>ChromaDB vector embeddings for private offline document Q&A</li>
-              <li>Automated multi-page executive summaries & table extraction</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">TensorFlow</span>
-              <span class="tag ml">Local LLM</span>
-              <span class="tag ml">ChromaDB RAG</span>
-              <span class="tag">NLTK</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="projects/document-ai.html" class="card-btn card-btn-primary">View Details →</a>
-              <a href="https://github.com/Yash-lab01/Document_AI" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- ML Project 2: Movie Recommendation -->
-        <div class="project-card reveal reveal-delay-2" id="project-ml-2">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">🎥 NLP Recommendation</span>
-            <span class="placeholder-icon">🎥</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Movie Recommendation Engine</h3>
-            <p class="project-card-description">
-              Content-based recommendation engine utilizing TF-IDF vectorization and cosine similarity matrix scoring.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Feature extraction across cast, crew, genres, and synopsis keywords</li>
-              <li>Real-time Top-N similarity matching & efficient ranking</li>
-              <li>Flask backend integrated with responsive web interface</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">TF-IDF</span>
-              <span class="tag ml">Cosine Sim</span>
+            <div class="catalog-card-tags">
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Cosine Sim</span>
               <span class="tag">Flask</span>
               <span class="tag">Pandas</span>
-              <span class="tag">Python</span>
             </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/MovieRecommendationSite" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- ML Project 3: Churn Predictor -->
-        <div class="project-card reveal reveal-delay-3" id="project-ml-3">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill emerald">🔮 Predictive Model</span>
-            <span class="placeholder-icon">🔮</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Customer Churn Predictor</h3>
-            <p class="project-card-description">
-              End-to-end classification pipeline predicting customer churn with 92% accuracy using ensemble models.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Exploratory data analysis & automated feature engineering</li>
-              <li>Hyperparameter tuning on XGBoost and Random Forest ensembles</li>
-              <li>Feature importance and model interpretability via SHAP values</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag ml">scikit-learn</span>
-              <span class="tag ml">XGBoost</span>
-              <span class="tag ml">SHAP</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            <div class="catalog-card-actions">
+              <a href="https://github.com/Yash-lab01/MovieRecommendationSite" target="_blank" rel="noopener" class="catalog-btn catalog-btn-primary">Source Code ↗</a>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== DATA ANALYTICS PROJECTS SECTION ========== -->
-  <section class="projects-section" id="data-analytics">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Data Analytics</span>
-        <h2 class="section-title">Interactive Dashboards & Data Stories</h2>
-        <p class="section-subtitle">Transforming millions of data points into intuitive Power BI dashboards, DAX metrics, and SQL models.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- DA Project 1: Sales Dashboard -->
-        <div class="project-card reveal reveal-delay-1" id="project-da-1">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill cyan">📊 Power BI</span>
-            <img src="assets/images/sales.png" alt="Sales Performance Dashboard">
+        <!-- Project: Sales Performance Dashboard -->
+        <div class="catalog-card" data-category="data-analytics">
+          <div class="catalog-card-thumbnail">
+            <img src="assets/images/sales.png" alt="Sales Performance Dashboard Screenshot">
           </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Sales Performance Dashboard</h3>
-            <p class="project-card-description">
-              Enterprise Power BI dashboard analyzing regional sales trends, product categories, and revenue margins.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Complex DAX time-intelligence metrics (MoM, YoY growth)</li>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">POWER BI · STAR SCHEMA DATA MODEL</span>
+            <h3 class="catalog-card-title">Sales Performance Model</h3>
+            <p class="catalog-card-desc">Enterprise Power BI dashboard analyzing regional sales trends, product categories, and revenue margins.</p>
+            <ul class="catalog-specs-list">
+              <li>Complex DAX time-intelligence metrics (MoM, YoY)</li>
               <li>Dynamic parameter drill-down & customer segmentation</li>
               <li>SQL data transformation & Star-Schema modeling</li>
             </ul>
-            <div class="project-card-tags">
-              <span class="tag data">Power BI</span>
-              <span class="tag data">DAX</span>
-              <span class="tag data">SQL</span>
+            <div class="catalog-card-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">SQL</span>
               <span class="tag">Data Modeling</span>
             </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/sales_analysis_dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            <div class="catalog-card-actions">
+              <a href="https://github.com/Yash-lab01/sales_analysis_dashboard" target="_blank" rel="noopener" class="catalog-btn catalog-btn-primary">Source Code ↗</a>
             </div>
           </div>
         </div>
 
-        <!-- DA Project 2: Olympics Dashboard -->
-        <div class="project-card reveal reveal-delay-2" id="project-da-2">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill purple">🏅 120-Year Analysis</span>
-            <img src="assets/images/olympics.png" alt="Olympics Analysis Dashboard">
+        <!-- Project: Olympics Historical Analysis -->
+        <div class="catalog-card" data-category="data-analytics">
+          <div class="catalog-card-thumbnail">
+            <img src="assets/images/olympics.png" alt="Olympics Analysis Dashboard Screenshot">
           </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Olympics Analysis (1896–2016)</h3>
-            <p class="project-card-description">
-              Interactive historical analysis exploring 120 years of Olympic Games athlete and country statistics.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Country-level medal tallies and sport-wise performance trends</li>
-              <li>Gender distribution & athlete age demographic shifts over time</li>
-              <li>Dynamically filterable by edition, country, and event type</li>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">HISTORICAL ANALYSIS (1896–2016)</span>
+            <h3 class="catalog-card-title">Olympics Historical Model</h3>
+            <p class="catalog-card-desc">Interactive historical analysis exploring 120 years of Olympic Games athlete and country statistics.</p>
+            <ul class="catalog-specs-list">
+              <li>Country medal tallies & sport-wise performance trends</li>
+              <li>Gender distribution & athlete age demographic shifts</li>
+              <li>Filterable by edition, country, and event type</li>
             </ul>
-            <div class="project-card-tags">
-              <span class="tag data">Power BI</span>
-              <span class="tag data">Excel</span>
-              <span class="tag data">DAX</span>
-              <span class="tag">Data Storytelling</span>
+            <div class="catalog-card-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Excel</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Pandas</span>
             </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/Olympics_analysis_dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DA Project 3: Credit Card Model -->
-        <div class="project-card reveal reveal-delay-3" id="project-da-3">
-          <div class="project-card-thumbnail">
-            <span class="card-category-pill emerald">💳 Financial Model</span>
-            <img src="assets/images/cc.png" alt="Credit Card Analysis Dashboard">
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Credit Card & Financial Model</h3>
-            <p class="project-card-description">
-              Automated financial reporting and customer delinquency risk model with dynamic scenario forecasting.
-            </p>
-            <ul class="project-card-highlights">
-              <li>Automated Excel VBA data pipelines for quarterly reviews</li>
-              <li>Transaction variance analysis & spending pattern clustering</li>
-              <li>Delinquency rate indicators and KPI health scorecards</li>
-            </ul>
-            <div class="project-card-tags">
-              <span class="tag data">Excel</span>
-              <span class="tag data">VBA</span>
-              <span class="tag data">Financial Analysis</span>
-              <span class="tag">Risk Modeling</span>
-            </div>
-            <div class="project-card-actions">
-              <a href="https://github.com/Yash-lab01/Credit-Card-Analysis-Dashboard" target="_blank" rel="noopener" class="card-btn card-btn-ghost">GitHub →</a>
+            <div class="catalog-card-actions">
+              <a href="https://github.com/Yash-lab01/Olympics_analysis_dashboard" target="_blank" rel="noopener" class="catalog-btn catalog-btn-primary">Source Code ↗</a>
             </div>
           </div>
         </div>
@@ -658,26 +589,84 @@
     </div>
   </section>
 
-  <!-- ========== CONTACT SECTION ========== -->
-  <section class="contact" id="contact">
+  <!-- ========== SECTION 5: TECHNICAL TOOLKIT ========== -->
+  <section class="toolkit-section" id="toolkit">
     <div class="container">
-      <div class="contact-wrapper reveal">
-        <span class="section-label">Get In Touch</span>
-        <h2 class="contact-cta">Let's Build Something Extraordinary</h2>
+      <div class="section-header">
+        <span class="section-label">Technical Inventory</span>
+        <h2 class="section-title">Verified Tools & Dependencies</h2>
+        <p class="section-subtitle">Every item listed here represents technologies used across the production codebases above.</p>
+      </div>
+
+      <div class="toolkit-grid">
+        <div class="toolkit-col">
+          <div class="toolkit-title">Orchestration & Agents</div>
+          <div class="toolkit-list">
+            <div class="toolkit-item"><span>LangGraph</span> <span class="context">Cyclic Graphs</span></div>
+            <div class="toolkit-item"><span>LangChain</span> <span class="context">Chains & Tools</span></div>
+            <div class="toolkit-item"><span>Google ADK</span> <span class="context">GenAI Agent Kit</span></div>
+            <div class="toolkit-item"><span>SQLite</span> <span class="context">State Checkpoints</span></div>
+            <div class="toolkit-item"><span>Pydantic v2</span> <span class="context">Data Contracts</span></div>
+          </div>
+        </div>
+
+        <div class="toolkit-col">
+          <div class="toolkit-title">Inference & LLMs</div>
+          <div class="toolkit-list">
+            <div class="toolkit-item"><span>Ollama</span> <span class="context">Local GGUF</span></div>
+            <div class="toolkit-item"><span>Groq Cloud</span> <span class="context">Sub-second 70B</span></div>
+            <div class="toolkit-item"><span>Gemini 3.5 / 2.5</span> <span class="context">Google AI Studio</span></div>
+            <div class="toolkit-item"><span>Fireworks AI</span> <span class="context">Fast Inference</span></div>
+            <div class="toolkit-item"><span>LoRA (Unsloth)</span> <span class="context">Llama 3.2 Fine-tune</span></div>
+          </div>
+        </div>
+
+        <div class="toolkit-col">
+          <div class="toolkit-title">Vector Stores & Search</div>
+          <div class="toolkit-list">
+            <div class="toolkit-item"><span>ChromaDB</span> <span class="context">Embedded v7</span></div>
+            <div class="toolkit-item"><span>Qdrant</span> <span class="context">Dense Retrieval</span></div>
+            <div class="toolkit-item"><span>Tavily API</span> <span class="context">Web Search</span></div>
+            <div class="toolkit-item"><span>Reddit API</span> <span class="context">Public Sentiment</span></div>
+            <div class="toolkit-item"><span>VADER</span> <span class="context">Zero-Latency NLP</span></div>
+          </div>
+        </div>
+
+        <div class="toolkit-col">
+          <div class="toolkit-title">Data & Engineering</div>
+          <div class="toolkit-list">
+            <div class="toolkit-item"><span>Power BI & DAX</span> <span class="context">Star Schema</span></div>
+            <div class="toolkit-item"><span>MySQL & BigQuery</span> <span class="context">Analytical SQL</span></div>
+            <div class="toolkit-item"><span>FastAPI</span> <span class="context">Async + SSE</span></div>
+            <div class="toolkit-item"><span>Next.js 16</span> <span class="context">App Router</span></div>
+            <div class="toolkit-item"><span>Playwright</span> <span class="context">PDF Generation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: CONTACT ========== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <span class="section-label">Direct Communication</span>
+        <h2 class="contact-title">Let's Discuss Systems & Roles</h2>
         <p class="contact-text">
-          I'm always open to discussing new high-impact AI/ML engineering opportunities, multi-agent LLM systems, or data analytics collaborations.
+          I am actively evaluating roles in <strong>AI/ML Engineering</strong>, <strong>Multi-Agent System Architecture</strong>, and <strong>Data Engineering</strong>. If you value deterministic execution, latency benchmarks, and verified code over empty buzzwords, feel free to reach out directly.
         </p>
         <div class="contact-links">
-          <a href="mailto:yashpbhawar2003@gmail.com" class="contact-link" id="contact-email">
-            <span>✉️</span> <span>Email Me</span>
+          <a href="mailto:yashpbhawar2003@gmail.com" class="contact-link-item">
+            <span>✉️</span>
+            <span>yashpbhawar2003@gmail.com</span>
           </a>
-          <a href="https://www.linkedin.com/in/yash-bhawar-77b5752b7/" target="_blank" rel="noopener"
-            class="contact-link" id="contact-linkedin">
-            <span>💼</span> <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/yash-bhawar-77b5752b7/" target="_blank" rel="noopener" class="contact-link-item">
+            <span>💼</span>
+            <span>LinkedIn Profile ↗</span>
           </a>
-          <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="contact-link"
-            id="contact-github">
-            <span>🐙</span> <span>GitHub</span>
+          <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="contact-link-item">
+            <span>🐙</span>
+            <span>GitHub (Yash-lab01) ↗</span>
           </a>
         </div>
       </div>
@@ -687,7 +676,8 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <p>Designed & built by Yash Bhawar · 2026 <span class="footer-heart">♥</span> · Powered by Modern AI</p>
+      <span>Yash Bhawar · AI/ML Engineer & Systems Builder</span>
+      <span>Engineered with HTML, Vanilla CSS & Clean JavaScript</span>
     </div>
   </footer>
 
