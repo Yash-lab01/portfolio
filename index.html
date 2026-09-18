@@ -15,6 +15,9 @@
 
 <body>
 
+  <!-- ========== INTERACTIVE BLUEPRINT BACKGROUND CANVAS ========== -->
+  <canvas id="bgCanvas"></canvas>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
@@ -252,7 +255,18 @@ hidden_gem_score = clamp(
       <!-- Flagship 1: WanderAI -->
       <div class="flagship-showcase">
         <div class="flagship-preview">
-          <img src="assets/images/wanderai.png" alt="WanderAI Travel Planner Interface Screenshot">
+          <div style="padding: 32px; font-family: var(--font-mono); font-size: 0.82rem; color: #94a3b8; line-height: 1.7; width: 100%;">
+            <div style="color: var(--accent); margin-bottom: 12px; font-weight: 600;">[PIPELINE_ARCHITECTURE: WANDER_AI]</div>
+            <div>├── 1. Intake: Intent Classifier & Dynamic Q&A</div>
+            <div>├── 2. Scraper: Reddit & Tavily Hidden Gem Extraction</div>
+            <div>├── 3. Scorer: Log-Normalized Sentiment & Review Weighting</div>
+            <div>├── 4. Clusterer: K-means++ Spatial POI Geo-Clustering</div>
+            <div>├── 5. Planner: LangGraph Cyclic State Machine (SQLite)</div>
+            <div>└── 6. Exporter: Drag-and-Drop Timeline & Playwright PDF</div>
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border); color: #f8fafc;">
+              Status: 100% Functional · Next.js 16 + FastAPI
+            </div>
+          </div>
         </div>
         <div class="flagship-body">
           <span class="flagship-badge">FLAGSHIP SYSTEM 01 · MULTI-AGENT STATE MACHINE</span>
