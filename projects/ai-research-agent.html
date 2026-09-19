@@ -62,6 +62,18 @@
     </div>
   </section>
 
+  <!-- ========== HERO LANDING SHOWCASE (MAIN HOME) ========== -->
+  <section class="project-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="demo-showcase-item" style="max-width: 1050px; margin: 0 auto;">
+        <h3 class="showcase-item-title">📚 01 · Main Home & Paper Hub</h3>
+        <div class="image-wrapper">
+          <img src="../assets/project_images/ai%20research%20assistant/1.png" alt="AI Research OS Paper Hub Interface" class="showcase-img lightbox-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== PROBLEM & SOLUTION ========== -->
   <section class="project-section">
     <div class="container">
@@ -116,6 +128,57 @@
           <span class="feature-icon">📊</span>
           <h3>Survey Generator & Gap Finder</h3>
           <p>Surfaces open research problems by cross-referencing paper limitations, builds side-by-side taxonomy matrices, and exports citations in BibTeX/APA format.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHRONOLOGICAL INTERFACE WALKTHROUGH ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">📸 Chronological System Walkthrough & Core Pillars</h2>
+      <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 32px; font-size: 0.95rem;">
+        Explore the primary user journeys across the 3 core pillars of AI Research OS: arXiv preprint ingestion, comparative multi-paper synthesis, and interactive multimodal RAG copilot.
+      </p>
+      <div class="carousel-wrapper" style="max-width: 1050px; margin: 0 auto;">
+        <div class="custom-carousel" id="carousel-research">
+          <div class="carousel-track-container">
+            <ul class="carousel-track" style="width: 300%;">
+              <!-- Slide 1 -->
+              <li class="carousel-slide active" style="width: 33.3333%;">
+                <img src="../assets/project_images/ai%20research%20assistant/1.png" alt="Pillar 01 - Paper Hub & arXiv Ingestion" class="carousel-img lightbox-img">
+                <div class="carousel-caption">
+                  <h4>Pillar 01 · Main Home & Paper Hub</h4>
+                  <p>Real-time arXiv preprint discovery, relevance/date sorting, batch ingestion queue with duplicate prevention, and indexed Qdrant vector status monitor.</p>
+                </div>
+              </li>
+              <!-- Slide 2 -->
+              <li class="carousel-slide" style="width: 33.3333%;">
+                <img src="../assets/project_images/ai%20research%20assistant/2.png" alt="Pillar 02 - Synthesis Studio & Comparison Matrix" class="carousel-img lightbox-img">
+                <div class="carousel-caption">
+                  <h4>Pillar 02 · Synthesis Studio & Comparative Matrix</h4>
+                  <p>Multi-paper side-by-side taxonomy contrast, comparative evaluation tables, deep literature surveys, and automated open research gap detection.</p>
+                </div>
+              </li>
+              <!-- Slide 3 -->
+              <li class="carousel-slide" style="width: 33.3333%;">
+                <img src="../assets/project_images/ai%20research%20assistant/3.png" alt="Pillar 03 - Agent Copilot & Evolution" class="carousel-img lightbox-img">
+                <div class="carousel-caption">
+                  <h4>Pillar 03 · Agent Copilot & Multimodal RAG</h4>
+                  <p>Interactive literature copilot with Server-Sent Events (SSE) streaming, voice research mode, and clickable paragraph-level citation badges opening exact source context.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Controls -->
+          <button class="carousel-btn btn-prev" aria-label="Previous slide">‹</button>
+          <button class="carousel-btn btn-next" aria-label="Next slide">›</button>
+          <!-- Indicators -->
+          <div class="carousel-nav-dots">
+            <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+            <button class="carousel-dot" aria-label="Go to slide 2"></button>
+            <button class="carousel-dot" aria-label="Go to slide 3"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -206,6 +269,12 @@
     </div>
   </section>
 
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal" style="display:none;">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged image">
+  </div>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
@@ -214,6 +283,69 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---------- Carousel Logic ----------
+      const initCarousel = (carouselId, slideCount) => {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = carousel.querySelector('.btn-next');
+        const prevButton = carousel.querySelector('.btn-prev');
+        const dotsNav = carousel.querySelector('.carousel-nav-dots');
+        const dots = Array.from(dotsNav.children);
+        let currentIndex = 0;
+        const slideWidthPct = 100 / slideCount;
+
+        const updateCarousel = (index) => {
+          track.style.transform = `translateX(-${index * slideWidthPct}%)`;
+          slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+          dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+          currentIndex = index;
+        };
+
+        if (nextButton) {
+          nextButton.addEventListener('click', () => {
+            updateCarousel((currentIndex + 1) % slides.length);
+          });
+        }
+        if (prevButton) {
+          prevButton.addEventListener('click', () => {
+            updateCarousel((currentIndex - 1 + slides.length) % slides.length);
+          });
+        }
+        dots.forEach((dot, i) => dot.addEventListener('click', () => updateCarousel(i)));
+      };
+
+      initCarousel('carousel-research', 3);
+
+      // ---------- Lightbox ----------
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg   = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      if (lightboxModal && lightboxImg) {
+        document.querySelectorAll('.lightbox-img').forEach(img => {
+          img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxModal.style.display = 'flex';
+          });
+        });
+        if (lightboxClose) {
+          lightboxClose.addEventListener('click', () => {
+            lightboxModal.style.display = 'none';
+          });
+        }
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal) lightboxModal.style.display = 'none';
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') lightboxModal.style.display = 'none';
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
