@@ -177,8 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typedElement) {
     const roles = [
       'AI & ML Engineer',
-      'Multi-Agent System Builder',
-      'Deterministic Graph Architect',
+      'Multi-Agent Systems Developer',
+      'LLM & RAG Engineer',
       'Data Analyst'
     ];
     let roleIndex = 0;

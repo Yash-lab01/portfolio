@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">CompanyLens — AI Web Scraper & Intelligence Agent</h1>
         <p class="project-detail-tagline">
-          Enterprise-grade AI company enrichment pipeline and prospect intelligence agent built for the AI & Automation Developer Hackathon. Crawls websites, extracts verified contact info, and generates deep business insights.
+          Automated company intelligence pipeline and prospect research agent built for the AI & Automation Developer Hackathon. Traverses sitemaps with Cloudflare anti-bot bypass, extracts verified contact info using regex pre-processing, and structures business profiles with Gemini 2.5 Flash.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">Gemini 2.5</span>
@@ -68,13 +68,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Sales, business development, and market analysis teams waste countless hours manually visiting target company websites, copying contact information, hunting through sitemaps, and trying to digest complex product offerings into actionable sales insights. Standard web scrapers often break on anti-bot protections or return unstructured HTML clutter.
+            Sales, business development, and market intelligence teams spend hundreds of hours manually browsing target company websites, hunting through sitemaps for verified contact info, and copy-pasting unstructured blurbs into CRMs. Standard scrapers frequently break on Cloudflare anti-bot challenges, while feeding raw, noisy HTML directly into LLMs wastes context tokens and produces hallucinated business summaries.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            <strong>CompanyLens</strong> automates company prospect research end-to-end. It intelligently crawls high-value company pages using fuzzy sitemap weighting, circumvents Cloudflare anti-bot checks, extracts pre-compiled contact regex records, and feeds clean markdown text to Gemini 2.5 Flash for structured business insight synthesis.
+            <strong>CompanyLens</strong> automates company prospect research end-to-end. It uses fuzzy string matching to prioritize high-value sitemap pages (About, Solutions, Contact), deploys <code>cloudscraper</code> to cleanly bypass anti-bot protections, extracts verified emails and phones via deterministic regex pre-processing, and passes clean markdown to Gemini 2.5 Flash for structured JSON synthesis and competitive positioning insights.
           </p>
         </div>
       </div>

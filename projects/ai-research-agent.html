@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">AI Research OS — Autonomous Research Assistant</h1>
         <p class="project-detail-tagline">
-          An autonomous, local-first & cloud-boosted AI research assistant. Discovers arXiv papers, parses complex layouts, captions figures with vision models, and generates literature reviews & comparisons via a LangGraph multi-agent pipeline with paragraph-level citation traceability.
+          An end-to-end literature research platform built with LangGraph, Next.js 15, and Qdrant. Discovers arXiv preprints, parses multi-column PDFs with Docling, captions diagrams using local vision models, and generates verified literature reviews with paragraph-level clickable citations.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangGraph</span>
@@ -81,13 +81,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Academic and industrial researchers are overwhelmed by thousands of new papers published weekly. Ingesting, cross-comparing backbones, identifying novel open gaps, verifying mathematical proofs, and extracting architectural diagrams is slow, manual, and prone to hallucinated literature citations when using standard chat LLMs.
+            Researchers face an overwhelming influx of new papers weekly. Standard chat models struggle with two-column academic layouts, mishandle mathematical formulas, cannot interpret embedded architecture diagrams, and frequently hallucinate paper citations.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            <strong>AI Research OS</strong> builds an end-to-end multi-agent research pipeline. It fetches papers directly from arXiv, runs hybrid PDF layout parsing with vision figure captioning, indexes embeddings in Qdrant, and coordinates specialized LangGraph agents (Planner, Search, Reading, Writing) to deliver streaming chat with verified paragraph citations, literature reviews, and research gap matrices.
+            <strong>AI Research OS</strong> coordinates a specialized 4-agent LangGraph pipeline (Planner, Search, Reading, Writing). It parses arXiv PDFs using Docling layout analysis and Qwen2.5-VL vision models, indexes chunks in a Qdrant vector database, and streams responses with exact paragraph-level citation badges so every claim is verifiable.
           </p>
         </div>
       </div>

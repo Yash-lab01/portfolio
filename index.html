@@ -76,7 +76,7 @@
         </p>
 
         <p class="hero-landing-desc">
-          Architecting deterministic multi-agent graphs, local-first LLM pipelines, and analytical data models. Less hallucination, zero fluff, verified latency.
+          Building reliable multi-agent systems, local-first RAG pipelines, and analytical data models. Focused on practical engineering: reducing hallucinations, keeping latency low, and anchoring every response in real data.
         </p>
 
         <div class="hero-landing-buttons">
@@ -127,7 +127,7 @@
           </h2>
 
           <p class="hero-manifesto">
-            I build <strong>deterministic multi-agent graphs</strong>, local-first LLM pipelines, and analytical data models. Less hallucination, zero fluff, verified latency.
+            I specialize in architecting <strong>stateful multi-agent workflows</strong>, <strong>hybrid local/cloud LLM pipelines</strong>, and <strong>structured data models</strong>. My goal is to build AI systems that are deterministic, cost-effective, and directly verifiable against real data.
           </p>
 
           <div class="hero-specs">
@@ -212,31 +212,31 @@ hidden_gem_score = clamp(
       <div class="section-header">
         <span class="section-label">Engineering Philosophy</span>
         <h2 class="section-title">How I Build Systems That Work in the Real World</h2>
-        <p class="section-subtitle">A candid perspective on production AI: why monolithic prompts fail, where local quantization matters, and how data integrity drives every model.</p>
+        <p class="section-subtitle">A practical look at production AI: why monolithic prompts fail, where local quantization matters, and how data integrity drives every model.</p>
       </div>
 
       <div class="philosophy-grid">
         <div class="philosophy-card">
           <span class="philosophy-index">PRINCIPLE 01</span>
-          <h3 class="philosophy-title">Determinism Over Raw Prompts</h3>
+          <h3 class="philosophy-title">Stateful Workflows Over Monolithic Prompts</h3>
           <p>
-            Monolithic LLM prompts hallucinate geography, fail at arithmetic, and produce erratic structures. I isolate responsibilities into <strong>stateful LangGraph nodes</strong>, enforce Pydantic contracts, and offload calculations to deterministic solvers (AST parsing, K-means++, Haversine routing) at 0 token cost.
+            Single, giant prompts tend to drift, hallucinate details, and struggle with arithmetic. I break complex systems into <strong>stateful LangGraph agent nodes</strong> with validated Pydantic schemas. Heavy computations — like spatial clustering, geo-routing, and math formulas — run through deterministic Python solvers rather than burning AI tokens.
           </p>
         </div>
 
         <div class="philosophy-card">
           <span class="philosophy-index">PRINCIPLE 02</span>
-          <h3 class="philosophy-title">Pragmatic Latency & Cost Routing</h3>
+          <h3 class="philosophy-title">Hybrid Latency & Cost-Effective Routing</h3>
           <p>
-            Sending every request to a 70B cloud model is economically reckless and slow. I architect <strong>hybrid multi-tier routers</strong>: sub-millisecond TF-IDF classification, fast slot extraction via Groq, local quantized Ollama fallbacks, and frontier cloud models reserved exclusively for synthesis.
+            Sending every request to a 70B cloud LLM leads to high latency and ballooning API bills. I engineer <strong>multi-tier routing architectures</strong>: sub-millisecond classifiers and local quantized models (Ollama) handle straightforward tasks instantly, reserving high-parameter cloud models strictly for complex reasoning and synthesis.
           </p>
         </div>
 
         <div class="philosophy-card">
           <span class="philosophy-index">PRINCIPLE 03</span>
-          <h3 class="philosophy-title">Verifiable Grounding, Zero Fluff</h3>
+          <h3 class="philosophy-title">Verifiable Grounding & Citation Traceability</h3>
           <p>
-            An AI answer without verifiable source traceability is a liability. Whether building an academic paper assistant or an enterprise company scraper, every output is tethered to raw data: <strong>paragraph-level citation anchors</strong>, vector similarity scores, and strict schema validation.
+            In real-world applications, unverified AI outputs are a liability. Every RAG architecture I build guarantees <strong>source grounding</strong> — linking responses to paragraph-level citation anchors, vector similarity scores, and strict schema validation so outputs can always be traced back to raw data.
           </p>
         </div>
       </div>
@@ -261,24 +261,24 @@ hidden_gem_score = clamp(
           <span class="flagship-badge">FLAGSHIP SYSTEM 01 · MULTI-AGENT STATE MACHINE</span>
           <h3 class="flagship-title">WanderAI — AI Travel Planner</h3>
           <p class="flagship-description">
-            Autonomous multi-agent system that crafts day-by-day travel itineraries with spatial coherence, live weather, real community hidden gems, and interactive timeline drag-and-drop editing.
+            An autonomous multi-agent travel system built with LangGraph and Next.js 16. Resolves spatial disorientation and routing bugs in standard LLMs through K-means++ coordinate clustering, community sentiment analysis, and interactive timeline drag-and-drop editing.
           </p>
           <div class="flagship-specs-box">
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Core Problem:</span>
-              <span class="flagship-spec-detail">Raw LLMs produce chaotic zig-zag routes, hallucinate closed spots, and push tourist traps.</span>
+              <span class="flagship-spec-detail">Standard LLMs generate geographically chaotic routes (causing zig-zag transit), hallucinate closed attractions, and lack persistent state for iterative editing.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Architecture:</span>
-              <span class="flagship-spec-detail">4-Agent LangGraph workflow (Intake, Ranker, Planner, Editor) with SQLite checkpoints.</span>
+              <span class="flagship-spec-detail">4-Agent LangGraph workflow (Intake, Ranker, Planner, Editor) with SQLite checkpoints and dynamic preference clarification.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Custom Engine:</span>
-              <span class="flagship-spec-detail">Log-normalized scoring balancing Reddit API + Tavily sentiment against Google review counts.</span>
+              <span class="flagship-spec-detail">Log-normalized ranking formula balancing Reddit and travel blog sentiment against Google Places review volumes.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Real Data:</span>
-              <span class="flagship-spec-detail">K-means++ spatial POI clustering, Open-Meteo forecasts, 4-tier Wikipedia photo cascade.</span>
+              <span class="flagship-spec-detail">K-means++ spatial POI clustering, live Open-Meteo forecasts, and a 4-tier zero-auth Wikipedia photography cascade.</span>
             </div>
           </div>
           <div class="flagship-tags">
@@ -303,24 +303,24 @@ hidden_gem_score = clamp(
           <span class="flagship-badge">FLAGSHIP SYSTEM 02 · LOCAL-FIRST RAG SYSTEM</span>
           <h3 class="flagship-title">AI Research OS</h3>
           <p class="flagship-description">
-            Autonomous literature research assistant combining arXiv paper discovery, hybrid layout PDF parsing, vision figure captioning, and multi-agent literature survey generation.
+            An end-to-end literature research platform combining arXiv paper discovery, layout-aware PDF parsing, vision models for figure captioning, and multi-agent literature survey synthesis.
           </p>
           <div class="flagship-specs-box">
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Core Problem:</span>
-              <span class="flagship-spec-detail">Naive text splitters shred multi-column academic papers, mathematical formulas, and figures.</span>
+              <span class="flagship-spec-detail">Standard chat models shred complex multi-column academic papers, hallucinate mathematical formulas, and cannot reference visual figures or provide verifiable citations.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Parsing Pipeline:</span>
-              <span class="flagship-spec-detail">Docling layout analyzer + vision-language figure extraction (Qwen2.5-VL 3B).</span>
+              <span class="flagship-spec-detail">Docling layout analyzer with local Qwen2.5-VL vision models for extracting and captioning technical figures and tables.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Orchestration:</span>
-              <span class="flagship-spec-detail">4-agent team with dual router: local Ollama for parsing, Groq 70B for synthesis.</span>
+              <span class="flagship-spec-detail">4-agent cyclic LangGraph team with dual router: local Ollama for background parsing and Groq 70B for real-time synthesis.</span>
             </div>
             <div class="flagship-spec-row">
               <span class="flagship-spec-label">Traceability:</span>
-              <span class="flagship-spec-detail">Qdrant vector embeddings with SSE streaming paragraph-level clickable citation anchors.</span>
+              <span class="flagship-spec-detail">Qdrant vector similarity search with Server-Sent Events (SSE) streaming and clickable paragraph-level citation anchors.</span>
             </div>
           </div>
           <div class="flagship-tags">
@@ -372,7 +372,7 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">HACKATHON WINNER ENTRY · AMD ACT II</span>
             <h3 class="catalog-card-title">OptiRoute — Accuracy Router</h3>
-            <p class="catalog-card-desc">Hybrid accuracy router combining zero-token AST solvers with remote LLM self-consistency voting.</p>
+            <p class="catalog-card-desc">Hybrid accuracy and token router that evaluates incoming queries, executes deterministic Python AST/SymPy solvers first (at 0 token cost), and routes complex reasoning to cloud LLMs with self-consistency voting.</p>
             <ul class="catalog-specs-list">
               <li>Sub-ms TF-IDF query classification</li>
               <li>Tier-0 Python AST & SymPy solvers (0 token cost)</li>
@@ -399,7 +399,7 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">NATIONAL HACKATHON · GOOGLE GENAI</span>
             <h3 class="catalog-card-title">Community Care Navigator</h3>
-            <p class="catalog-card-desc">Decision intelligence platform matching citizens with welfare schemes in regional languages.</p>
+            <p class="catalog-card-desc">Multilingual decision intelligence platform built with Google ADK and Gemini 2.5 Flash. Uses multimodal OCR to parse ID documents and matches citizens to welfare schemes using vector RAG.</p>
             <ul class="catalog-specs-list">
               <li>Google ADK & Gemini 2.5 Flash conversational agent</li>
               <li>Multimodal Vision OCR parsing government certificates</li>
@@ -426,7 +426,7 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">AUTONOMOUS MULTI-AGENT SYSTEM</span>
             <h3 class="catalog-card-title">Market Research Agent</h3>
-            <p class="catalog-card-desc">Autonomous research engine decomposing inquiries, scraping live web data, and drafting PDF reports.</p>
+            <p class="catalog-card-desc">Autonomous 5-agent LangGraph system that decomposes market inquiries, scrapes live web data, indexes findings in ChromaDB, and compiles structured executive PDF reports.</p>
             <ul class="catalog-specs-list">
               <li>5 agents: Planner, Search, Scraper, Verifier, Summarizer</li>
               <li>ChromaDB vector store RAG for document indexing</li>
@@ -453,10 +453,10 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">PROSPECT INTELLIGENCE PIPELINE</span>
             <h3 class="catalog-card-title">CompanyLens — AI Scraper</h3>
-            <p class="catalog-card-desc">Enterprise company enrichment pipeline with intelligent sitemap crawling and verified contact extraction.</p>
+            <p class="catalog-card-desc">Automated company intelligence pipeline that crawls target domains with anti-bot bypass, extracts verified contact info using regex pre-processing, and synthesizes business profiles with Gemini 2.5 Flash.</p>
             <ul class="catalog-specs-list">
-              <li>Fuzzy sitemap routing & Cloudflare anti-bot bypass</li>
-              <li>Regex pre-harvesting with Gemini 2.5 Flash validation</li>
+              <li>Intelligent sitemap crawler with Cloudflare bypass</li>
+              <li>Regex pre-harvesting with Gemini 2.5 schema validation</li>
               <li>FastAPI backend paired with interactive dashboard</li>
             </ul>
             <div class="catalog-card-tags">
@@ -480,9 +480,9 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">DEEP LEARNING & COMPUTER VISION</span>
             <h3 class="catalog-card-title">Document AI Platform</h3>
-            <p class="catalog-card-desc">Deep learning document intelligence platform combining TensorFlow vision models with Local LLM RAG.</p>
+            <p class="catalog-card-desc">Deep learning document intelligence platform combining TensorFlow computer vision models for layout segmentation with a local LLM and ChromaDB vector pipeline for offline Q&A.</p>
             <ul class="catalog-specs-list">
-              <li>Visual layout segmentation & document classification</li>
+              <li>TensorFlow layout segmentation & document classification</li>
               <li>ChromaDB vector embeddings for offline Q&A</li>
               <li>Automated multi-page executive summaries</li>
             </ul>
@@ -507,11 +507,11 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">NLP & INFORMATION RETRIEVAL</span>
             <h3 class="catalog-card-title">Recommendation Engine</h3>
-            <p class="catalog-card-desc">Content-based recommendation engine utilizing TF-IDF vectorization and cosine similarity matrix scoring.</p>
+            <p class="catalog-card-desc">Content-based recommendation engine utilizing TF-IDF vector space modeling and cosine similarity matrices to generate real-time Top-N film recommendations.</p>
             <ul class="catalog-specs-list">
-              <li>Feature extraction across cast, crew, and synopsis</li>
-              <li>Real-time Top-N similarity matching & ranking</li>
-              <li>Flask backend integrated with responsive web UI</li>
+              <li>Feature extraction across genres, cast, crew, and synopsis</li>
+              <li>Real-time Top-N cosine similarity matching</li>
+              <li>Flask backend integrated with responsive UI</li>
             </ul>
             <div class="catalog-card-tags">
               <span class="tag">TF-IDF</span>
@@ -533,11 +533,11 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">POWER BI · STAR SCHEMA DATA MODEL</span>
             <h3 class="catalog-card-title">Sales Performance Model</h3>
-            <p class="catalog-card-desc">Enterprise Power BI dashboard analyzing regional sales trends, product categories, and revenue margins.</p>
+            <p class="catalog-card-desc">Enterprise Power BI analytics dashboard built on a normalized Star Schema data model, utilizing complex DAX time-intelligence calculations (MoM, YoY) to analyze margins and regional sales trends.</p>
             <ul class="catalog-specs-list">
               <li>Complex DAX time-intelligence metrics (MoM, YoY)</li>
-              <li>Dynamic parameter drill-down & customer segmentation</li>
-              <li>SQL data transformation & Star-Schema modeling</li>
+              <li>Dynamic parameter drill-downs & customer segmentation</li>
+              <li>Star Schema data model with automated SQL transformations</li>
             </ul>
             <div class="catalog-card-tags">
               <span class="tag">Power BI</span>
@@ -559,10 +559,10 @@ hidden_gem_score = clamp(
           <div class="catalog-card-body">
             <span class="catalog-card-category">HISTORICAL ANALYSIS (1896–2016)</span>
             <h3 class="catalog-card-title">Olympics Historical Model</h3>
-            <p class="catalog-card-desc">Interactive historical analysis exploring 120 years of Olympic Games athlete and country statistics.</p>
+            <p class="catalog-card-desc">Interactive historical data analytics model analyzing 120 years of Olympic Games data, utilizing multi-dimensional DAX metrics to track athlete demographics and country performance trends.</p>
             <ul class="catalog-specs-list">
               <li>Country medal tallies & sport-wise performance trends</li>
-              <li>Gender distribution & athlete age demographic shifts</li>
+              <li>Gender distribution & athlete demographic shifts</li>
               <li>Filterable by edition, country, and event type</li>
             </ul>
             <div class="catalog-card-tags">

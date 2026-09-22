@@ -40,8 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">Museum Booking Chatbot</h1>
         <p class="project-detail-tagline">
-          Discover Indian museums, explore detailed information, and book tickets — all through natural conversation
-          with an AI agent.
+          Stateful LangGraph ReAct agent powered by local Ollama (<code>qwen2.5</code>) and MySQL. Enables natural language museum discovery, typo-tolerant fuzzy search, and transactional ticket booking with persistent session checkpointing.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangGraph</span>
@@ -97,19 +96,13 @@
           <div class="content-block">
             <h2 class="detail-section-title">💡 The Problem</h2>
             <p>
-              Tourists and locals wanting to visit Indian museums face fragmented information — scattered across
-              multiple
-              websites with no unified way to search, compare, and book tickets. Museums need 24/7 booking capability
-              but can't afford dedicated staff for every inquiry.
+              Visitors planning trips to cultural landmarks and museums in India encounter scattered, outdated information across dozens of fragmented websites with no central booking interface. At the same time, museum administrations lack affordable, round-the-clock digital support to answer visitor inquiries, handle ticketing peaks, and verify accessibility accommodations.
             </p>
           </div>
           <div class="content-block">
             <h2 class="detail-section-title">🎯 The Solution</h2>
             <p>
-              A <strong>conversational AI agent</strong> that understands natural language queries about museums.
-              Users can search by city or theme, get detailed info (timings, prices, facilities), and complete
-              ticket bookings — all within a single chat interface. The agent remembers context across turns, enabling
-              natural multi-step workflows like <em>search → details → book</em>.
+              A <strong>conversational AI booking agent</strong> orchestrated by a stateful LangGraph ReAct state machine. Visitors query museums conversationally using typo-tolerant fuzzy matching (<code>difflib</code>), receive detailed operating hours and pricing, and execute transactional ticket reservations stored in a persistent MySQL database with LangGraph <code>MemorySaver</code> context checkpointing.
             </p>
           </div>
         </div>

@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">Autonomous Market Research Agent</h1>
         <p class="project-detail-tagline">
-          Type a single market research question — 5 autonomous AI agents search the web, cross-verify claims, and synthesize structured executive reports with publication-quality PDF exports.
+          Multi-agent research engine orchestrating 5 specialized LangGraph agents. Decomposes market queries, executes parallel web scraping with Tavily, verifies claims with local LLMs, and synthesizes publication-ready PDF reports.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangGraph</span>
@@ -70,13 +70,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Conducting comprehensive market research is time-consuming and fragmented. Researchers must query multiple search engines, filter reliable sources from noise, cross-check facts, structure insights, and generate exportable reports — taking hours or days for every single query.
+            Comprehensive market research is fragmented and labor-intensive. Analysts spend hours manually browsing dozens of industry reports, cross-checking conflicting statistics, weeding out sponsored clickbait, and formatting summaries into presentation decks. Single-prompt AI tools often hallucinate unsourced figures or fail to maintain citation traceability across broad research queries.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            An <strong>autonomous multi-agent workflow</strong> powered by LangGraph. Five specialized AI agents divide and conquer research tasks: breaking queries into sub-topics, executing real-time web searches, scraping full page content, verifying facts with local LLMs, and generating comprehensive reports complete with vector-search RAG and PDF export.
+            An <strong>autonomous multi-agent workflow</strong> built on LangGraph. Five specialized agents collaborate deterministically: a Planner decomposes queries into sub-topics, Search and Scraper agents gather live web data via Tavily and BeautifulSoup, a Verifier validates quantitative claims using local Ollama (<code>qwen2.5:7b</code>), and a Summarizer synthesizes executive insights via Groq (<code>llama-3.3-70b</code>)—complete with interactive ChromaDB RAG and automated ReportLab PDF exports.
           </p>
         </div>
       </div>

@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project</span>
         <h1 class="project-detail-title">AI SQL Assistant</h1>
         <p class="project-detail-tagline">
-          Ask your database questions in plain English — get safe, accurate SQL queries generated and executed instantly.
+          Local natural-language-to-SQL copilot powered by Ollama (Mistral 7B) with a tiered AST safety guardrail system (Allow/Confirm/Block), automated schema discovery, and zero external network calls.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangChain</span>
@@ -125,17 +125,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Non-technical users — business analysts, managers, product teams — need to query databases daily but don't
-            know SQL. Existing solutions are either cloud-based (data privacy concerns) or lack safety guardrails, 
-            making it risky to let an AI execute arbitrary queries against production databases.
+            Business teams, product managers, and analysts frequently need ad-hoc insights from relational databases but lack advanced SQL fluency, creating engineering bottlenecks. Meanwhile, deploying third-party cloud LLMs on enterprise databases introduces compliance and data exfiltration risks, while uncontrolled AI-generated SQL risks executing unindexed full table scans or destructive operations (e.g., DROP, TRUNCATE, unconstrained UPDATEs).
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            A <strong>fully local</strong> AI assistant that runs on your machine — no data leaves your network. Users 
-            type questions in plain English, the LLM generates SQL, and a <strong>tiered safety system</strong> 
-            classifies, validates, and optionally blocks dangerous queries before they ever touch the database.
+            A <strong>fully local natural-language-to-SQL copilot</strong> running offline via Ollama. It combines few-shot schema introspection with a deterministic <code>sqlparse</code> AST validator that enforces a tiered security policy: read-only SELECTs execute immediately, schema alterations or writes require manual approval, and destructive commands are blocked outright before touching the database.
           </p>
         </div>
       </div>

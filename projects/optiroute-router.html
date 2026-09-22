@@ -40,7 +40,7 @@
         <span class="section-label">AI & LLM Project · AMD Developer Hackathon</span>
         <h1 class="project-detail-title">OptiRoute — AI Accuracy Router</h1>
         <p class="project-detail-tagline">
-          Built for the <strong>AMD Developer Hackathon (Act II — Track 1)</strong>. An intelligent hybrid accuracy routing agent that classifies tasks, executes deterministic solvers first (0 tokens), and routes complex prompts to specialized remote LLMs with chain-of-thought reasoning and self-consistency voting.
+          A hybrid accuracy and token routing system built for the AMD Developer Hackathon (Act II — Track 1). It evaluates queries, executes deterministic Python AST and SymPy solvers first (at 0 token cost), and routes complex reasoning tasks to cloud LLMs with self-consistency voting and local fallback.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">AMD Hackathon</span>
@@ -78,13 +78,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Challenge</h2>
           <p>
-            In hackathon scenarios and production environments, routing every query blindly to massive LLMs causes excessive latency, ballooning token costs, and unnecessary halluncinations for deterministic math or factual lookups. Conversely, relying solely on small local models leads to low accuracy on complex logic, code, and reasoning tasks.
+            Routing every incoming query to high-parameter cloud LLMs causes excessive latency, ballooning token costs, and avoidable hallucinations for deterministic math. Conversely, relying solely on small local models drops accuracy significantly on complex reasoning and code generation.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            <strong>OptiRoute</strong> introduces a <strong>remote-first accuracy routing architecture</strong>. It utilizes sub-millisecond TF-IDF domain classification, checks for zero-token deterministic Python solvers (math, fact tables, AST code analysis), routes complex queries to specialized remote models (Fireworks AI), and falls back to a thread-safe local quantized Qwen 1.5B GGUF model if remote connections fail.
+            <strong>OptiRoute</strong> introduces a <strong>tier-based hybrid routing architecture</strong>. It utilizes sub-millisecond TF-IDF classification, executes zero-token Python solvers (math, AST code parsing), routes complex queries to remote models (Fireworks AI) with Chain-of-Thought voting, and falls back to a local quantized Qwen 1.5B GGUF model for offline resilience.
           </p>
         </div>
       </div>

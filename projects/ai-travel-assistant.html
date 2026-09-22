@@ -40,7 +40,7 @@
         <span class="section-label">Flagship AI & LLM Project</span>
         <h1 class="project-detail-title">WanderAI — Multi-Agent AI Travel Planner</h1>
         <p class="project-detail-tagline">
-          An autonomous conversational multi-agent system crafting spatial day-by-day itineraries for any global or regional destination — balancing iconic landmarks, authentic Reddit hidden gems, live weather, budget pacing, drag-and-drop reordering, and multi-turn conversational editing.
+          An autonomous multi-agent travel system that builds spatially coherent day-by-day itineraries. It combines LangGraph state machines with K-means++ coordinate clustering, Reddit community sentiment scoring, and an interactive drag-and-drop timeline with Playwright PDF export.
         </p>
         <div class="project-detail-tags">
           <span class="tag ml">LangGraph</span>
@@ -83,13 +83,13 @@
         <div class="content-block">
           <h2 class="detail-section-title">💡 The Problem</h2>
           <p>
-            Standard AI travel planners are simple wrappers around single LLM prompts. They hallucinate attractions, schedule geographically chaotic routes (causing zig-zag transit across cities), recommend generic tourist traps, fail to adapt to live weather, and cannot handle iterative conversational modifications or realistic daily schedules.
+            Standard AI travel planners are simple wrappers around single LLM prompts. They often hallucinate attractions, generate geographically chaotic routes (causing zig-zag transit across cities), push generic tourist traps, and lack persistent state for iterative editing.
           </p>
         </div>
         <div class="content-block">
           <h2 class="detail-section-title">🎯 The Solution</h2>
           <p>
-            <strong>WanderAI</strong> is an <strong>autonomous multi-agent state machine</strong> (LangGraph) backed by real-time tools. Four specialized agents (Intake, Ranker, Planner, Editor) parse requirements with dynamic clarifying questions, scrape niche community signals from Reddit & travel blogs via mathematical scoring, group attractions with K-means++ spatial clustering, and provide interactive timeline drag-and-drop editing, Playwright PDF export, and local fine-tuned LoRA narrations.
+            <strong>WanderAI</strong> is a <strong>multi-agent state machine</strong> built with LangGraph. Four specialized agents (Intake, Ranker, Planner, Editor) parse requirements with dynamic clarifying questions, surface authentic hidden gems using sentiment-scored Reddit discussions, group attractions using K-means++ geographic clustering, and provide interactive timeline drag-and-drop editing with instant Playwright PDF export.
           </p>
         </div>
       </div>
