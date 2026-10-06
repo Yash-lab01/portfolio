@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Evaluation & Benchmarking Platform — Yash Bhawar</title>
+  <meta name="description"
+    content="Enterprise-grade LLM evaluation and benchmarking platform with parallel multi-model inference, PyTorch BERTScore, tripartite RAG evaluation, NLI hallucination detection, and FastMCP integration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- Live Interactive Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">YB</span>
+        <span class="logo-bracket">}</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#flagship" class="nav-link">Flagship Systems</a>
+        <a href="../index.html#project-catalog" class="nav-link">Project Catalog</a>
+        <a href="../index.html#principles" class="nav-link">Engineering Philosophy</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+        <a href="https://github.com/Yash-lab01" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+          GitHub ↗
+        </a>
+      </div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PROJECT HERO ========== -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#project-catalog" class="back-link">← Back to Projects</a>
+      <div class="project-hero-content">
+        <span class="section-label">AI & LLM Platform · Enterprise System</span>
+        <h1 class="project-detail-title">LLM Evaluation & Benchmarking Platform</h1>
+        <p class="project-detail-tagline">
+          Enterprise-grade LLM evaluation and benchmarking platform engineered for multi-model parallel inference, real-time WebSocket token streaming, non-blocking PyTorch BERTScore/ROUGE scoring, tripartite RAG evaluation, sentence-level NLI hallucination detection, and native FastMCP agent tool integration.
+        </p>
+        <div class="project-detail-tags">
+          <span class="tag ml">FastAPI</span>
+          <span class="tag ml">Next.js 15</span>
+          <span class="tag ml">PyTorch</span>
+          <span class="tag ml">FastMCP</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Celery</span>
+          <span class="tag">Redis</span>
+          <span class="tag">LiteLLM</span>
+          <span class="tag">Langfuse</span>
+          <span class="tag">Docker</span>
+        </div>
+        <div class="project-detail-links">
+          <a href="https://github.com/Yash-lab01/LLM-Eval-Platform" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM & SOLUTION ========== -->
+  <section class="project-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h2 class="detail-section-title">💡 The Problem</h2>
+          <p>
+            Engineering teams deploying LLMs to production lack rigorous, automated benchmarking infrastructure to compare frontier models, track prompt regressions, and detect hallucinations before shipping. Manual qualitative testing is subjective, unscalable, and slow, while naive single-prompt evaluation fails to measure critical production failure modes such as semantic drift, context unfaithfulness in RAG pipelines, latency spikes, and cost-per-token efficiency.
+          </p>
+        </div>
+        <div class="content-block">
+          <h2 class="detail-section-title">🎯 The Solution</h2>
+          <p>
+            A self-hosted, full-stack <strong>LLM Evaluation & Benchmarking Platform</strong>. It orchestrates parallel inference across frontier models (Gemini 3.5/3.8 Flash, Groq, Qwen, Ollama) via LiteLLM with real-time WebSocket token dispatching to Next.js 15. The evaluation core executes asynchronous PyTorch BERTScore and ROUGE-L calculations, tripartite RAG scoring, sentence-level NLI hallucination detection, Gemini G-Eval rubrics, distributed Celery batch processing, and a native FastMCP server exposing tools directly to Cursor IDE and Claude Desktop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY FEATURES ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">⚡ Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Multi-Model Parallel Inference</h3>
+          <p>Streams responses concurrently from multiple frontier models (Gemini, Groq, Ollama) using LiteLLM with sub-millisecond WebSocket streaming over a Redis pub/sub backbone.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🧠</span>
+          <h3>Non-Blocking PyTorch Scoring</h3>
+          <p>Computes BERTScore F1 (<code>bert-base-uncased</code> / <code>all-MiniLM</code>) in dedicated async thread pools alongside ROUGE-L, latency tracking, token counts, and cost estimation.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎯</span>
+          <h3>Tripartite RAG Framework</h3>
+          <p>Automatically evaluates retrieval quality and generation fidelity across three dimensions: <strong>Context Relevance</strong>, <strong>Faithfulness</strong> (via NLI grounding), and <strong>Answer Relevance</strong>.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🛡️</span>
+          <h3>Sentence-Level NLI Hallucination Scorer</h3>
+          <p>Decomposes generated answers into individual claims, verifies each claim against source context for contradictions or ungrounded facts, and applies penalizing winner weights.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔌</span>
+          <h3>Native FastMCP Server</h3>
+          <p>Exposes 5 standardized Model Context Protocol tools over <code>stdio</code> and <code>sse</code> transports, enabling Cursor IDE and Claude Desktop agents to run evaluations and query model recommendations.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚖️</span>
+          <h3>LLM-as-a-Judge (G-Eval Rubrics)</h3>
+          <p>Automated semantic grading powered by Gemini 3.5 Flash across 9 pre-configured domain rubrics (Code, Summarization, QA, Data Extraction, RAG) with custom weight balancing.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📦</span>
+          <h3>Distributed Celery Batch Processing</h3>
+          <p>Upload large CSV/JSON datasets to asynchronous Celery worker queues (<code>eval_batch</code>) with real-time Redis progress tracking and CSV report export.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📊</span>
+          <h3>2D Semantic Embedding Visualizer</h3>
+          <p>Multi-dimensional projection (Semantic MDS / UMAP) mapping prompts, references, and candidate outputs onto an interactive 2D coordinate plane with pairwise cosine similarity matrices.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📑</span>
+          <h3>Print-Styled Executive Reports</h3>
+          <p>Generates print-ready HTML and WeasyPrint PDF executive summaries featuring score matrices, win-rate charts, and automated model recommendation badges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ARCHITECTURE ========== -->
+  <section class="project-section">
+    <div class="container">
+      <h2 class="detail-section-title center">🏗️ Platform Architecture</h2>
+      <div class="architecture-flow">
+        <div class="arch-node">
+          <span class="arch-icon">💻</span>
+          <span class="arch-label">Clients</span>
+          <span class="arch-sublabel">Next.js 15 / Cursor MCP</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">⚡</span>
+          <span class="arch-label">FastAPI Gateway</span>
+          <span class="arch-sublabel">SlowAPI + SHA-256 Auth</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🔄</span>
+          <span class="arch-label">LiteLLM & Celery</span>
+          <span class="arch-sublabel">Redis Pub/Sub & Workers</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🧠</span>
+          <span class="arch-label">Evaluation Core</span>
+          <span class="arch-sublabel">PyTorch + NLI + G-Eval</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <span class="arch-icon">🗄️</span>
+          <span class="arch-label">Persistence</span>
+          <span class="arch-sublabel">PostgreSQL + Langfuse</span>
+        </div>
+      </div>
+
+      <div class="architecture-detail">
+        <div class="arch-component">
+          <h3>Backend & Evaluation Engines</h3>
+          <ul>
+            <li><code>backend/services/eval_runner.py</code> — Multi-model parallel inference orchestrator with LiteLLM gateway</li>
+            <li><code>backend/services/scoring.py</code> — Async PyTorch BERTScore F1, ROUGE-L, latency, and token cost estimators</li>
+            <li><code>backend/services/rag_eval.py</code> — Tripartite RAG metrics (Context Relevance, Faithfulness, Answer Relevance)</li>
+            <li><code>backend/services/hallucination.py</code> — Sentence-level NLI contradiction & claim ungroundedness scoring</li>
+            <li><code>backend/services/llm_judge.py</code> — Gemini G-Eval rubric evaluator with weighted multi-criteria grading</li>
+            <li><code>mcp/eval_server.py</code> — FastMCP server exposing 5 tools over stdio/sse for Cursor and Claude Desktop</li>
+            <li><code>backend/core/database.py</code> — Async PostgreSQL engine (SQLAlchemy 2.0 + AsyncPG) with connection pooling</li>
+          </ul>
+        </div>
+        <div class="arch-component">
+          <h3>Frontend UI & Infrastructure</h3>
+          <ul>
+            <li><code>frontend/app/</code> — Next.js 15 App Router dashboard with React 19, Turbopack, and Tailwind CSS</li>
+            <li><code>frontend/components/</code> — Real-time WebSocket token streamers, Recharts score matrices, and 2D MDS scatter visualizer</li>
+            <li><code>backend/tasks/eval_tasks.py</code> — Celery distributed worker tasks for asynchronous dataset benchmarking</li>
+            <li><code>backend/services/report_service.py</code> — Jinja2 and WeasyPrint executive summary report generation</li>
+            <li><code>docker-compose.yml</code> — Production multi-container orchestration (FastAPI, Next.js, FastMCP, Celery, Postgres, Redis)</li>
+            <li><code>backend/tests/</code> — Comprehensive test suite with 93%+ coverage across 120 automated tests</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="project-section section-alt">
+    <div class="container">
+      <h2 class="detail-section-title center">🛠️ Tech Stack & Technologies</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Backend Core</h3>
+          <p>Python 3.12, FastAPI, Pydantic v2, Pydantic-Settings, Uvicorn, SlowAPI rate limiting, SHA-256 API key authentication.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Frontend UI</h3>
+          <p>Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, Zustand state management, Recharts data visualization.</p>
+        </div>
+        <div class="feature-card">
+          <h3>ML & Scoring</h3>
+          <p>PyTorch, HuggingFace Transformers (<code>bert-base-uncased</code>, <code>all-MiniLM-L6-v2</code>), ROUGE-Score, Sentence-NLI.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Storage & Queues</h3>
+          <p>PostgreSQL 16, SQLAlchemy 2.0 (AsyncIO), AsyncPG, Alembic migrations, Redis 7 (Pub/Sub & Cache), Celery 5.4.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Inference & Observability</h3>
+          <p>LiteLLM (Gemini 3.5/3.8 Flash, Groq, Ollama), Langfuse SDK (automated token tracing, latency, and cost telemetry).</p>
+        </div>
+        <div class="feature-card">
+          <h3>Protocol & DevOps</h3>
+          <p>FastMCP (Model Context Protocol), Docker Compose multi-service architecture, Ruff linter/formatter, Pre-commit hooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Yash Bhawar · 2025 <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>

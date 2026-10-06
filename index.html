@@ -355,14 +355,43 @@ hidden_gem_score = clamp(
 
       <!-- Filter Tabs -->
       <div class="catalog-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Systems (8)</button>
-        <button class="filter-btn" data-filter="ai-agent">AI Agents & LLM (4)</button>
+        <button class="filter-btn active" data-filter="all">All Systems (9)</button>
+        <button class="filter-btn" data-filter="ai-agent">AI Agents & LLM (5)</button>
         <button class="filter-btn" data-filter="machine-learning">Machine Learning (2)</button>
         <button class="filter-btn" data-filter="data-analytics">Data Analytics (2)</button>
       </div>
 
       <!-- Catalog Grid -->
       <div class="catalog-grid">
+
+        <!-- Project: LLM Evaluation & Benchmarking Platform -->
+        <div class="catalog-card" data-category="ai-agent">
+          <div class="catalog-card-thumbnail">
+            <span class="catalog-card-placeholder">LLM Evaluation & Benchmarking Platform</span>
+          </div>
+          <div class="catalog-card-body">
+            <span class="catalog-card-category">ENTERPRISE EVALUATION · FASTMCP & PYTORCH</span>
+            <h3 class="catalog-card-title">LLM Evaluation Platform</h3>
+            <p class="catalog-card-desc">Self-hosted enterprise benchmarking platform for multi-model parallel inference, real-time WebSocket token streaming, PyTorch BERTScore, tripartite RAG metrics, sentence-level NLI hallucination scoring, and native FastMCP agent tools.</p>
+            <ul class="catalog-specs-list">
+              <li>Multi-model parallel streaming (Gemini, Groq, Ollama)</li>
+              <li>PyTorch BERTScore, ROUGE-L & sentence-level NLI hallucination scorer</li>
+              <li>Native FastMCP server for Cursor & Claude Desktop + Celery batch queues</li>
+            </ul>
+            <div class="catalog-card-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Next.js 15</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">FastMCP</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Celery</span>
+            </div>
+            <div class="catalog-card-actions">
+              <a href="projects/llm-eval.html" class="catalog-btn catalog-btn-primary">Case Study →</a>
+              <a href="https://github.com/Yash-lab01/LLM-Eval-Platform" target="_blank" rel="noopener" class="catalog-btn catalog-btn-ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
 
         <!-- Project: OptiRoute (AMD Hackathon) -->
         <div class="catalog-card" data-category="ai-agent">
@@ -592,12 +621,12 @@ hidden_gem_score = clamp(
 
       <div class="toolkit-grid">
         <div class="toolkit-col">
-          <div class="toolkit-title">Orchestration & Agents</div>
+          <div class="toolkit-title">Orchestration & Protocols</div>
           <div class="toolkit-list">
+            <div class="toolkit-item"><span>FastMCP</span> <span class="context">Model Context Protocol</span></div>
             <div class="toolkit-item"><span>LangGraph</span> <span class="context">Cyclic Graphs</span></div>
             <div class="toolkit-item"><span>LangChain</span> <span class="context">Chains & Tools</span></div>
             <div class="toolkit-item"><span>Google ADK</span> <span class="context">GenAI Agent Kit</span></div>
-            <div class="toolkit-item"><span>SQLite</span> <span class="context">State Checkpoints</span></div>
             <div class="toolkit-item"><span>Pydantic v2</span> <span class="context">Data Contracts</span></div>
           </div>
         </div>
@@ -608,7 +637,7 @@ hidden_gem_score = clamp(
             <div class="toolkit-item"><span>Ollama</span> <span class="context">Local GGUF</span></div>
             <div class="toolkit-item"><span>Groq Cloud</span> <span class="context">Sub-second 70B</span></div>
             <div class="toolkit-item"><span>Gemini 3.5 / 2.5</span> <span class="context">Google AI Studio</span></div>
-            <div class="toolkit-item"><span>Fireworks AI</span> <span class="context">Fast Inference</span></div>
+            <div class="toolkit-item"><span>LiteLLM & Fireworks</span> <span class="context">Gateway & Voting</span></div>
             <div class="toolkit-item"><span>LoRA (Unsloth)</span> <span class="context">Llama 3.2 Fine-tune</span></div>
           </div>
         </div>
@@ -620,18 +649,18 @@ hidden_gem_score = clamp(
             <div class="toolkit-item"><span>Qdrant</span> <span class="context">Dense Retrieval</span></div>
             <div class="toolkit-item"><span>Tavily API</span> <span class="context">Web Search</span></div>
             <div class="toolkit-item"><span>Reddit API</span> <span class="context">Public Sentiment</span></div>
-            <div class="toolkit-item"><span>VADER</span> <span class="context">Zero-Latency NLP</span></div>
+            <div class="toolkit-item"><span>PyTorch BERTScore</span> <span class="context">Dense Semantic Eval</span></div>
           </div>
         </div>
 
         <div class="toolkit-col">
           <div class="toolkit-title">Data & Engineering</div>
           <div class="toolkit-list">
+            <div class="toolkit-item"><span>PostgreSQL & AsyncPG</span> <span class="context">Async SQLAlchemy 2.0</span></div>
+            <div class="toolkit-item"><span>Celery & Redis</span> <span class="context">Distributed Queues</span></div>
             <div class="toolkit-item"><span>Power BI & DAX</span> <span class="context">Star Schema</span></div>
-            <div class="toolkit-item"><span>MySQL & BigQuery</span> <span class="context">Analytical SQL</span></div>
-            <div class="toolkit-item"><span>FastAPI</span> <span class="context">Async + SSE</span></div>
-            <div class="toolkit-item"><span>Next.js 16</span> <span class="context">App Router</span></div>
-            <div class="toolkit-item"><span>Playwright</span> <span class="context">PDF Generation</span></div>
+            <div class="toolkit-item"><span>FastAPI</span> <span class="context">Async + WebSockets</span></div>
+            <div class="toolkit-item"><span>Next.js 15</span> <span class="context">App Router</span></div>
           </div>
         </div>
       </div>
